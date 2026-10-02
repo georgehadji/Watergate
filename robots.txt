@@ -1,0 +1,40 @@
+# Επιτρέπεται η πρόσβαση σε όλες τις μηχανές αναζήτησης και στους crawlers τεχνητής νοημοσύνης (GEO).
+# Αν δεν θέλετε το περιεχόμενο να χρησιμοποιείται από AI, αλλάξτε το "Allow: /" σε "Disallow: /" για τους αντίστοιχους bots.
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# TODO: αντικαταστήστε με το πραγματικό σας domain
+Sitemap: https://www.example.gr/sitemap.xml
