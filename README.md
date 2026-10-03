@@ -1,4 +1,4 @@
-# Watergate: Waterwal water filter landing page (Greek)
+# Waterwal – Φίλτρα νερού: landing page (Greek)
 
 A static, single-page site (HTML + CSS + vanilla JS, no build step) that presents **Waterwal** water-filtration solutions organized by need: homes, coffee shops, restaurants/hotels and offices. It is **not an e-shop**. Every call to action leads to a request for free advice or a quote.
 
@@ -29,14 +29,21 @@ grep -rn "TODO\|example\.gr\|example\.com\|XXX\|\[Επωνυμία\|\[Περιο
 
 1. **Domain**: replace `https://www.example.gr/` everywhere: canonical, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `llms.txt`. If the domain has no `www`, also change the redirect in `.htaccess`.
 2. **Business details**: legal name, VAT number (ΑΦΜ), GEMI number, address, email. (The phone number is set: the mobile 694 783 0756 is the main number; there is no landline.) They appear in the contact section, footer, JSON-LD, `llms.txt` and `privacy.html`. Use **exactly the same** details everywhere and in your Google Business Profile; consistent NAP (name, address, phone) matters for local SEO.
-3. **Business name / logo**: "Watergate" is a working name taken from the repo name. Replace it if you are using a different one.
+3. **Logo**: the site is named **Waterwal – Φίλτρα νερού**. The header and footer use a water-drop icon with the name as text. Replace them with the real logo when you have one.
 4. **Viber / WhatsApp**: the mobile number (694 783 0756, written `306947830756` in the links) is already set in the contact section and the mobile action bar. To change it, replace it everywhere in `index.html` and `llms.txt`.
    - The WhatsApp link (`https://wa.me/30…`) needs the country code with no `+`, spaces or leading zeros. It opens a chat with a pre-filled Greek message; edit the `text=` part to change it.
    - The Viber link (`viber://chat?number=%2B30…`) opens a chat only if the visitor has Viber installed, on a phone or Viber Desktop. Without Viber, the link does nothing. The number must have an active Viber account.
-5. **Contact form**: create a free form at [formspree.io](https://formspree.io) and replace `YOUR_FORM_ID` in `index.html`. Until then, the form opens the visitor's email app with the message pre-filled. If you switch to another provider, update `connect-src` / `form-action` in the CSP (three places: `index.html`, `_headers`, `.htaccess`).
-6. **Product information**: model names, features, the list of what the filters remove, and the replacement interval (6 months / 3,600–5,000 litres) came from public listings. **Verify them against the official Waterwal catalogue.** If Waterwal makes dedicated HoReCa / espresso-machine models, add them to the "Καφέ" (coffee shops) section.
-7. **Product photos**: the products currently use illustrations. If you get photos from Waterwal (with permission to use them), see "Photos" below.
-8. **Privacy policy**: fill in the template and have a lawyer or accountant review it.
+5. **Map (service area)**: set to **all of Thessaloniki prefecture + Δήμος Θερμαϊκού** (map query «Νομός Θεσσαλονίκης», zoom 9). The contact section has a map that loads Google Maps **only when the visitor clicks "Εμφάνιση χάρτη"**. Until then the page makes no request to Google and sets no cookies, so no cookie banner is needed. To set it up, edit the `#service-map` block in `index.html`:
+   - `data-map-query`: your area, e.g. `Χαλάνδρι, Αττική`;
+   - `data-map-zoom`: `11` for a city, `12` for a municipality;
+   - the visible `<strong>` text;
+   - the `query=` part of the "Άνοιγμα στο Google Maps" link (URL-encoded).
+   - Optional, for an exact area: in Google Maps choose **Share → Embed a map**, and paste the iframe's `src` into `data-embed-src`. This is Google's official embed format and needs no API key. The default `maps?q=…&output=embed` format is widely used but not officially documented by Google.
+   - The CSP allows frames only from `www.google.com` / `maps.google.com`.
+6. **Contact form**: create a free form at [formspree.io](https://formspree.io) and replace `YOUR_FORM_ID` in `index.html`. Until then, the form opens the visitor's email app with the message pre-filled. If you switch to another provider, update `connect-src` / `form-action` in the CSP (three places: `index.html`, `_headers`, `.htaccess`).
+7. **Product information**: model names, features, the list of what the filters remove, and the replacement interval (6 months / 3,600–5,000 litres) came from public listings. **Verify them against the official Waterwal catalogue.** If Waterwal makes dedicated HoReCa / espresso-machine models, add them to the "Καφέ" (coffee shops) section.
+8. **Product photos**: the products currently use illustrations. If you get photos from Waterwal (with permission to use them), see "Photos" below.
+9. **Privacy policy**: fill in the template and have a lawyer or accountant review it.
 
 ## SEO
 
@@ -66,7 +73,7 @@ grep -rn "TODO\|example\.gr\|example\.com\|XXX\|\[Επωνυμία\|\[Περιο
 
 - **Content Security Policy**: only resources from the site itself, with no inline scripts or styles; the one exception is Formspree for the form. It is set both as a `<meta>` tag and as an HTTP header (`_headers` / `.htaccess`, which also add `frame-ancestors 'none'`).
 - HSTS, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, `Cross-Origin-Opener-Policy`.
-- **No third parties**: fonts are self-hosted (SIL Open Font License), and there are no analytics or cookies. That means no cookie banner is needed, and it avoids the GDPR problem with Google Fonts (LG München, 2022).
+- **No third parties on page load**: fonts are self-hosted (SIL Open Font License), and there are no analytics or cookies. Google Maps loads only after a visitor clicks to show the map. That means no cookie banner is needed, and it avoids the GDPR problem with Google Fonts (LG München, 2022).
 - The form has a honeypot against bots, field length limits, and a required consent checkbox.
 - A static site has no database or server-side code, so it has a very small attack surface.
 - Check the headers after launch at [securityheaders.com](https://securityheaders.com).
