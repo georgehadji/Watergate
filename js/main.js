@@ -143,6 +143,28 @@
     });
   }
 
+  // ---------- Service-area map (click to load) ----------
+  // Google Maps is only contacted after the visitor clicks "Εμφάνιση χάρτη".
+  var mapCard = document.getElementById("service-map");
+  if (mapCard) {
+    var loadBtn = mapCard.querySelector(".map-load");
+    loadBtn.hidden = false;
+    loadBtn.addEventListener("click", function () {
+      var src = mapCard.dataset.embedSrc ||
+        "https://www.google.com/maps?q=" + encodeURIComponent(mapCard.dataset.mapQuery) +
+        "&z=" + encodeURIComponent(mapCard.dataset.mapZoom || "11") + "&hl=el&output=embed";
+      var iframe = document.createElement("iframe");
+      iframe.src = src;
+      iframe.title = "Χάρτης: περιοχή εξυπηρέτησης";
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.allowFullscreen = true;
+      var frame = mapCard.querySelector(".map-frame");
+      frame.replaceChildren(iframe);
+      frame.classList.add("is-loaded");
+      iframe.focus();
+    });
+  }
+
   // ---------- Reveal on scroll ----------
   if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     var targets = document.querySelectorAll(".section-head, .solution, .product, .steps li, .faq details, .calc-result, .chips, .table-wrap");
