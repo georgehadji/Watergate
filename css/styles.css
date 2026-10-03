@@ -440,7 +440,7 @@ textarea { resize: vertical; min-height: 110px; }
 @media (min-width: 900px) { .contact-grid { grid-template-columns: .85fr 1.15fr; gap: 56px; } }
 
 /* ---------- Footer ---------- */
-.site-footer { background: #071d2c; color: #9fbccb; padding: 40px 0 calc(96px + env(safe-area-inset-bottom)); font-size: .9rem; }
+.site-footer { background: #071d2c; color: #9fbccb; padding: 40px 0 calc(84px + env(safe-area-inset-bottom)); font-size: .9rem; }
 .footer-grid { display: flex; flex-direction: column; gap: 24px; }
 .legal { margin: 16px 0 0; line-height: 1.7; }
 .legal a { color: #d6e7ef; }
@@ -456,15 +456,36 @@ textarea { resize: vertical; min-height: 110px; }
   .site-footer nav a { padding: 0; }
 }
 
-/* ---------- Call FAB (μόνο σε κινητά/tablet) ---------- */
-.call-fab {
-  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 40;
-  display: inline-flex; align-items: center; gap: 8px; min-height: 48px;
-  background: var(--mint); color: #fff; text-decoration: none; font-weight: 700;
-  padding: 12px 20px; border-radius: 999px; box-shadow: 0 12px 30px -8px rgba(43, 179, 155, .8);
+/* ---------- Viber / WhatsApp ---------- */
+:root { --whatsapp: #0e7a6e; --viber: #665cac; } /* σκουρότερες αποχρώσεις των brand χρωμάτων για αντίθεση ≥ 4.5:1 με λευκό κείμενο */
+.chat-title { margin: 28px 0 12px; color: #fff; font-weight: 700; }
+.chat-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.btn-chat { color: #fff; gap: 10px; }
+.btn-chat svg { width: 22px; height: 22px; flex: none; }
+.btn-whatsapp { background: var(--whatsapp); }
+.btn-whatsapp:hover { background: #0a6358; }
+.btn-viber { background: var(--viber); }
+.btn-viber:hover { background: #554b96; }
+@media (min-width: 600px) { .chat-buttons { display: flex; flex-wrap: wrap; } .btn-chat { min-width: 170px; } }
+
+/* Γραμμή γρήγορης επικοινωνίας (μόνο σε κινητά/tablet) */
+.action-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -8px 24px -12px rgba(11, 42, 63, .3);
+  padding-bottom: env(safe-area-inset-bottom);
 }
-.call-fab svg { width: 20px; height: 20px; }
-@media (min-width: 900px) { .call-fab { display: none; } }
+.action-bar a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  min-height: 60px; padding: 8px 4px; text-decoration: none; font-weight: 700; font-size: .8rem;
+}
+.action-bar a + a { border-left: 1px solid var(--line); }
+.action-bar svg { width: 24px; height: 24px; }
+.action-call { color: var(--aqua-dark); }
+.action-viber { color: var(--viber); }
+.action-whatsapp { color: var(--whatsapp); }
+.action-bar a:active { background: var(--bg-tint); }
+@media (min-width: 900px) { .action-bar { display: none; } }
 
 /* ---------- Reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
