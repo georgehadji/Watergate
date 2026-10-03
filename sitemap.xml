@@ -3,6 +3,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.example.gr/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/nero-vrysis-thessaloniki.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/nero-peraia-michaniona-trilofos.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/sklero-nero-alata.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/xlorio-sto-nero.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/antistrofi-osmosi.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/nero-gia-kafe-espresso.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/emfialomeno-i-filtro.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/palies-solines-molyvdos.html</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.gr/odigos/pos-dialego-filtro-nerou.html</loc>
+    <lastmod>2026-10-03</lastmod>
   </url>
 </urlset>

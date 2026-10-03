@@ -7,11 +7,12 @@ A static, single-page site (HTML + CSS + vanilla JS, no build step) that present
 | File | Purpose |
 |---|---|
 | `index.html` | The landing page: hero, solutions by need, products (filterable by type of space), what the filters remove, comparison table, savings calculator, how it works, FAQ, about, contact form |
+| `odigos/` | **Οδηγός νερού**: hub (`odigos/index.html`) and 9 articles with sources. See "Water guide" below |
 | `privacy.html` | GDPR privacy-policy **template** (have it reviewed before launch) |
 | `404.html` | Error page |
 | `css/styles.css` | Mobile-first styles (`min-width` breakpoints at 600 / 900 / 1100 px) |
 | `js/main.js` | Mobile menu, product filter, calculator, contact form |
-| `assets/` | Self-hosted fonts, favicon/app icons, `og-image.jpg` (1200×630, ~45 KB) |
+| `assets/` | Self-hosted fonts, favicon/app icons, `og-image.jpg` (1200×630, ~45 KB), `og/*.jpg` (one OG image per guide page) |
 | `robots.txt`, `sitemap.xml`, `llms.txt` | SEO / GEO |
 | `_headers` | Security & cache headers for **Netlify / Cloudflare Pages** |
 | `.htaccess` | Security, HTTPS redirect, compression & cache for **Apache / cPanel** hosting |
@@ -20,6 +21,8 @@ A static, single-page site (HTML + CSS + vanilla JS, no build step) that present
 To preview locally: `python3 -m http.server 8000`, then open http://localhost:8000.
 
 ## Before going live (required)
+
+Also see **"Before publishing the guide"** under *Water guide* below.
 
 Every placeholder is marked with `TODO`, `[...]`, `XXX`, `example.gr` or `example.com`:
 
@@ -44,6 +47,65 @@ grep -rn "TODO\|example\.gr\|example\.com\|XXX\|\[Επωνυμία\|\[Περιο
 7. **Product information**: model names, features, the list of what the filters remove, and the replacement interval (6 months / 3,600–5,000 litres) came from public listings. **Verify them against the official Waterwal catalogue.** If Waterwal makes dedicated HoReCa / espresso-machine models, add them to the "Καφέ" (coffee shops) section.
 8. **Product photos**: the products currently use illustrations. If you get photos from Waterwal (with permission to use them), see "Photos" below.
 9. **Privacy policy**: fill in the template and have a lawyer or accountant review it.
+
+## Water guide (`/odigos/`)
+
+A hub page and 9 articles written to answer the questions people search for, and to turn readers into enquiries:
+
+| Article | Search intent |
+|---|---|
+| `nero-vrysis-thessaloniki.html` | Is Thessaloniki tap water drinkable, where it comes from, ΕΥΑΘ analyses |
+| `nero-peraia-michaniona-trilofos.html` | Local: Περαία, Νέοι Επιβάτες, Αγία Τριάδα, Νέα Μηχανιώνα, Πλαγιάρι, Τρίλοφος |
+| `sklero-nero-alata.html` | Hard water and limescale |
+| `xlorio-sto-nero.html` | Chlorine taste and smell |
+| `palies-solines-molyvdos.html` | Old pipes, rust, lead |
+| `pos-dialego-filtro-nerou.html` | How to choose a filter, NSF/ANSI certifications, cartridge changes |
+| `antistrofi-osmosi.html` | Reverse osmosis: pros, cons, waste water |
+| `emfialomeno-i-filtro.html` | Bottled water vs filter: cost, plastic, microplastics |
+| `nero-gia-kafe-espresso.html` | Coffee shops: water for espresso machines (B2B) |
+
+Every article has:
+
+- **A short answer** at the top. Search engines and AI tools like answers they can quote.
+- **A table of contents**, **numbered citations** and a **sources list**.
+- **Two calls to action**: one mid-article and one at the end. Each has a WhatsApp message pre-filled with the article topic, so you can tell which article brought the enquiry.
+- **An FAQ**.
+- **Related articles**.
+- **JSON-LD**: `BlogPosting` + `BreadcrumbList` + `FAQPage`.
+- **Its own OG image**.
+
+The home page links to the guide from the menu, the footer and the "Οδηγός νερού" section.
+
+### Before publishing the guide (required)
+
+The research ran in an environment that **could not open the source pages**: the network blocked them. Facts were cross-checked from search-engine summaries and well-known primary documents (WHO, EU Directive 2020/2184, US EPA, NSF). **Open every link in each article's sources list and confirm the numbers.** Check these first:
+
+1. **ΕΥΑΘ values** (`nero-vrysis-thessaloniki.html`): nitrates, conductivity and residual chlorine ranges, and the source shares (Αλιάκμονας ~60–65%, Αραβησσός ~30%). Check them against [quality.eyath.gr](https://quality.eyath.gr/). If you can, add the **hardness** of the main areas; we did not publish a hardness figure because we found no official one.
+2. **Θερμαϊκός / Θέρμη** (`nero-peraia-michaniona-trilofos.html`):
+   - the ΔΕΥΑ Θερμαϊκού announcement on arsenic at the Γηπέδου reservoir (2025);
+   - the treatment works announced;
+   - the Άνω Αγία Τριάδα chlorides (326 mg/L, 2022);
+   - the ΔΕΥΑ Θέρμης nitrate statement (2021);
+   - the 43 boreholes / 4 closed (June 2026).
+
+   **This is the most sensitive article**: re-read it and keep it current, because it names local areas.
+3. **Ν. 5325/2026** (transfer of the ΔΕΥΑ to ΕΥΑΘ): check the ΦΕΚ and the timeline.
+4. **Bottled water**: Greek consumption (~158 L per person per year, Euronews/NMWE 2024) and supermarket prices (0.20–0.25 €/L). Prices change, so check them before publishing.
+5. **SCA / La Marzocco** (coffee article): the values come from the SCA 2013 standard. Confirm the warranty wording on the manufacturer's site.
+6. **Waterwal products**: the articles don't claim any certification (NSF etc.) for Waterwal products, because we found none. If Waterwal has certificates, add them; they are strong selling points.
+
+Articles are marked with a publication date. When you change content, update `dateModified` in the JSON-LD, the visible date and `sitemap.xml`.
+
+### Adding an article
+
+1. Copy an existing article in `odigos/` and change:
+   - the text;
+   - `<title>`, the description, canonical, `og:*` and `article:*` tags;
+   - the JSON-LD;
+   - the breadcrumb.
+2. Make an OG image (1200×630 JPEG, under 100 KB) in `assets/og/`.
+3. Add a card in `odigos/index.html` (and in its `ItemList` JSON-LD), plus a link in `sitemap.xml` and `llms.txt`.
+4. Don't make health claims without a source. Prefer WHO, the EU, the Ministry of Health or the water provider.
 
 ## SEO
 

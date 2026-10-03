@@ -157,9 +157,16 @@ address { font-style: normal; }
     position: static; display: flex; flex-direction: row; align-items: center; gap: 26px;
     background: none; border: 0; box-shadow: none; padding: 0;
   }
-  .site-nav a:not(.btn) { padding: 0; border: 0; font-size: .95rem; }
+  .site-nav { gap: 16px; }
+  .site-nav a { white-space: nowrap; }
+  .site-nav a:not(.btn) { padding: 0; border: 0; font-size: .9rem; }
   .site-nav a:not(.btn):hover { color: var(--aqua-dark); }
+  .site-nav a[aria-current="page"] { color: var(--aqua-dark); }
   .site-nav .btn { margin-top: 0; }
+}
+@media (min-width: 1100px) {
+  .site-nav { gap: 26px; }
+  .site-nav a:not(.btn) { font-size: .95rem; }
 }
 
 /* ---------- Hero ---------- */
@@ -528,3 +535,98 @@ textarea { resize: vertical; min-height: 110px; }
 .prose h2 { font-size: 1.3rem; margin-top: 2em; }
 .prose p, .prose li { color: var(--ink); }
 @media (min-width: 900px) { .prose { padding-top: 56px; padding-bottom: 88px; } }
+
+/* ============================================================
+   Οδηγός νερού (άρθρα): /odigos/
+   ============================================================ */
+.breadcrumb { font-size: .85rem; color: var(--muted); margin: 0 0 16px; }
+.breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 2px 0; }
+.breadcrumb li + li::before { content: "›"; margin: 0 8px; color: var(--line); }
+.breadcrumb a { color: var(--muted); text-decoration: none; display: inline-block; padding: 6px 0; }
+.breadcrumb a:hover { color: var(--aqua-dark); text-decoration: underline; }
+
+/* Hub */
+.guide-hero { padding: 28px 0 40px; background: linear-gradient(180deg, #fff 0%, var(--bg-tint) 100%); }
+.guide-hero h1 { font-size: clamp(2rem, 7vw, 3.2rem); }
+.guide-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.guide-card {
+  position: relative; display: flex; flex-direction: column;
+  padding: 22px 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.guide-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+.guide-card h2, .guide-card h3 { font-size: 1.15rem; margin: 6px 0 8px; }
+.guide-card h2 a, .guide-card h3 a { color: var(--navy); text-decoration: none; }
+.guide-card h2 a::after, .guide-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; } /* όλη η κάρτα clickable */
+.guide-card p { color: var(--muted); font-size: .95rem; margin: 0 0 14px; }
+.guide-card .meta { margin-top: auto; margin-bottom: 0; font-size: .82rem; font-weight: 600; color: var(--aqua-dark); }
+.guide-tag { font: 700 .72rem/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--mint); }
+@media (min-width: 600px) { .guide-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; } .guide-card { padding: 26px 24px; } }
+@media (min-width: 1100px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Άρθρο */
+.article { padding: 24px 0 56px; }
+.article-head { margin-bottom: 24px; }
+.article-head h1 { font-size: clamp(1.85rem, 6.5vw, 2.9rem); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); font-size: .88rem; margin: 0; }
+.article-body { font-size: 1.05rem; }
+.article-body h2 { font-size: clamp(1.35rem, 4.5vw, 1.8rem); margin-top: 1.8em; }
+.article-body h3 { margin-top: 1.4em; }
+.article-body ul, .article-body ol { padding-left: 1.3em; margin: 0 0 1.2em; }
+.article-body li { margin-bottom: .45em; }
+.article-body li::marker { color: var(--aqua-dark); }
+.article-body strong { color: var(--navy); }
+.article-body sup a { text-decoration: none; font-weight: 700; font-size: .78em; padding: 0 2px; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: .93rem; min-width: 520px; }
+.article-body .table-wrap { margin: 0 0 1.4em; }
+.article-body th, .article-body td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.article-body thead th { background: var(--navy); color: #fff; font-family: var(--font-head); }
+.article-body tbody tr:last-child > * { border-bottom: 0; }
+.article-body caption { caption-side: bottom; text-align: left; padding: 10px 14px; font-size: .82rem; color: var(--muted); }
+
+/* "Η σύντομη απάντηση": η πρώτη, αυτοτελής απάντηση (χρήσιμη και για AI αναζήτηση) */
+.tldr { background: var(--aqua-soft); border: 1px solid #c4e9f4; border-radius: var(--radius); padding: 20px; margin: 0 0 28px; }
+.tldr h2 { font-size: 1rem; margin: 0 0 8px; text-transform: uppercase; letter-spacing: .08em; color: var(--aqua-dark); }
+.tldr p:last-child, .tldr ul:last-child { margin-bottom: 0; }
+
+.note { border-left: 4px solid var(--mint); background: #eef8f5; padding: 14px 16px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 0 0 1.4em; font-size: .97rem; }
+.note-warn { border-left-color: #b7791f; background: #fdf6e7; }
+.note p:last-child { margin-bottom: 0; }
+
+.toc { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; margin: 0 0 28px; background: #fff; }
+.toc h2 { font-size: .95rem !important; margin: 0 0 6px !important; }
+.toc ol { margin: 0; padding-left: 1.2em; font-size: .95rem; }
+.toc li { padding: 5px 0; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+/* Κουτί μετατροπής (CTA) μέσα στο άρθρο */
+.cta-box {
+  margin: 32px 0; padding: 24px 20px; border-radius: 22px; color: #c7dde7;
+  background: radial-gradient(600px 300px at 100% 0%, rgba(26, 163, 200, .3), transparent 60%), var(--navy);
+}
+.cta-box h2, .cta-box .cta-title { color: #fff; font: 800 1.3rem/1.25 var(--font-head); margin: 0 0 8px; }
+.cta-box p { margin: 0 0 16px; }
+.cta-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.cta-actions .chat-buttons { gap: 10px; }
+@media (min-width: 600px) {
+  .cta-box { padding: 30px 32px; }
+  .cta-actions { display: flex; flex-wrap: wrap; align-items: center; }
+  .cta-actions .chat-buttons { display: flex; }
+}
+
+.sources { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .88rem; color: var(--muted); }
+.sources h2 { font-size: 1.05rem !important; margin-top: 0 !important; }
+.sources ol { padding-left: 1.4em; }
+.sources li { margin-bottom: .5em; overflow-wrap: anywhere; }
+.sources li:target { background: #fff6d6; border-radius: 6px; }
+.disclaimer { font-size: .85rem; color: var(--muted); font-style: italic; }
+
+.article-faq { margin-top: 8px; }
+.related { padding: 48px 0; }
+.related h2 { font-size: 1.4rem; }
+@media (min-width: 900px) {
+  .article { padding: 40px 0 72px; }
+  .article-body { font-size: 1.08rem; }
+  .tldr { padding: 24px 28px; }
+}
