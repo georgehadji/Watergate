@@ -17,11 +17,18 @@
     });
   }
 
-  // ---------- Header shadow on scroll ----------
+  // ---------- Header shadow once the page has scrolled ----------
+  // A sentinel at the top of the page replaces a scroll listener: no work per scroll frame.
   var header = document.querySelector(".site-header");
-  function onScroll() { header.classList.toggle("is-scrolled", window.scrollY > 8); }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  requestAnimationFrame(onScroll);
+  if (header && "IntersectionObserver" in window) {
+    var sentinel = document.createElement("div");
+    sentinel.className = "scroll-sentinel";
+    sentinel.setAttribute("aria-hidden", "true");
+    document.body.prepend(sentinel);
+    new IntersectionObserver(function (entries) {
+      header.classList.toggle("is-scrolled", !entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
 
   // ---------- Product filter (by type of space) ----------
   var tabs = document.querySelectorAll(".filter-tabs .tab");
@@ -51,7 +58,7 @@
     });
   });
 
-  // ---------- "Ζητήστε πληροφορίες" preselects the product in the form ----------
+  // ---------- Product "Ζητήστε δωρεάν συμβουλή" buttons preselect the product in the form ----------
   var select = document.getElementById("product-select");
   document.querySelectorAll("[data-product]").forEach(function (btn) {
     btn.addEventListener("click", function () {
