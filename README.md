@@ -1,4 +1,4 @@
-# Watergate: Waterwal water filter landing page (Greek)
+# Waterwal – Φίλτρα νερού: landing page (Greek)
 
 A static, single-page site (HTML + CSS + vanilla JS, no build step) that presents **Waterwal** water-filtration solutions organized by need: homes, coffee shops, restaurants/hotels and offices. It is **not an e-shop**. Every call to action leads to a request for free advice or a quote.
 
@@ -29,7 +29,7 @@ grep -rn "TODO\|example\.gr\|example\.com\|XXX\|\[Επωνυμία\|\[Περιο
 
 1. **Domain**: replace `https://www.example.gr/` everywhere: canonical, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `llms.txt`. If the domain has no `www`, also change the redirect in `.htaccess`.
 2. **Business details**: legal name, VAT number (ΑΦΜ), GEMI number, address, email. (The phone number is set: the mobile 694 783 0756 is the main number; there is no landline.) They appear in the contact section, footer, JSON-LD, `llms.txt` and `privacy.html`. Use **exactly the same** details everywhere and in your Google Business Profile; consistent NAP (name, address, phone) matters for local SEO.
-3. **Business name / logo**: "Watergate" is a working name taken from the repo name. Replace it if you are using a different one.
+3. **Logo**: the site is named **Waterwal – Φίλτρα νερού**. The header and footer use a water-drop icon with the name as text. Replace them with the real logo when you have one.
 4. **Viber / WhatsApp**: the mobile number (694 783 0756, written `306947830756` in the links) is already set in the contact section and the mobile action bar. To change it, replace it everywhere in `index.html` and `llms.txt`.
    - The WhatsApp link (`https://wa.me/30…`) needs the country code with no `+`, spaces or leading zeros. It opens a chat with a pre-filled Greek message; edit the `text=` part to change it.
    - The Viber link (`viber://chat?number=%2B30…`) opens a chat only if the visitor has Viber installed, on a phone or Viber Desktop. Without Viber, the link does nothing. The number must have an active Viber account.
