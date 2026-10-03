@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Ασφάλεια: Content Security Policy. Η ίδια πολιτική (μαζί με frame-ancestors) στέλνεται και ως HTTP header από τα _headers / .htaccess -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- TODO: αντικαταστήστε παντού το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
+  <title>Φίλτρα Νερού Waterwal για Σπίτι, Καφέ &amp; Επαγγελματίες | Watergate</title>
+  <meta name="description" content="Λύσεις φιλτραρίσματος νερού Waterwal για σπίτια, καφέ, εστίαση, ξενοδοχεία και γραφεία: φίλτρα κάτω πάγκου, αντίστροφη όσμωση, κεντρικής παροχής και ανταλλακτικά. Δωρεάν συμβουλή και τοποθέτηση.">
+  <link rel="canonical" href="https://www.example.gr/">
+  <link rel="alternate" hreflang="el-GR" href="https://www.example.gr/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.gr/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#0b2a3f">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph / κοινοποίηση σε Facebook, Viber, WhatsApp, LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Watergate – Φίλτρα νερού Waterwal">
+  <meta property="og:url" content="https://www.example.gr/">
+  <meta property="og:title" content="Φίλτρα Νερού Waterwal για Σπίτι, Καφέ &amp; Επαγγελματίες">
+  <meta property="og:description" content="Καθαρό, νόστιμο νερό από τη βρύση. Βρείτε τη λύση Waterwal που ταιριάζει στον χώρο σας και ζητήστε δωρεάν συμβουλή.">
+  <meta property="og:image" content="https://www.example.gr/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ποτήρι με καθαρό νερό και η φράση: Φίλτρα νερού Waterwal για σπίτι, καφέ και επαγγελματίες">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Φίλτρα Νερού Waterwal για Σπίτι, Καφέ &amp; Επαγγελματίες">
+  <meta name="twitter:description" content="Καθαρό, νόστιμο νερό από τη βρύση. Ζητήστε δωρεάν συμβουλή.">
+  <meta name="twitter:image" content="https://www.example.gr/assets/og-image.jpg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/manrope-greek.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/commissioner-greek.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+
+  <!-- Δομημένα δεδομένα (Schema.org) για Google & μηχανές τεχνητής νοημοσύνης. TODO: συμπληρώστε τα στοιχεία σε [αγκύλες] -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.example.gr/#business",
+        "name": "Watergate – Φίλτρα νερού Waterwal",
+        "description": "Συμβουλευτική, διάθεση και τοποθέτηση συστημάτων φιλτραρίσματος νερού Waterwal για σπίτια, καφέ, εστίαση, ξενοδοχεία και γραφεία.",
+        "url": "https://www.example.gr/",
+        "logo": "https://www.example.gr/assets/apple-touch-icon.png",
+        "image": "https://www.example.gr/assets/og-image.jpg",
+        "telephone": "+30-210-000-0000",
+        "email": "info@example.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "[Οδός και αριθμός]",
+          "addressLocality": "[Πόλη]",
+          "postalCode": "[ΤΚ]",
+          "addressCountry": "GR"
+        },
+        "areaServed": [{ "@type": "Country", "name": "Ελλάδα" }],
+        "knowsLanguage": "el",
+        "knowsAbout": ["Φίλτρα νερού", "Αντίστροφη όσμωση", "Φίλτρα κάτω πάγκου", "Φίλτρα κεντρικής παροχής", "Φιλτράρισμα νερού για μηχανές espresso"],
+        "brand": { "@type": "Brand", "name": "Waterwal" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Λύσεις φιλτραρίσματος νερού Waterwal",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Φίλτρο νερού βρύσης Waterwal", "brand": { "@type": "Brand", "name": "Waterwal" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Φίλτρο νερού κάτω πάγκου 2 σταδίων με βρυσάκι Waterwal", "brand": { "@type": "Brand", "name": "Waterwal" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Τριπλό φίλτρο νερού άνω πάγκου ανοξείδωτο Waterwal", "brand": { "@type": "Brand", "name": "Waterwal" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Σύστημα αντίστροφης όσμωσης Waterwal", "brand": { "@type": "Brand", "name": "Waterwal" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Φίλτρο νερού κεντρικής παροχής Waterwal", "brand": { "@type": "Brand", "name": "Waterwal" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Φίλτρο ντους Waterwal", "brand": { "@type": "Brand", "name": "Waterwal" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ανταλλακτικά φίλτρα νερού Waterwal", "brand": { "@type": "Brand", "name": "Waterwal" } } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.example.gr/#website",
+        "url": "https://www.example.gr/",
+        "name": "Watergate – Φίλτρα νερού Waterwal",
+        "inLanguage": "el-GR",
+        "publisher": { "@id": "https://www.example.gr/#business" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.example.gr/#webpage",
+        "url": "https://www.example.gr/",
+        "name": "Φίλτρα Νερού Waterwal για Σπίτι, Καφέ & Επαγγελματίες",
+        "inLanguage": "el-GR",
+        "isPartOf": { "@id": "https://www.example.gr/#website" },
+        "about": { "@id": "https://www.example.gr/#business" },
+        "primaryImageOfPage": "https://www.example.gr/assets/og-image.jpg",
+        "dateModified": "2026-10-02"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.example.gr/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "Το νερό της βρύσης δεν είναι ήδη πόσιμο;", "acceptedAnswer": { "@type": "Answer", "text": "Στις περισσότερες περιοχές το νερό του δικτύου πληροί τα όρια ποιότητας για πόσιμο νερό. Μέχρι να φτάσει όμως στη βρύση σας, μπορεί να μαζέψει σκουριά ή ιζήματα από παλιές σωληνώσεις και δεξαμενές. Επίσης, το χλώριο που χρησιμοποιείται για την απολύμανση επηρεάζει τη γεύση. Το φίλτρο βελτιώνει το νερό στο σημείο που το πίνετε." } },
+          { "@type": "Question", "name": "Κάθε πότε αλλάζω τα ανταλλακτικά;", "acceptedAnswer": { "@type": "Answer", "text": "Συνήθως κάθε 6 μήνες περίπου. Εξαρτάται όμως από την ποιότητα του νερού και από το πόσο νερό καταναλώνετε. Για τα ανταλλακτικά 10 ιντσών αυτό αντιστοιχεί περίπου σε 3.600–5.000 λίτρα." } },
+          { "@type": "Question", "name": "Το φίλτρο αφαιρεί τα άλατα (το «πουρί»);", "acceptedAnswer": { "@type": "Answer", "text": "Τα φίλτρα ιζημάτων και ενεργού άνθρακα δεν αφαιρούν τα διαλυμένα άλατα. Για αυτά χρειάζεται σύστημα αντίστροφης όσμωσης." } },
+          { "@type": "Question", "name": "Τι νερό χρειάζεται μια μηχανή espresso;", "acceptedAnswer": { "@type": "Answer", "text": "Νερό χωρίς χλώριο και ιζήματα, με ελεγχόμενη σκληρότητα. Τα πολλά άλατα δημιουργούν πουρί στον βραστήρα και στις αντιστάσεις. Το εντελώς απιονισμένο νερό όμως δεν είναι ιδανικό ούτε για τη γεύση ούτε για τη μηχανή. Η σωστή λύση εξαρτάται από την ανάλυση του νερού της περιοχής σας." } },
+          { "@type": "Question", "name": "Χρειάζομαι υδραυλικό για την τοποθέτηση;", "acceptedAnswer": { "@type": "Answer", "text": "Το φίλτρο βρύσης το τοποθετείτε μόνοι σας. Τα συστήματα κάτω πάγκου, αντίστροφης όσμωσης και κεντρικής παροχής καλό είναι να τα τοποθετεί τεχνικός." } },
+          { "@type": "Question", "name": "Η αντίστροφη όσμωση σπαταλά νερό;", "acceptedAnswer": { "@type": "Answer", "text": "Ναι, ένα μέρος του νερού απορρίπτεται στην αποχέτευση μαζί με τα άλατα που συγκρατεί η μεμβράνη. Η αναλογία διαφέρει από σύστημα σε σύστημα." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Εικονογραφήσεις (SVG sprite). TODO: για τα προϊόντα, αντικαταστήστε με πραγματικές φωτογραφίες Waterwal όταν τις έχετε (βλ. README) -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fd6ec"/><stop offset="1" stop-color="#1aa3c8"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-faucet" viewBox="0 0 120 120">
+    <path d="M20 40h46a14 14 0 0 1 14 14v6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <rect x="12" y="30" width="14" height="22" rx="4" fill="currentColor"/>
+    <rect x="66" y="58" width="28" height="30" rx="8" fill="#fff" stroke="currentColor" stroke-width="5"/>
+    <rect x="72" y="66" width="16" height="6" rx="3" fill="url(#g-water)"/>
+    <path d="M80 94c0 0-5 7-5 11a5 5 0 0 0 10 0c0-4-5-11-5-11z" fill="url(#g-water)"/>
+  </symbol>
+  <symbol id="ic-undersink" viewBox="0 0 120 120">
+    <path d="M10 22h100" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    <path d="M60 22V10m0 0h10" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M38 22v18M82 22v18" stroke="currentColor" stroke-width="4"/>
+    <rect x="24" y="40" width="28" height="12" rx="3" fill="currentColor"/>
+    <rect x="68" y="40" width="28" height="12" rx="3" fill="currentColor"/>
+    <rect x="27" y="52" width="22" height="56" rx="8" fill="#fff" stroke="currentColor" stroke-width="5"/>
+    <rect x="71" y="52" width="22" height="56" rx="8" fill="#fff" stroke="currentColor" stroke-width="5"/>
+    <rect x="33" y="62" width="10" height="38" rx="4" fill="url(#g-water)"/>
+    <rect x="77" y="62" width="10" height="38" rx="4" fill="url(#g-water)"/>
+    <path d="M52 46h16" stroke="currentColor" stroke-width="4"/>
+  </symbol>
+  <symbol id="ic-countertop" viewBox="0 0 120 120">
+    <rect x="8" y="22" width="104" height="10" rx="3" fill="currentColor"/>
+    <g fill="#fff" stroke="currentColor" stroke-width="5">
+      <rect x="14" y="40" width="24" height="64" rx="9"/><rect x="48" y="40" width="24" height="64" rx="9"/><rect x="82" y="40" width="24" height="64" rx="9"/>
+    </g>
+    <g fill="url(#g-water)">
+      <rect x="21" y="50" width="10" height="46" rx="4"/><rect x="55" y="50" width="10" height="46" rx="4"/><rect x="89" y="50" width="10" height="46" rx="4"/>
+    </g>
+    <path d="M26 32v8M60 32v8M94 32v8" stroke="currentColor" stroke-width="5"/>
+    <path d="M8 112h104" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-ro" viewBox="0 0 120 120">
+    <g fill="#fff" stroke="currentColor" stroke-width="4.5">
+      <rect x="8" y="30" width="18" height="50" rx="7"/><rect x="30" y="30" width="18" height="50" rx="7"/><rect x="52" y="30" width="18" height="50" rx="7"/>
+      <rect x="10" y="88" width="58" height="16" rx="8"/><rect x="78" y="40" width="34" height="64" rx="16"/>
+    </g>
+    <g fill="url(#g-water)">
+      <rect x="13" y="38" width="8" height="34" rx="3"/><rect x="35" y="38" width="8" height="34" rx="3"/><rect x="57" y="38" width="8" height="34" rx="3"/>
+      <rect x="18" y="93" width="42" height="6" rx="3"/><rect x="85" y="64" width="20" height="32" rx="8"/>
+    </g>
+    <path d="M8 22h62" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    <path d="M95 40V20h-8" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-central" viewBox="0 0 120 120">
+    <path d="M6 30h108" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+    <rect x="38" y="20" width="44" height="20" rx="4" fill="currentColor"/>
+    <rect x="42" y="40" width="36" height="72" rx="12" fill="#fff" stroke="currentColor" stroke-width="5"/>
+    <rect x="51" y="50" width="18" height="54" rx="6" fill="url(#g-water)"/>
+    <path d="M96 30v14" stroke="currentColor" stroke-width="4"/>
+    <circle cx="96" cy="56" r="12" fill="#fff" stroke="currentColor" stroke-width="4"/>
+    <path d="M96 56l5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-shower" viewBox="0 0 120 120">
+    <path d="M24 108V40a20 20 0 0 1 20-20h22a12 12 0 0 1 12 12v6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <rect x="66" y="38" width="24" height="18" rx="5" fill="#fff" stroke="currentColor" stroke-width="5"/>
+    <rect x="71" y="43" width="14" height="8" rx="3" fill="url(#g-water)"/>
+    <path d="M58 56h40l-6 14H64z" fill="currentColor"/>
+    <g stroke="url(#g-water)" stroke-width="4" stroke-linecap="round"><path d="M66 78l-4 12M78 78v14M90 78l4 12M72 96l-2 8M86 96l2 8"/></g>
+  </symbol>
+  <symbol id="ic-cartridge" viewBox="0 0 120 120">
+    <rect x="40" y="10" width="40" height="100" rx="10" fill="#fff" stroke="currentColor" stroke-width="5"/>
+    <rect x="40" y="10" width="40" height="14" rx="6" fill="currentColor"/>
+    <rect x="40" y="96" width="40" height="14" rx="6" fill="currentColor"/>
+    <g stroke="url(#g-water)" stroke-width="4"><path d="M48 34h24M48 44h24M48 54h24M48 64h24M48 74h24M48 84h24"/></g>
+    <path d="M92 40a14 14 0 0 1 0 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    <path d="M92 80l-6-1m6 1l1-6" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <!-- Εικονίδια λύσεων -->
+  <symbol id="ic-home" viewBox="0 0 48 48">
+    <path d="M6 22L24 7l18 15" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11 19v22h26V19" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M24 23s-6 7-6 10.5a6 6 0 0 0 12 0C30 30 24 23 24 23z" fill="url(#g-water)"/>
+  </symbol>
+  <symbol id="ic-coffee" viewBox="0 0 48 48">
+    <path d="M8 18h26v10a11 11 0 0 1-11 11h-4A11 11 0 0 1 8 28z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M34 21h3a5 5 0 0 1 0 10h-4" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <path d="M6 43h32" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M16 6c-2 3 2 5 0 8M24 6c-2 3 2 5 0 8" fill="none" stroke="url(#g-water)" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-hotel" viewBox="0 0 48 48">
+    <path d="M10 6v14a5 5 0 0 0 10 0V6M15 6v36" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M34 42V6c-5 2-7 9-7 16h7" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="40" cy="12" r="3" fill="url(#g-water)"/>
+  </symbol>
+  <symbol id="ic-office" viewBox="0 0 48 48">
+    <rect x="8" y="6" width="22" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <path d="M30 18h10v24H30M14 13h4M20 13h4M14 20h4M20 20h4M14 27h4M20 27h4M17 42v-7h4v7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M35 24s-3 3.5-3 5.5a3 3 0 0 0 6 0c0-2-3-5.5-3-5.5z" fill="url(#g-water)"/>
+  </symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24">
+    <path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-drop" viewBox="0 0 24 24">
+    <path d="M12 2.5S5 10.2 5 14.6a7 7 0 0 0 14 0C19 10.2 12 2.5 12 2.5z" fill="currentColor"/>
+  </symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24">
+    <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="logo" href="#top">
+      <svg class="logo-mark" aria-hidden="true"><use href="#ic-drop"/></svg>
+      <!-- TODO: αντικαταστήστε με την επωνυμία / λογότυπο της επιχείρησής σας -->
+      <span class="logo-text">Watergate<small>Φίλτρα νερού Waterwal</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Μενού</span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Κύρια πλοήγηση">
+      <a href="#solutions">Λύσεις</a>
+      <a href="#products">Προϊόντα</a>
+      <a href="#how">Πώς δουλεύουμε</a>
+      <a href="#faq">Ερωτήσεις</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Δωρεάν συμβουλή</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Φίλτρα νερού Waterwal</p>
+        <h1 id="hero-title">Καθαρό, νόστιμο νερό <span class="accent">για κάθε χώρο και κάθε ανάγκη.</span></h1>
+        <p class="lead">Προτείνουμε και τοποθετούμε συστήματα φιλτραρίσματος νερού Waterwal για σπίτια, καφέ, εστιατόρια, ξενοδοχεία και γραφεία. Μας λέτε τι χρειάζεστε και σας δείχνουμε τη λύση που σας ταιριάζει.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">Ζητήστε δωρεάν συμβουλή</a>
+          <a class="btn btn-ghost" href="#solutions">Βρείτε τη λύση σας</a>
+        </div>
+        <ul class="hero-points">
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Για σπίτι, καφέ, εστίαση &amp; γραφεία</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Από φίλτρο βρύσης έως αντίστροφη όσμωση</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Τοποθέτηση &amp; υπενθύμιση αλλαγής φίλτρων</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="glass" viewBox="0 0 200 280">
+          <defs>
+            <clipPath id="glass-clip"><path d="M14 12h172l-18 252a8 8 0 0 1-8 7H40a8 8 0 0 1-8-7z"/></clipPath>
+            <linearGradient id="g-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9e6f4"/><stop offset="1" stop-color="#1aa3c8"/></linearGradient>
+          </defs>
+          <path d="M14 12h172l-18 252a8 8 0 0 1-8 7H40a8 8 0 0 1-8-7z" fill="#ffffff" fill-opacity=".75"/>
+          <g clip-path="url(#glass-clip)">
+            <g class="wave"><path d="M-60 86q15-10 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0V290H-60z" fill="url(#g-glass)"/></g>
+            <circle class="bubble b1" cx="70" cy="262" r="5"/>
+            <circle class="bubble b2" cx="112" cy="262" r="3.5"/>
+            <circle class="bubble b3" cx="140" cy="262" r="6"/>
+            <path d="M44 34L58 246" stroke="#ffffff" stroke-opacity=".7" stroke-width="6" stroke-linecap="round" fill="none"/>
+          </g>
+          <path d="M14 12h172l-18 252a8 8 0 0 1-8 7H40a8 8 0 0 1-8-7z" fill="none" stroke="#0b2a3f" stroke-opacity=".18" stroke-width="5" stroke-linejoin="round"/>
+        </svg>
+        <div class="hero-card hc-1"><svg><use href="#ic-drop"/></svg><div><strong>Λιγότερο χλώριο</strong><span>καλύτερη γεύση &amp; οσμή</span></div></div>
+        <div class="hero-card hc-2"><svg><use href="#ic-check"/></svg><div><strong>Λιγότερα πλαστικά</strong><span>για εσάς και το περιβάλλον</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOLUTIONS BY NEED ========== -->
+  <section class="section" id="solutions" aria-labelledby="solutions-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Λύσεις ανά ανάγκη</p>
+        <h2 id="solutions-title">Ποιος χώρος σας ενδιαφέρει;</h2>
+        <p class="section-sub">Κάθε χώρος έχει διαφορετικές ανάγκες σε νερό. Διαλέξτε τη δική σας περίπτωση και δείτε τι προτείνουμε.</p>
+      </div>
+      <div class="solutions-grid">
+        <article class="solution" id="lysi-spiti">
+          <div class="solution-icon"><svg aria-hidden="true"><use href="#ic-home"/></svg></div>
+          <h3>Σπίτι &amp; οικογένεια</h3>
+          <p class="solution-need"><strong>Η ανάγκη:</strong> Νόστιμο πόσιμο νερό για όλη την οικογένεια, χωρίς να κουβαλάτε μπουκάλια, και προστασία των συσκευών του σπιτιού.</p>
+          <p class="solution-label">Προτείνουμε</p>
+          <ul class="solution-list">
+            <li>Φίλτρο κάτω πάγκου ή αντίστροφη όσμωση για το πόσιμο νερό</li>
+            <li>Φίλτρο κεντρικής παροχής για όλο το σπίτι</li>
+            <li>Φίλτρο ντους για λιγότερο χλώριο στο μπάνιο</li>
+          </ul>
+          <a class="solution-link" href="#products" data-show="home">Δείτε τα προϊόντα για το σπίτι →</a>
+        </article>
+
+        <article class="solution" id="lysi-kafe">
+          <div class="solution-icon"><svg aria-hidden="true"><use href="#ic-coffee"/></svg></div>
+          <h3>Καφέ &amp; καφετέριες</h3>
+          <p class="solution-need"><strong>Η ανάγκη:</strong> Ο καφές είναι κυρίως νερό. Χρειάζεστε σταθερή γεύση σε κάθε φλιτζάνι και προστασία της μηχανής espresso και της παγομηχανής από άλατα και ιζήματα.</p>
+          <p class="solution-label">Προτείνουμε</p>
+          <ul class="solution-list">
+            <li>Φίλτρο γραμμής πριν από τη μηχανή espresso</li>
+            <li>Προφίλτρο ιζημάτων για μηχανές και παγομηχανές</li>
+            <li>Πρόγραμμα τακτικής αλλαγής ανταλλακτικών</li>
+          </ul>
+          <!-- TODO: αν η Waterwal έχει ειδικά μοντέλα για μηχανές espresso / HoReCa, προσθέστε τα ονομαστικά εδώ και στα προϊόντα -->
+          <a class="solution-link" href="#products" data-show="cafe">Δείτε τα προϊόντα για καφέ →</a>
+        </article>
+
+        <article class="solution" id="lysi-estiasi">
+          <div class="solution-icon"><svg aria-hidden="true"><use href="#ic-hotel"/></svg></div>
+          <h3>Εστιατόρια &amp; ξενοδοχεία</h3>
+          <p class="solution-need"><strong>Η ανάγκη:</strong> Καθαρό νερό για την κουζίνα και τα παγάκια, φιλτραρισμένο νερό σε καράφα για τους πελάτες και λιγότερες βλάβες στον εξοπλισμό.</p>
+          <p class="solution-label">Προτείνουμε</p>
+          <ul class="solution-list">
+            <li>Αντίστροφη όσμωση για πόσιμο νερό σε καράφα</li>
+            <li>Φίλτρο κεντρικής παροχής για την κουζίνα και τις συσκευές</li>
+            <li>Μελέτη ανάλογα με την κατανάλωση του χώρου</li>
+          </ul>
+          <a class="solution-link" href="#products" data-show="horeca">Δείτε τα προϊόντα για εστίαση →</a>
+        </article>
+
+        <article class="solution" id="lysi-grafeio">
+          <div class="solution-icon"><svg aria-hidden="true"><use href="#ic-office"/></svg></div>
+          <h3>Γραφεία &amp; επαγγελματικοί χώροι</h3>
+          <p class="solution-need"><strong>Η ανάγκη:</strong> Πόσιμο νερό για προσωπικό και επισκέπτες, χωρίς παραγγελίες, αποθήκευση και επιστροφές μπουκαλιών.</p>
+          <p class="solution-label">Προτείνουμε</p>
+          <ul class="solution-list">
+            <li>Φίλτρο κάτω ή άνω πάγκου στην κουζίνα του γραφείου</li>
+            <li>Αντίστροφη όσμωση για μεγαλύτερη κατανάλωση</li>
+            <li>Συμβόλαιο αλλαγής φίλτρων, χωρίς έγνοιες</li>
+          </ul>
+          <a class="solution-link" href="#products" data-show="office">Δείτε τα προϊόντα για γραφεία →</a>
+        </article>
+      </div>
+      <p class="solution-other">Έχετε άλλο χώρο, όπως ιατρείο, γυμναστήριο, σχολείο, εξοχικό ή κατάστημα; <a href="#contact">Πείτε μας τι χρειάζεστε</a>.</p>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section class="section section-tint" id="products" aria-labelledby="products-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Η γκάμα Waterwal</p>
+        <h2 id="products-title">Τα φίλτρα νερού Waterwal</h2>
+        <p class="section-sub">Από ένα απλό φίλτρο βρύσης έως πλήρες σύστημα για όλο το κτίριο. Φιλτράρετε ανά χώρο ή <a href="#contact">ρωτήστε μας</a> για να σας προτείνουμε τη λύση που ταιριάζει στο νερό της περιοχής σας.</p>
+      </div>
+
+      <!-- TODO: επιβεβαιώστε ονόματα μοντέλων και χαρακτηριστικά με τον κατάλογο Waterwal πριν τη δημοσίευση -->
+      <div class="filter-tabs" role="group" aria-label="Φιλτράρισμα προϊόντων ανά χώρο">
+        <button class="tab is-active" type="button" aria-pressed="true" data-filter="all">Όλα</button>
+        <button class="tab" type="button" aria-pressed="false" data-filter="home">Σπίτι</button>
+        <button class="tab" type="button" aria-pressed="false" data-filter="cafe">Καφέ</button>
+        <button class="tab" type="button" aria-pressed="false" data-filter="horeca">Εστίαση &amp; ξενοδοχεία</button>
+        <button class="tab" type="button" aria-pressed="false" data-filter="office">Γραφεία</button>
+      </div>
+
+      <div class="products-grid">
+        <article class="product" data-cat="home">
+          <div class="product-art"><svg role="img" aria-label="Εικονογράφηση φίλτρου βρύσης"><use href="#ic-faucet"/></svg></div>
+          <div class="product-body">
+            <p class="product-tag">Σπίτι · Χωρίς υδραυλικό</p>
+            <h3>Φίλτρο βρύσης</h3>
+            <p>Μικρό φίλτρο που βιδώνει απευθείας στη βρύση. Ιδανικό για ενοικιαζόμενα σπίτια ή για όσους θέλουν μια γρήγορη και οικονομική λύση.</p>
+            <ul class="product-feats">
+              <li>Τοποθέτηση σε λίγα λεπτά</li>
+              <li>Μειώνει χλώριο, οσμές και σωματίδια</li>
+            </ul>
+            <a class="btn btn-outline btn-sm product-cta" href="#contact" data-product="Φίλτρο βρύσης">Ζητήστε πληροφορίες</a>
+          </div>
+        </article>
+
+        <article class="product product-featured" data-cat="home office">
+          <span class="badge">Δημοφιλές</span>
+          <div class="product-art"><svg role="img" aria-label="Εικονογράφηση φίλτρου κάτω πάγκου δύο σταδίων"><use href="#ic-undersink"/></svg></div>
+          <div class="product-body">
+            <p class="product-tag">Σπίτι · Γραφεία</p>
+            <h3>Φίλτρο κάτω πάγκου 2 σταδίων με βρυσάκι</h3>
+            <p>Τοποθετείται κάτω από τον νεροχύτη, μακριά από το βλέμμα. Το φιλτραρισμένο νερό βγαίνει από ξεχωριστό βρυσάκι πάνω στον πάγκο.</p>
+            <ul class="product-feats">
+              <li>Δύο στάδια: προφίλτρο ιζημάτων + ενεργός άνθρακας</li>
+              <li>Τυποποιημένα ανταλλακτικά 10 ιντσών</li>
+              <li>Ο πάγκος σας μένει ελεύθερος</li>
+            </ul>
+            <a class="btn btn-primary btn-sm product-cta" href="#contact" data-product="Φίλτρο κάτω πάγκου 2 σταδίων">Ζητήστε πληροφορίες</a>
+          </div>
+        </article>
+
+        <article class="product" data-cat="home office">
+          <div class="product-art"><svg role="img" aria-label="Εικονογράφηση τριπλού φίλτρου άνω πάγκου"><use href="#ic-countertop"/></svg></div>
+          <div class="product-body">
+            <p class="product-tag">Σπίτι · Γραφεία</p>
+            <h3>Τριπλό φίλτρο άνω πάγκου, ανοξείδωτο</h3>
+            <p>Τρία στάδια φίλτρανσης σε ανοξείδωτο σώμα, πάνω στον πάγκο. Δυνατό φιλτράρισμα, χωρίς να ανοίξετε τρύπες ή ντουλάπια.</p>
+            <ul class="product-feats">
+              <li>Τρία στάδια φίλτρανσης</li>
+              <li>Ανθεκτικό ανοξείδωτο περίβλημα</li>
+            </ul>
+            <a class="btn btn-outline btn-sm product-cta" href="#contact" data-product="Τριπλό φίλτρο άνω πάγκου">Ζητήστε πληροφορίες</a>
+          </div>
+        </article>
+
+        <article class="product" data-cat="home horeca office">
+          <div class="product-art"><svg role="img" aria-label="Εικονογράφηση συστήματος αντίστροφης όσμωσης"><use href="#ic-ro"/></svg></div>
+          <div class="product-body">
+            <p class="product-tag">Σπίτι · Εστίαση · Γραφεία</p>
+            <h3>Σύστημα αντίστροφης όσμωσης</h3>
+            <p>Πολυσταδιακό σύστημα με μεμβράνη και δοχείο αποθήκευσης. Η πιο ολοκληρωμένη λύση για πόσιμο νερό, ειδικά σε περιοχές με «σκληρό» νερό.</p>
+            <ul class="product-feats">
+              <li>Η μεμβράνη μειώνει τα διαλυμένα άλατα και τα νιτρικά</li>
+              <li>Ιδανικό για πόσιμο νερό σε καράφα</li>
+            </ul>
+            <a class="btn btn-outline btn-sm product-cta" href="#contact" data-product="Αντίστροφη όσμωση">Ζητήστε πληροφορίες</a>
+          </div>
+        </article>
+
+        <article class="product" data-cat="home cafe horeca">
+          <div class="product-art"><svg role="img" aria-label="Εικονογράφηση φίλτρου κεντρικής παροχής"><use href="#ic-central"/></svg></div>
+          <div class="product-body">
+            <p class="product-tag">Σπίτι · Καφέ · Εστίαση</p>
+            <h3>Φίλτρο κεντρικής παροχής / γραμμής</h3>
+            <p>Τοποθετείται στην είσοδο του νερού ή πριν από μια συσκευή. Προστατεύει βρύσες, θερμοσίφωνα, πλυντήρια, μηχανές espresso και παγομηχανές.</p>
+            <ul class="product-feats">
+              <li>Συγκρατεί άμμο, σκουριά και λάσπη</li>
+              <li>Συνδυασμοί φυσιγγίων ανάλογα με την ανάγκη</li>
+            </ul>
+            <a class="btn btn-outline btn-sm product-cta" href="#contact" data-product="Φίλτρο κεντρικής παροχής / γραμμής">Ζητήστε πληροφορίες</a>
+          </div>
+        </article>
+
+        <article class="product" data-cat="home horeca">
+          <div class="product-art"><svg role="img" aria-label="Εικονογράφηση φίλτρου ντους"><use href="#ic-shower"/></svg></div>
+          <div class="product-body">
+            <p class="product-tag">Σπίτι · Ξενοδοχεία</p>
+            <h3>Φίλτρο ντους / μπάνιου</h3>
+            <p>Για ένα ντους με λιγότερο χλώριο. Το νερό είναι πιο ήπιο για το δέρμα και τα μαλλιά σας. Αποτελεί και μια ποιοτική πινελιά στα δωμάτια ενός ξενοδοχείου.</p>
+            <ul class="product-feats">
+              <li>Μειώνει το χλώριο στο νερό του ντους</li>
+              <li>Απλή τοποθέτηση</li>
+            </ul>
+            <a class="btn btn-outline btn-sm product-cta" href="#contact" data-product="Φίλτρο ντους / μπάνιου">Ζητήστε πληροφορίες</a>
+          </div>
+        </article>
+
+        <article class="product product-wide" data-cat="home cafe horeca office">
+          <div class="product-art"><svg role="img" aria-label="Εικονογράφηση ανταλλακτικού φίλτρου"><use href="#ic-cartridge"/></svg></div>
+          <div class="product-body">
+            <p class="product-tag">Για όλους τους χώρους</p>
+            <h3>Ανταλλακτικά φίλτρα &amp; πρόγραμμα αλλαγής</h3>
+            <p>Φίλτρα ιζημάτων, ενεργού άνθρακα και μεμβράνες αντίστροφης όσμωσης. Ένα φίλτρο κάνει καλά τη δουλειά του μόνο αν αλλάζεται έγκαιρα. Γι' αυτό σας υπενθυμίζουμε εμείς πότε έρχεται η ώρα.</p>
+            <ul class="product-feats">
+              <li>Αλλαγή περίπου κάθε 6 μήνες<sup>*</sup></li>
+              <li>Υπενθύμιση &amp; αλλαγή από εμάς</li>
+            </ul>
+            <a class="btn btn-outline btn-sm product-cta" href="#contact" data-product="Ανταλλακτικά φίλτρα">Ζητήστε πληροφορίες</a>
+          </div>
+        </article>
+      </div>
+      <p class="footnote">* Το διάστημα αλλαγής εξαρτάται από την ποιότητα του νερού και την κατανάλωση. Για τα ανταλλακτικά 10 ιντσών αντιστοιχεί περίπου σε 3.600–5.000 λίτρα. Οι εικόνες είναι ενδεικτικές.</p><!-- TODO: επιβεβαιώστε με τις προδιαγραφές Waterwal -->
+    </div>
+  </section>
+
+  <!-- ========== WHAT IT REMOVES ========== -->
+  <section class="section" id="removes" aria-labelledby="removes-title">
+    <div class="container removes-grid">
+      <div>
+        <p class="eyebrow">Τι συγκρατούν</p>
+        <h2 id="removes-title">Τι μένει έξω από το ποτήρι σας</h2>
+        <p class="section-sub">Ανάλογα με το φίλτρο και το φυσίγγιο που θα επιλέξετε, τα φίλτρα Waterwal μειώνουν:</p>
+        <p class="footnote">Κάθε τύπος φίλτρου κατακρατεί διαφορετικές ουσίες. Ο ενεργός άνθρακας <strong>δεν</strong> αφαιρεί τα διαλυμένα άλατα (το «πουρί»). Γι' αυτό χρειάζεται αντίστροφη όσμωση.</p>
+      </div>
+      <!-- TODO: επιβεβαιώστε τη λίστα με τα τεχνικά φυλλάδια Waterwal -->
+      <ul class="chips">
+        <li>Χλώριο</li><li>Οσμές &amp; άσχημη γεύση</li><li>Σκουριά</li><li>Άμμο &amp; λάσπη</li>
+        <li>Μόλυβδο</li><li>Χαλκό</li><li>Ψευδάργυρο</li><li>Σίδηρο</li><li>Μαγγάνιο</li>
+        <li>Υπολείμματα φυτοφαρμάκων</li><li>Ίνες αμιάντου</li><li>Χρωστικές</li>
+        <li class="chip-ro">Διαλυμένα άλατα &amp; νιτρικά <em>(αντίστροφη όσμωση)</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== COMPARE ========== -->
+  <section class="section section-tint" id="compare" aria-labelledby="compare-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Σύγκριση</p>
+        <h2 id="compare-title">Ποιος τύπος φίλτρου είναι για εσάς;</h2>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Πίνακας σύγκρισης φίλτρων (σύρετε οριζόντια)">
+        <table class="compare">
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Χαρακτηριστικό</span></th><th scope="col">Βρύσης</th><th scope="col">Κάτω / άνω πάγκου</th><th scope="col">Αντίστροφη όσμωση</th><th scope="col">Κεντρικής παροχής</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Χλώριο, γεύση, οσμή</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="partial">Ανάλογα με το φίλτρο</td></tr>
+            <tr><th scope="row">Άμμος, σκουριά, λάσπη</th><td class="partial">Μερικώς</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Διαλυμένα άλατα, νιτρικά</th><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="no">–</td></tr>
+            <tr><th scope="row">Προστασία όλου του χώρου</th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Εγκατάσταση</th><td>Μόνοι σας</td><td>Απλή</td><td>Από τεχνικό</td><td>Από υδραυλικό</td></tr>
+            <tr><th scope="row">Ιδανικό για</th><td>Ενοικιαζόμενα, γρήγορη λύση</td><td>Οικογένειες, γραφεία</td><td>Σκληρό νερό, εστίαση</td><td>Μονοκατοικίες, καφέ, επιχειρήσεις</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SAVINGS CALCULATOR ========== -->
+  <section class="section" id="savings" aria-labelledby="savings-title">
+    <div class="container savings-grid">
+      <div>
+        <p class="eyebrow">Υπολογιστής εξοικονόμησης</p>
+        <h2 id="savings-title">Πόσα ξοδεύετε σε εμφιαλωμένο νερό;</h2>
+        <p class="section-sub">Για σπίτι ή γραφείο: βάλτε τα δικά σας νούμερα και συγκρίνετε το ετήσιο κόστος του εμφιαλωμένου νερού με τα ανταλλακτικά ενός φίλτρου.</p>
+        <form class="calc" id="calc" novalidate>
+          <label>Άτομα
+            <input type="number" id="c-people" min="1" max="500" value="3" inputmode="numeric">
+          </label>
+          <label>Λίτρα / άτομο / ημέρα
+            <input type="number" id="c-liters" min="0.5" max="10" step="0.5" value="1.5" inputmode="decimal">
+          </label>
+          <label>Εμφιαλωμένο (€ / λίτρο)
+            <input type="number" id="c-bottle" min="0.05" max="3" step="0.01" value="0.25" inputmode="decimal">
+          </label>
+          <label>Ανταλλακτικά (€ / έτος)
+            <!-- TODO: βάλτε ως προεπιλογή το πραγματικό ετήσιο κόστος ανταλλακτικών του δημοφιλέστερου μοντέλου -->
+            <input type="number" id="c-filter" min="0" max="5000" step="5" value="60" inputmode="decimal">
+          </label>
+        </form>
+        <p class="footnote">Οι προεπιλεγμένες τιμές είναι ενδεικτικές. Αλλάξτε τες με τα δικά σας δεδομένα. Το αρχικό κόστος αγοράς και τοποθέτησης δεν περιλαμβάνεται.</p>
+      </div>
+      <div class="calc-result" aria-live="polite">
+        <div class="calc-row"><span>Εμφιαλωμένο / έτος</span><strong id="r-bottled">–</strong></div>
+        <div class="calc-row"><span>Ανταλλακτικά / έτος</span><strong id="r-filter">–</strong></div>
+        <div class="calc-row calc-total"><span>Εξοικονόμηση / έτος</span><strong id="r-save">–</strong></div>
+        <div class="calc-row"><span>Μπουκάλια 1,5 λίτρου λιγότερα</span><strong id="r-bottles">–</strong></div>
+        <a class="btn btn-light" href="#contact">Θέλω προσφορά</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW ========== -->
+  <section class="section section-tint" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Πώς δουλεύουμε</p>
+        <h2 id="how-title">Από την πρώτη επικοινωνία στο πρώτο ποτήρι</h2>
+      </div>
+      <!-- TODO: προσαρμόστε τα βήματα στις υπηρεσίες που προσφέρετε πραγματικά (π.χ. αν η εγκατάσταση είναι δωρεάν, περιοχές εξυπηρέτησης) -->
+      <ol class="steps">
+        <li>
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Μιλάμε μαζί σας</h3>
+          <p>Μας λέτε τι χώρο έχετε, πόσο νερό χρειάζεστε και τι σας ενοχλεί. Σας προτείνουμε τη σωστή λύση Waterwal.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Τοποθέτηση</h3>
+          <p>Σας παραδίδουμε το σύστημα και κανονίζουμε την τοποθέτηση. Σας δείχνουμε πώς λειτουργεί.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Είμαστε δίπλα σας</h3>
+          <p>Σας ενημερώνουμε πότε πρέπει να αλλάξετε ανταλλακτικό και σας το στέλνουμε ή το αλλάζουμε εμείς.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">Συχνές ερωτήσεις</p>
+        <h2 id="faq-title">Ό,τι θέλετε να ξέρετε για τα φίλτρα νερού</h2>
+      </div>
+      <!-- Οι απαντήσεις υπάρχουν και στο JSON-LD (FAQPage) στο <head>. Αν αλλάξετε κείμενο εδώ, αλλάξτε το και εκεί. -->
+      <div class="faq">
+        <details>
+          <summary>Το νερό της βρύσης δεν είναι ήδη πόσιμο;</summary>
+          <p>Στις περισσότερες περιοχές το νερό του δικτύου πληροί τα όρια ποιότητας για πόσιμο νερό. Μέχρι να φτάσει όμως στη βρύση σας, μπορεί να μαζέψει σκουριά ή ιζήματα από παλιές σωληνώσεις και δεξαμενές. Επίσης, το χλώριο που χρησιμοποιείται για την απολύμανση επηρεάζει τη γεύση. Το φίλτρο βελτιώνει το νερό στο σημείο που το πίνετε. Αν έχετε κάποια συγκεκριμένη ανησυχία, μια ανάλυση νερού θα σας δείξει ακριβώς τι χρειάζεστε.</p>
+        </details>
+        <details>
+          <summary>Κάθε πότε αλλάζω τα ανταλλακτικά;</summary>
+          <p>Συνήθως κάθε 6 μήνες περίπου. Εξαρτάται όμως από την ποιότητα του νερού και από το πόσο νερό καταναλώνετε. Για τα ανταλλακτικά 10 ιντσών αυτό αντιστοιχεί περίπου σε 3.600–5.000 λίτρα. Αν το φίλτρο δεν αλλάζεται έγκαιρα, παύει να είναι αποτελεσματικό. Γι' αυτό σας στέλνουμε υπενθύμιση.</p><!-- TODO: επιβεβαίωση -->
+        </details>
+        <details>
+          <summary>Το φίλτρο αφαιρεί τα άλατα (το «πουρί»);</summary>
+          <p>Τα φίλτρα ιζημάτων και ενεργού άνθρακα <strong>δεν</strong> αφαιρούν τα διαλυμένα άλατα. Για αυτά χρειάζεται σύστημα αντίστροφης όσμωσης. Αν θέλετε να προστατεύσετε τις συσκευές σας από τα άλατα, ρωτήστε μας ποια λύση ταιριάζει στον χώρο σας.</p>
+        </details>
+        <details>
+          <summary>Τι νερό χρειάζεται μια μηχανή espresso;</summary>
+          <p>Νερό χωρίς χλώριο και ιζήματα, με ελεγχόμενη σκληρότητα. Τα πολλά άλατα δημιουργούν πουρί στον βραστήρα και στις αντιστάσεις. Το εντελώς απιονισμένο νερό όμως δεν είναι ιδανικό ούτε για τη γεύση ούτε για τη μηχανή. Η σωστή λύση εξαρτάται από την ανάλυση του νερού της περιοχής σας και από τις οδηγίες του κατασκευαστή της μηχανής.</p>
+        </details>
+        <details>
+          <summary>Χρειάζομαι υδραυλικό για την τοποθέτηση;</summary>
+          <p>Το φίλτρο βρύσης το τοποθετείτε μόνοι σας. Τα συστήματα κάτω πάγκου, αντίστροφης όσμωσης και κεντρικής παροχής καλό είναι να τα τοποθετεί τεχνικός. Μπορούμε να το κανονίσουμε εμείς για εσάς.</p>
+        </details>
+        <details>
+          <summary>Η αντίστροφη όσμωση σπαταλά νερό;</summary>
+          <p>Ναι, ένα μέρος του νερού απορρίπτεται στην αποχέτευση μαζί με τα άλατα που συγκρατεί η μεμβράνη. Η αναλογία διαφέρει από σύστημα σε σύστημα. Ρωτήστε μας για τα στοιχεία του μοντέλου που σας ενδιαφέρει.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT (σημαντικό για τοπικό SEO & GEO: ποιοι είστε, πού, τι κάνετε) ========== -->
+  <section class="section section-tint" id="about" aria-labelledby="about-title">
+    <div class="container narrow about">
+      <p class="eyebrow">Ποιοι είμαστε</p>
+      <h2 id="about-title">Σχετικά με εμάς</h2>
+      <!-- TODO: γράψτε 2–3 προτάσεις με πραγματικά στοιχεία: ποιος είστε, από πότε, σε ποιες περιοχές εξυπηρετείτε, τη σχέση σας με τη Waterwal -->
+      <p>Η <strong>Watergate</strong> προτείνει, διαθέτει και τοποθετεί συστήματα φιλτραρίσματος νερού <strong>Waterwal</strong> σε σπίτια, καφέ, εστιατόρια, ξενοδοχεία και γραφεία στην περιοχή [Περιοχή / Πόλη]. Σας βοηθάμε να βρείτε τη σωστή λύση για το νερό του χώρου σας, την τοποθετούμε και φροντίζουμε για την έγκαιρη αλλαγή των ανταλλακτικών.</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-dark" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow eyebrow-light">Επικοινωνία</p>
+        <h2 id="contact-title">Ζητήστε δωρεάν συμβουλή</h2>
+        <p>Πείτε μας τι χώρο έχετε και τι χρειάζεστε. Θα σας καλέσουμε για να σας προτείνουμε τη σωστή λύση.</p>
+        <!-- TODO: συμπληρώστε τα πραγματικά στοιχεία επικοινωνίας (και στο footer και στο JSON-LD) -->
+        <ul class="contact-list">
+          <li><span>Τηλέφωνο</span><a href="tel:+302100000000">210 XXX XXXX</a></li>
+          <li><span>Κινητό / Viber / WhatsApp</span><a href="tel:+306900000000">69X XXX XXXX</a></li>
+          <li><span>Email</span><a href="mailto:info@example.com">info@example.com</a></li>
+          <li><span>Περιοχή εξυπηρέτησης</span>[Περιοχή / Πόλη]</li>
+        </ul>
+      </div>
+
+      <!-- TODO: δημιουργήστε δωρεάν φόρμα στο formspree.io και βάλτε το δικό σας endpoint στο action.
+           Μέχρι τότε, η φόρμα ανοίγει το πρόγραμμα email του επισκέπτη με τα στοιχεία συμπληρωμένα. -->
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-fallback-email="info@example.com">
+        <div class="field-row">
+          <label>Ονοματεπώνυμο *<input name="name" required maxlength="100" autocomplete="name"></label>
+          <label>Τηλέφωνο *<input name="phone" type="tel" required maxlength="25" pattern="[0-9+()\s\-]{8,25}" autocomplete="tel" inputmode="tel"></label>
+        </div>
+        <div class="field-row">
+          <label>Email<input name="email" type="email" maxlength="120" autocomplete="email"></label>
+          <label>Περιοχή<input name="area" maxlength="80" autocomplete="address-level2" placeholder="π.χ. Χαλάνδρι"></label>
+        </div>
+        <div class="field-row">
+          <label>Τύπος χώρου
+            <select name="space" id="space-select">
+              <option>Σπίτι</option>
+              <option>Καφέ / καφετέρια</option>
+              <option>Εστιατόριο / ξενοδοχείο</option>
+              <option>Γραφείο / επαγγελματικός χώρος</option>
+              <option>Άλλο</option>
+            </select>
+          </label>
+          <label>Με ενδιαφέρει
+            <select name="product" id="product-select">
+              <option>Δεν είμαι σίγουρος/η, θέλω συμβουλή</option>
+              <option>Φίλτρο βρύσης</option>
+              <option>Φίλτρο κάτω πάγκου 2 σταδίων</option>
+              <option>Τριπλό φίλτρο άνω πάγκου</option>
+              <option>Αντίστροφη όσμωση</option>
+              <option>Φίλτρο κεντρικής παροχής / γραμμής</option>
+              <option>Φίλτρο ντους / μπάνιου</option>
+              <option>Ανταλλακτικά φίλτρα</option>
+            </select>
+          </label>
+        </div>
+        <label>Μήνυμα<textarea name="message" rows="4" maxlength="2000" placeholder="Πείτε μας λίγα λόγια για τις ανάγκες σας"></textarea></label>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>Συμφωνώ να χρησιμοποιηθούν τα στοιχεία μου μόνο για να επικοινωνήσετε μαζί μου σχετικά με το αίτημά μου, σύμφωνα με την <a href="privacy.html">Πολιτική Απορρήτου</a>. *</span>
+        </label>
+        <button class="btn btn-primary btn-block" type="submit">Αποστολή αιτήματος</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="logo logo-light" href="#top">
+        <svg class="logo-mark" aria-hidden="true"><use href="#ic-drop"/></svg>
+        <span class="logo-text">Watergate<small>Φίλτρα νερού Waterwal</small></span>
+      </a>
+      <!-- TODO: στοιχεία επιχείρησης (απαιτούνται για ιστοσελίδες επιχειρήσεων) -->
+      <address class="legal">[Επωνυμία επιχείρησης] · ΑΦΜ: [XXXXXXXXX] · ΓΕΜΗ: [XXXXXXXXX]<br>[Διεύθυνση, ΤΚ, Πόλη] · <a href="tel:+302100000000">210 XXX XXXX</a> · <a href="mailto:info@example.com">info@example.com</a></address>
+    </div>
+    <nav aria-label="Υποσέλιδο">
+      <a href="#solutions">Λύσεις</a>
+      <a href="#products">Προϊόντα</a>
+      <a href="#faq">Συχνές ερωτήσεις</a>
+      <a href="#contact">Επικοινωνία</a>
+      <a href="privacy.html">Πολιτική απορρήτου</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> [Επωνυμία επιχείρησης]. Το «Waterwal» είναι εμπορικό σήμα του δικαιούχου του. Τελευταία ενημέρωση: <time datetime="2026-10-02">2 Οκτωβρίου 2026</time>.</p>
+  </div>
+</footer>
+
+<!-- Κουμπί κλήσης για κινητά. TODO: αριθμός -->
+<a class="call-fab" href="tel:+306900000000" aria-label="Καλέστε μας">
+  <svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Καλέστε μας</span>
+</a>
+
+</body>
+</html>
