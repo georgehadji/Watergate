@@ -33,7 +33,7 @@ grep -rn "TODO\|example\.gr\|example\.com\|XXX\|\[Επωνυμία\|\[Περιο
 4. **Viber / WhatsApp**: the mobile number (694 783 0756, written `306947830756` in the links) is already set in the contact section and the mobile action bar. To change it, replace it everywhere in `index.html` and `llms.txt`.
    - The WhatsApp link (`https://wa.me/30…`) needs the country code with no `+`, spaces or leading zeros. It opens a chat with a pre-filled Greek message; edit the `text=` part to change it.
    - The Viber link (`viber://chat?number=%2B30…`) opens a chat only if the visitor has Viber installed, on a phone or Viber Desktop. Without Viber, the link does nothing. The number must have an active Viber account.
-5. **Map (service area)**: the contact section has a map that loads Google Maps **only when the visitor clicks "Εμφάνιση χάρτη"**. Until then the page makes no request to Google and sets no cookies, so no cookie banner is needed. To set it up, edit the `#service-map` block in `index.html`:
+5. **Map (service area)**: set to **all of Thessaloniki prefecture + Δήμος Θερμαϊκού** (map query «Νομός Θεσσαλονίκης», zoom 9). The contact section has a map that loads Google Maps **only when the visitor clicks "Εμφάνιση χάρτη"**. Until then the page makes no request to Google and sets no cookies, so no cookie banner is needed. To set it up, edit the `#service-map` block in `index.html`:
    - `data-map-query`: your area, e.g. `Χαλάνδρι, Αττική`;
    - `data-map-zoom`: `11` for a city, `12` for a municipality;
    - the visible `<strong>` text;
