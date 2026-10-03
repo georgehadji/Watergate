@@ -150,6 +150,96 @@
     });
   }
 
+  // ---------- Contact form: Greek error messages under each field ----------
+  // Messages are also set as the native validity message, so the browser's own
+  // bubble (and validation without this script) stays in Greek.
+  var fieldMessages = {
+    name: { valueMissing: "Γράψτε το ονοματεπώνυμό σας." },
+    phone: {
+      valueMissing: "Γράψτε ένα τηλέφωνο για να σας καλέσουμε.",
+      patternMismatch: "Ο αριθμός δεν φαίνεται σωστός. Γράψτε 8 έως 25 ψηφία, π.χ. 6912345678."
+    },
+    email: { typeMismatch: "Το email δεν φαίνεται σωστό. Ελέγξτε ότι έχει τη μορφή onoma@domain.gr." },
+    consent: { valueMissing: "Τσεκάρετε τη συγκατάθεση για να μπορέσουμε να σας απαντήσουμε." }
+  };
+
+  function errorFor(field) {
+    var id = "err-" + field.name;
+    var el = document.getElementById(id);
+    if (el) return el;
+    el = document.createElement("span");
+    el.id = id;
+    el.className = "field-error";
+    el.hidden = true;
+    // Inside the label (keeps the grid layout) but outside its accessible name;
+    // screen readers get it through aria-describedby instead.
+    el.setAttribute("aria-hidden", "true");
+    var label = field.closest("label");
+    if (field.type === "checkbox") label.after(el);
+    else label.appendChild(el);
+    field.setAttribute("aria-describedby", id);
+    return el;
+  }
+
+  function messageFor(field) {
+    field.setCustomValidity("");
+    var msgs = fieldMessages[field.name] || {};
+    for (var key in msgs) {
+      if (field.validity[key]) return msgs[key];
+    }
+    return "";
+  }
+
+  function validateField(field, show) {
+    var msg = messageFor(field);
+    field.setCustomValidity(msg);
+    var err = errorFor(field);
+    if (msg && show) {
+      err.textContent = msg;
+      err.hidden = false;
+      field.setAttribute("aria-invalid", "true");
+    } else if (!msg) {
+      err.hidden = true;
+      field.removeAttribute("aria-invalid");
+    }
+  }
+
+  if (form) {
+    var checked = Object.keys(fieldMessages).map(function (n) { return form.elements[n]; }).filter(Boolean);
+    checked.forEach(function (field) {
+      validateField(field, false);
+      // Validate when the visitor leaves a field they typed in, then live while they fix it.
+      field.addEventListener("blur", function () { if (field.value && field.type !== "checkbox") validateField(field, true); });
+      field.addEventListener(field.type === "checkbox" ? "change" : "input", function () {
+        validateField(field, field.getAttribute("aria-invalid") === "true");
+      });
+    });
+    // On a submit attempt the browser fires "invalid" on each failing field.
+    form.addEventListener("invalid", function (e) { validateField(e.target, true); }, true);
+  }
+
+  // ---------- Highlight the nav item for the section in view (home page) ----------
+  var spyLinks = document.querySelectorAll('.site-nav a[href^="#"]:not(.btn)');
+  if (spyLinks.length && "IntersectionObserver" in window) {
+    var linkFor = {};
+    spyLinks.forEach(function (a) { linkFor[a.getAttribute("href").slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var link = linkFor[en.target.id];
+        if (en.isIntersecting) {
+          spyLinks.forEach(function (a) { a.removeAttribute("aria-current"); });
+          link.setAttribute("aria-current", "location");
+        } else if (link.getAttribute("aria-current")) {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(linkFor).forEach(function (id) {
+      var section = document.getElementById(id);
+      if (section) spy.observe(section);
+    });
+  }
+
   // ---------- Service-area map (click to load) ----------
   // Google Maps is only contacted after the visitor clicks "Εμφάνιση χάρτη".
   var mapCard = document.getElementById("service-map");
