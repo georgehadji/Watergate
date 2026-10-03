@@ -24,16 +24,19 @@ To preview locally: `python3 -m http.server 8000`, then open http://localhost:80
 Every placeholder is marked with `TODO`, `[...]`, `XXX`, `example.gr` or `example.com`:
 
 ```sh
-grep -rn "TODO\|example\.gr\|example\.com\|XXX\|\[Επωνυμία\|\[Περιοχή\|YOUR_FORM_ID" --include=*.html --include=*.txt --include=*.xml --include=.htaccess .
+grep -rn "TODO\|example\.gr\|example\.com\|XXX\|6900000000\|\[Επωνυμία\|\[Περιοχή\|YOUR_FORM_ID" --include=*.html --include=*.txt --include=*.xml --include=.htaccess .
 ```
 
 1. **Domain**: replace `https://www.example.gr/` everywhere: canonical, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `llms.txt`. If the domain has no `www`, also change the redirect in `.htaccess`.
 2. **Business details**: legal name, VAT number (ΑΦΜ), GEMI number, address, phone numbers, email. They appear in the contact section, footer, JSON-LD, `llms.txt` and `privacy.html`. Use **exactly the same** details everywhere and in your Google Business Profile; consistent NAP (name, address, phone) matters for local SEO.
 3. **Business name / logo**: "Watergate" is a working name taken from the repo name. Replace it if you are using a different one.
-4. **Contact form**: create a free form at [formspree.io](https://formspree.io) and replace `YOUR_FORM_ID` in `index.html`. Until then, the form opens the visitor's email app with the message pre-filled. If you switch to another provider, update `connect-src` / `form-action` in the CSP (three places: `index.html`, `_headers`, `.htaccess`).
-5. **Product information**: model names, features, the list of what the filters remove, and the replacement interval (6 months / 3,600–5,000 litres) came from public listings. **Verify them against the official Waterwal catalogue.** If Waterwal makes dedicated HoReCa / espresso-machine models, add them to the "Καφέ" (coffee shops) section.
-6. **Product photos**: the products currently use illustrations. If you get photos from Waterwal (with permission to use them), see "Photos" below.
-7. **Privacy policy**: fill in the template and have a lawyer or accountant review it.
+4. **Viber / WhatsApp**: replace `306900000000` with your mobile number. It appears in the contact section and in the mobile action bar.
+   - The WhatsApp link (`https://wa.me/30…`) needs the country code with no `+`, spaces or leading zeros. It opens a chat with a pre-filled Greek message; edit the `text=` part to change it.
+   - The Viber link (`viber://chat?number=%2B30…`) opens a chat only if the visitor has Viber installed, on a phone or Viber Desktop. Without Viber, the link does nothing. The number must have an active Viber account.
+5. **Contact form**: create a free form at [formspree.io](https://formspree.io) and replace `YOUR_FORM_ID` in `index.html`. Until then, the form opens the visitor's email app with the message pre-filled. If you switch to another provider, update `connect-src` / `form-action` in the CSP (three places: `index.html`, `_headers`, `.htaccess`).
+6. **Product information**: model names, features, the list of what the filters remove, and the replacement interval (6 months / 3,600–5,000 litres) came from public listings. **Verify them against the official Waterwal catalogue.** If Waterwal makes dedicated HoReCa / espresso-machine models, add them to the "Καφέ" (coffee shops) section.
+7. **Product photos**: the products currently use illustrations. If you get photos from Waterwal (with permission to use them), see "Photos" below.
+8. **Privacy policy**: fill in the template and have a lawyer or accountant review it.
 
 ## SEO
 
