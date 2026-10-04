@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Νερό βρύσης Θεσσαλονίκη: πηγές &amp; αναλύσεις ΕΥΑΘ">
   <meta name="twitter:description" content="Από πού έρχεται το νερό της Θεσσαλονίκης, τι δείχνουν οι αναλύσεις της ΕΥΑΘ, ποια είναι τα όρια της νομοθεσίας και πότε αξίζει φίλτρο.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/nero-vrysis-thessaloniki.jpg">
+  <meta name="twitter:image:alt" content="Το νερό της βρύσης στη Θεσσαλονίκη: από πού έρχεται, τι περιέχει και πότε αξίζει φίλτρο">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -225,7 +226,7 @@
 <p>«Πίνετε νερό από τη βρύση;» Στη Θεσσαλονίκη η απάντηση συχνά είναι «όχι, μυρίζει χλώριο» ή «όχι, κάνει άλατα». Παρακάτω θα βρείτε τι λένε τα στοιχεία που δημοσιεύει ο ίδιος ο πάροχος.</p>
 
 <h2 id="apo-pou">Από πού έρχεται το νερό</h2>
-<p>Η ΕΥΑΘ υδροδοτεί το πολεοδομικό συγκρότημα από τρεις πηγές:<sup><a href="#src-1">1</a></sup> <sup><a href="#src-2">2</a></sup></p>
+<p>Η ΕΥΑΘ υδροδοτεί το πολεοδομικό συγκρότημα από τρεις πηγές:<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup> <sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup></p>
 <ul>
   <li><strong>Αλιάκμονας</strong>, η μεγαλύτερη πηγή (περίπου 60–65%, κατά δημοσιεύματα). Το νερό του ποταμού επεξεργάζεται στη Μονάδα Επεξεργασίας Νερού πριν μπει στο δίκτυο.</li>
   <li><strong>Πηγές Αραβησσού</strong> (περίπου 30%): υπόγειο νερό που μεταφέρεται με αγωγό από την Πέλλα.</li>
@@ -233,10 +234,10 @@
 </ul>
 <p>Η αναλογία αλλάζει ανάλογα με την εποχή και τη ζήτηση, άρα το νερό στη βρύση σας μπορεί να διαφέρει λίγο από μήνα σε μήνα.</p>
 <h3>Ποιος σας υδροδοτεί</h3>
-<p>Μέχρι σήμερα, η ΕΥΑΘ καλύπτει το πολεοδομικό συγκρότημα. Οι υπόλοιποι δήμοι του νομού έχουν δικές τους δημοτικές επιχειρήσεις (ΔΕΥΑ), π.χ. Θερμαϊκού, Θέρμης, Λαγκαδά, Χαλκηδόνος, Δέλτα, και συχνά υδρεύονται από <strong>γεωτρήσεις</strong>, με διαφορετική σύσταση νερού. Σύμφωνα με τον ν. 5325/2026, η αρμοδιότητα της ΕΥΑΘ επεκτείνεται σταδιακά σε όλους τους δήμους της Περιφερειακής Ενότητας, με ορίζοντα το 2027.<sup><a href="#src-7">7</a></sup> Ως τότε, για την περιοχή σας ισχύουν οι αναλύσεις του παρόχου που σας χρεώνει.</p>
+<p>Μέχρι σήμερα, η ΕΥΑΘ καλύπτει το πολεοδομικό συγκρότημα. Οι υπόλοιποι δήμοι του νομού έχουν δικές τους δημοτικές επιχειρήσεις (ΔΕΥΑ), π.χ. Θερμαϊκού, Θέρμης, Λαγκαδά, Χαλκηδόνος, Δέλτα, και συχνά υδρεύονται από <strong>γεωτρήσεις</strong>, με διαφορετική σύσταση νερού. Σύμφωνα με τον ν. 5325/2026, η αρμοδιότητα της ΕΥΑΘ επεκτείνεται σταδιακά σε όλους τους δήμους της Περιφερειακής Ενότητας, με ορίζοντα το 2027.<sup><a href="#src-7" aria-label="Πηγή 7">7</a></sup> Ως τότε, για την περιοχή σας ισχύουν οι αναλύσεις του παρόχου που σας χρεώνει.</p>
 
 <h2 id="analyseis">Τι δείχνουν οι αναλύσεις</h2>
-<p>Η ΕΥΑΘ δημοσιεύει <strong>μηνιαίες αναλύσεις ανά περιοχή</strong> στο <a href="https://quality.eyath.gr/" rel="noopener" target="_blank">quality.eyath.gr</a>.<sup><a href="#src-3">3</a></sup> Στις δημοσιευμένες αναλύσεις περιοχών του 2025–2026 βλέπουμε ενδεικτικά:</p>
+<p>Η ΕΥΑΘ δημοσιεύει <strong>μηνιαίες αναλύσεις ανά περιοχή</strong> στο <a href="https://quality.eyath.gr/" rel="noopener noreferrer" target="_blank">quality.eyath.gr<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>.<sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup> Στις δημοσιευμένες αναλύσεις περιοχών του 2025–2026 βλέπουμε ενδεικτικά:</p>
 <div class="table-wrap">
   <table>
     <thead><tr><th scope="col">Παράμετρος</th><th scope="col">Ενδεικτικές τιμές ΕΥΑΘ</th><th scope="col">Όριο νομοθεσίας</th></tr></thead>
@@ -246,11 +247,11 @@
       <tr><td>Υπολειμματικό χλώριο</td><td>περίπου 0,26–0,42 mg/L</td><td>τουλάχιστον 0,2 mg/L στο δίκτυο (εγκύκλιος ΥΥ)</td></tr>
     </tbody>
   </table>
-  <caption>Οι τιμές διαφέρουν ανά περιοχή και μήνα. Δείτε την τελευταία ανάλυση για τη δική σας περιοχή στο quality.eyath.gr. Όρια: Οδηγία (ΕΕ) 2020/2184 και ΚΥΑ 27829/2023.<sup><a href="#src-5">5</a></sup> <sup><a href="#src-6">6</a></sup></caption>
+  <caption>Οι τιμές διαφέρουν ανά περιοχή και μήνα. Δείτε την τελευταία ανάλυση για τη δική σας περιοχή στο quality.eyath.gr. Όρια: Οδηγία (ΕΕ) 2020/2184 και ΚΥΑ 27829/2023.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup> <sup><a href="#src-6" aria-label="Πηγή 6">6</a></sup></caption>
 </div>
-<p><strong>Το νερό του δικτύου είναι πόσιμο</strong> και ελέγχεται συστηματικά. Η γεύση χλωρίου υπάρχει επειδή η νομοθεσία το απαιτεί. Εγκύκλιος του Υπουργείου Υγείας ζητά τουλάχιστον 0,2 mg/L ελεύθερο χλώριο ακόμη και στα πιο απομακρυσμένα σημεία του δικτύου.<sup><a href="#src-4">4</a></sup></p>
+<p><strong>Το νερό του δικτύου είναι πόσιμο</strong> και ελέγχεται συστηματικά. Η γεύση χλωρίου υπάρχει επειδή η νομοθεσία το απαιτεί. Εγκύκλιος του Υπουργείου Υγείας ζητά τουλάχιστον 0,2 mg/L ελεύθερο χλώριο ακόμη και στα πιο απομακρυσμένα σημεία του δικτύου.<sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup></p>
 <h3>Πώς διαβάζετε μια ανάλυση</h3>
-<p>Αν ανοίξετε την ανάλυση της περιοχής σας, αυτές είναι οι παράμετροι που αξίζει να κοιτάξετε, με τα όρια της Οδηγίας 2020/2184:<sup><a href="#src-5">5</a></sup></p>
+<p>Αν ανοίξετε την ανάλυση της περιοχής σας, αυτές είναι οι παράμετροι που αξίζει να κοιτάξετε, με τα όρια της Οδηγίας 2020/2184:<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup></p>
 <div class="table-wrap">
   <table>
     <thead><tr><th scope="col">Παράμετρος</th><th scope="col">Όριο</th><th scope="col">Τι σας λέει</th></tr></thead>
@@ -272,7 +273,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CF%84%CE%B7%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82.%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%3A%20" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CF%84%CE%B7%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82.%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%3A%20" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -281,8 +282,8 @@
 <h2 id="nomos">Έξω από το πολεοδομικό συγκρότημα</h2>
 <p>Στους οικισμούς που υδρεύονται από γεωτρήσεις, η ποιότητα εξαρτάται από τη γεωλογία και από τις πιέσεις στον υδροφορέα: γεωργία, άντληση, θάλασσα. Μερικά παραδείγματα που έχουν καταγραφεί στον νομό:</p>
 <ul>
-  <li>Επιστημονική μελέτη του 2006 βρήκε <strong>αρσενικό</strong> σε υπόγεια νερά της βιομηχανικής περιοχής της Θεσσαλονίκης, συχνά πάνω από το όριο των 10 μg/L.<sup><a href="#src-8">8</a></sup></li>
-  <li>Το 2022, ερώτηση στο Ευρωπαϊκό Κοινοβούλιο ανέφερε υπερβάσεις (αρσενικό, χλωριόντα, μικροβιολογικές) σε οικισμούς του Δήμου Δέλτα. Η λύση που χρηματοδοτήθηκε ήταν η σύνδεση με το δίκτυο της ΕΥΑΘ.<sup><a href="#src-9">9</a></sup></li>
+  <li>Επιστημονική μελέτη του 2006 βρήκε <strong>αρσενικό</strong> σε υπόγεια νερά της βιομηχανικής περιοχής της Θεσσαλονίκης, συχνά πάνω από το όριο των 10 μg/L.<sup><a href="#src-8" aria-label="Πηγή 8">8</a></sup></li>
+  <li>Το 2022, ερώτηση στο Ευρωπαϊκό Κοινοβούλιο ανέφερε υπερβάσεις (αρσενικό, χλωριόντα, μικροβιολογικές) σε οικισμούς του Δήμου Δέλτα. Η λύση που χρηματοδοτήθηκε ήταν η σύνδεση με το δίκτυο της ΕΥΑΘ.<sup><a href="#src-9" aria-label="Πηγή 9">9</a></sup></li>
   <li>Κατά καιρούς, τοπικά μέσα αναφέρουν προσωρινές ανακοινώσεις ακαταλληλότητας σε μεμονωμένους οικισμούς, π.χ. για νιτρικά ή φθόριο.</li>
 </ul>
 <p class="note note-warn">Αν ο πάροχός σας ανακοινώσει ότι το νερό είναι <strong>ακατάλληλο για πόσιμο</strong>, ακολουθήστε τις οδηγίες του. Ένα οικιακό φίλτρο δεν είναι λύση για νερό που δεν πληροί τα όρια, εκτός αν είναι σχεδιασμένο και <strong>πιστοποιημένο</strong> για τη συγκεκριμένη ουσία (π.χ. αντίστροφη όσμωση πιστοποιημένη για αρσενικό ή νιτρικά), και αφού το επιβεβαιώσει ανάλυση.</p>
@@ -319,7 +320,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CF%84%CE%B7%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82.%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%3A%20" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CF%84%CE%B7%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82.%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%3A%20" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -328,15 +329,15 @@
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Πηγές</h2>
           <ol>
-      <li id="src-1">ΕΥΑΘ – Οι πηγές του νερού μας: <a href="https://www.eyath.gr/our-water-sources/?lang=en" rel="noopener" target="_blank">www.eyath.gr/our-water-sources/?lang=en</a></li>
-      <li id="src-2">Voria.gr – Αλιάκμονας, Αραβησσός και γεωτρήσεις: το «υφαντό» του νερού της Θεσσαλονίκης: <a href="https://www.voria.gr/article/eyath-goiteytiko-kai-me-apali-yfi-nero-tis-thessalonikis" rel="noopener" target="_blank">www.voria.gr/article/eyath-goiteytiko-kai-me-apali-yfi-nero-tis-thessalonikis</a></li>
-      <li id="src-3">ΕΥΑΘ – Ποιότητα νερού: μηνιαίες αναλύσεις ανά περιοχή: <a href="https://quality.eyath.gr/" rel="noopener" target="_blank">quality.eyath.gr/</a></li>
-      <li id="src-4">Υπουργείο Υγείας – Εγκύκλιος Γ1δ/ΓΠ 37193/19-6-2017 για το υπολειμματικό χλώριο: <a href="https://www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasia-poiothtas-ydatwn/prostasia-neroy-anthrwpinhs-katanalwshs/4766-egkyklios-ypoleimmatiko-xlwrio-sto-nero-anthrwpinhs-katanalwshs" rel="noopener" target="_blank">www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasi</a></li>
-      <li id="src-5">Οδηγία (ΕΕ) 2020/2184 – Παράρτημα I (παραμετρικές τιμές): <a href="https://eur-lex.europa.eu/eli/dir/2020/2184/oj/eng" rel="noopener" target="_blank">eur-lex.europa.eu/eli/dir/2020/2184/oj/eng</a></li>
-      <li id="src-6">ΚΥΑ Δ1(δ)/ΓΠ οικ. 27829/2023 (ΦΕΚ Β΄ 3525/25.05.2023): <a href="https://www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023" rel="noopener" target="_blank">www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023</a></li>
-      <li id="src-7">Ν. 5325/2026 (ΦΕΚ Α΄ 122/31.07.2026) – επέκταση της ΕΥΑΘ στους δήμους της ΠΕ Θεσσαλονίκης: <a href="https://www.taxheaven.gr/law/5325/2026" rel="noopener" target="_blank">www.taxheaven.gr/law/5325/2026</a></li>
-      <li id="src-8">Katsoyiannis I.A., Katsoyiannis A.A. (2006), Environ. Monit. Assess. – Arsenic and other metal contamination of groundwaters in the industrial area of Thessaloniki: <a href="https://link.springer.com/article/10.1007/s10661-006-9204-y" rel="noopener" target="_blank">link.springer.com/article/10.1007/s10661-006-9204-y</a></li>
-      <li id="src-9">Ευρωπαϊκό Κοινοβούλιο – Ερώτηση E-001433/2022 για την ύδρευση στον Δήμο Δέλτα: <a href="https://www.europarl.europa.eu/doceo/document/E-9-2022-001433_EL.html" rel="noopener" target="_blank">www.europarl.europa.eu/doceo/document/E-9-2022-001433_EL.html</a></li>
+      <li id="src-1">ΕΥΑΘ – Οι πηγές του νερού μας: <a href="https://www.eyath.gr/our-water-sources/?lang=en" rel="noopener noreferrer" target="_blank">www.eyath.gr/our-water-sources/?lang=en<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-2">Voria.gr – Αλιάκμονας, Αραβησσός και γεωτρήσεις: το «υφαντό» του νερού της Θεσσαλονίκης: <a href="https://www.voria.gr/article/eyath-goiteytiko-kai-me-apali-yfi-nero-tis-thessalonikis" rel="noopener noreferrer" target="_blank">www.voria.gr/article/eyath-goiteytiko-kai-me-apali-yfi-nero-tis-thessalonikis<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-3">ΕΥΑΘ – Ποιότητα νερού: μηνιαίες αναλύσεις ανά περιοχή: <a href="https://quality.eyath.gr/" rel="noopener noreferrer" target="_blank">quality.eyath.gr/<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-4">Υπουργείο Υγείας – Εγκύκλιος Γ1δ/ΓΠ 37193/19-6-2017 για το υπολειμματικό χλώριο: <a href="https://www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasia-poiothtas-ydatwn/prostasia-neroy-anthrwpinhs-katanalwshs/4766-egkyklios-ypoleimmatiko-xlwrio-sto-nero-anthrwpinhs-katanalwshs" rel="noopener noreferrer" target="_blank">www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasi<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-5">Οδηγία (ΕΕ) 2020/2184 – Παράρτημα I (παραμετρικές τιμές): <a href="https://eur-lex.europa.eu/eli/dir/2020/2184/oj/eng" rel="noopener noreferrer" target="_blank">eur-lex.europa.eu/eli/dir/2020/2184/oj/eng<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-6">ΚΥΑ Δ1(δ)/ΓΠ οικ. 27829/2023 (ΦΕΚ Β΄ 3525/25.05.2023): <a href="https://www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023" rel="noopener noreferrer" target="_blank">www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-7">Ν. 5325/2026 (ΦΕΚ Α΄ 122/31.07.2026) – επέκταση της ΕΥΑΘ στους δήμους της ΠΕ Θεσσαλονίκης: <a href="https://www.taxheaven.gr/law/5325/2026" rel="noopener noreferrer" target="_blank">www.taxheaven.gr/law/5325/2026<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-8">Katsoyiannis I.A., Katsoyiannis A.A. (2006), Environ. Monit. Assess. – Arsenic and other metal contamination of groundwaters in the industrial area of Thessaloniki: <a href="https://link.springer.com/article/10.1007/s10661-006-9204-y" rel="noopener noreferrer" target="_blank">link.springer.com/article/10.1007/s10661-006-9204-y<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-9">Ευρωπαϊκό Κοινοβούλιο – Ερώτηση E-001433/2022 για την ύδρευση στον Δήμο Δέλτα: <a href="https://www.europarl.europa.eu/doceo/document/E-9-2022-001433_EL.html" rel="noopener noreferrer" target="_blank">www.europarl.europa.eu/doceo/document/E-9-2022-001433_EL.html<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
           </ol>
           <p class="disclaimer">Το άρθρο είναι ενημερωτικό και δεν αποτελεί ιατρική συμβουλή. Για την ποιότητα του νερού του δικτύου σας, η επίσημη πηγή είναι ο πάροχος ύδρευσης της περιοχής σας. Για ασφαλή συμπεράσματα για το δικό σας νερό, χρειάζεται εργαστηριακή ανάλυση.</p>
         </section>
@@ -398,7 +399,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CF%84%CE%B7%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82.%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%3A%20" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CF%84%CE%B7%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82.%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%3A%20" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

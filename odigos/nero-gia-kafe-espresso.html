@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Νερό για καφέ &amp; μηχανή espresso: φίλτρο καφετέριας">
   <meta name="twitter:description" content="Τι νερό θέλει η μηχανή espresso κατά το πρότυπο SCA, πώς τα άλατα και το χλώριο χαλάνε γεύση και εξοπλισμό, και ποιο φίλτρο χρειάζεται.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/nero-gia-kafe-espresso.jpg">
+  <meta name="twitter:image:alt" content="Νερό για καφέ: γιατί το φίλτρο είναι η φθηνότερη ασφάλεια της μηχανής espresso">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -224,11 +225,11 @@
 
 <h2 id="geusi">Πώς το νερό αλλάζει τη γεύση</h2>
 <ul>
-  <li><strong>Χλώριο:</strong> αλλοιώνει το άρωμα και αφήνει πικρή, «χημική» επίγευση. Ο ΠΟΥ αναφέρει ότι πολλοί το καταλαβαίνουν από 0,3 mg/L.<sup><a href="#src-4">4</a></sup> Γι' αυτό το πρότυπο νερού του Specialty Coffee Association (SCA) έχει στόχο <strong>μηδέν χλώριο</strong>.<sup><a href="#src-1">1</a></sup></li>
+  <li><strong>Χλώριο:</strong> αλλοιώνει το άρωμα και αφήνει πικρή, «χημική» επίγευση. Ο ΠΟΥ αναφέρει ότι πολλοί το καταλαβαίνουν από 0,3 mg/L.<sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup> Γι' αυτό το πρότυπο νερού του Specialty Coffee Association (SCA) έχει στόχο <strong>μηδέν χλώριο</strong>.<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup></li>
   <li><strong>Πολλά άλατα (υψηλή σκληρότητα και αλκαλικότητα):</strong> «κόβουν» την οξύτητα και δίνουν βαρύ, θαμπό καφέ.</li>
   <li><strong>Πολύ λίγα άλατα:</strong> ο καφές βγαίνει επίπεδος και ξινός, χωρίς σώμα. Τα μέταλλα του νερού βοηθούν στην εκχύλιση.</li>
 </ul>
-<p>Το κλασικό πρότυπο νερού της SCA (2013) δίνει ενδεικτικούς στόχους:<sup><a href="#src-1">1</a></sup></p>
+<p>Το κλασικό πρότυπο νερού της SCA (2013) δίνει ενδεικτικούς στόχους:<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup></p>
 <div class="table-wrap">
   <table>
     <thead><tr><th scope="col">Παράμετρος</th><th scope="col">Στόχος</th><th scope="col">Αποδεκτό εύρος</th></tr></thead>
@@ -252,8 +253,8 @@
   <li>μπερδεύουν τους <strong>αισθητήρες στάθμης και θερμοκρασίας</strong>,</li>
   <li>κομμάτια πουρί που ξεκολλούν μπορεί να φράξουν σωληνάκια.</li>
 </ul>
-<p>Το <strong>υψηλό χλωριούχο</strong> διαβρώνει και τους ανοξείδωτους βραστήρες. Γι' αυτό η La Marzocco, για παράδειγμα, βάζει όρια και στα χλωριόντα στις προδιαγραφές νερού της.<sup><a href="#src-2">2</a></sup></p>
-<p class="note note-warn"><strong>Η εγγύηση:</strong> η La Marzocco αναφέρει ρητά ότι η εγγύηση <strong>δεν καλύπτει</strong> προβλήματα από νερό, κακή ποιότητα νερού και άλατα.<sup><a href="#src-3">3</a></sup> Πολλοί κατασκευαστές έχουν παρόμοιους όρους. Ελέγξτε τι λέει η εγγύηση της δικής σας μηχανής.</p>
+<p>Το <strong>υψηλό χλωριούχο</strong> διαβρώνει και τους ανοξείδωτους βραστήρες. Γι' αυτό η La Marzocco, για παράδειγμα, βάζει όρια και στα χλωριόντα στις προδιαγραφές νερού της.<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup></p>
+<p class="note note-warn"><strong>Η εγγύηση:</strong> η La Marzocco αναφέρει ρητά ότι η εγγύηση <strong>δεν καλύπτει</strong> προβλήματα από νερό, κακή ποιότητα νερού και άλατα.<sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup> Πολλοί κατασκευαστές έχουν παρόμοιους όρους. Ελέγξτε τι λέει η εγγύηση της δικής σας μηχανής.</p>
 
 <aside class="cta-box" aria-label="Δωρεάν συμβουλή">
   <p class="cta-title">Έχετε καφέ ή καφετέρια στη Θεσσαλονίκη;</p>
@@ -261,7 +262,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%88%CF%87%CF%89%20%CE%BA%CE%B1%CF%86%CE%AD%2F%CE%BA%CE%B1%CF%86%CE%B5%CF%84%CE%AD%CF%81%CE%B9%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%20%CE%BC%CE%B7%CF%87%CE%B1%CE%BD%CE%AE%20espresso." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%88%CF%87%CF%89%20%CE%BA%CE%B1%CF%86%CE%AD%2F%CE%BA%CE%B1%CF%86%CE%B5%CF%84%CE%AD%CF%81%CE%B9%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%20%CE%BC%CE%B7%CF%87%CE%B1%CE%BD%CE%AE%20espresso." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -279,8 +280,8 @@
 
 <h2 id="alles-syskeves">Παγομηχανή, φούρνος, πλυντήριο ποτηριών</h2>
 <ul>
-  <li><strong>Παγομηχανή:</strong> οι κατασκευαστές, όπως η Hoshizaki, προσφέρουν φίλτρα που μειώνουν ιζήματα και άλατα και, όπως αναφέρουν, τις ανάγκες συντήρησης.<sup><a href="#src-5">5</a></sup> Ο πάγος καταλήγει στο ποτήρι του πελάτη, άρα ισχύουν τα ίδια με το πόσιμο νερό.</li>
-  <li><strong>Φούρνοι ατμού (combi):</strong> ακολουθήστε τις προδιαγραφές νερού του κατασκευαστή. Η Rational, για παράδειγμα, προειδοποιεί στο εγχειρίδιο εγκατάστασης ότι και το <em>υπερβολικά</em> μαλακό νερό μπορεί να είναι διαβρωτικό.<sup><a href="#src-6">6</a></sup></li>
+  <li><strong>Παγομηχανή:</strong> οι κατασκευαστές, όπως η Hoshizaki, προσφέρουν φίλτρα που μειώνουν ιζήματα και άλατα και, όπως αναφέρουν, τις ανάγκες συντήρησης.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup> Ο πάγος καταλήγει στο ποτήρι του πελάτη, άρα ισχύουν τα ίδια με το πόσιμο νερό.</li>
+  <li><strong>Φούρνοι ατμού (combi):</strong> ακολουθήστε τις προδιαγραφές νερού του κατασκευαστή. Η Rational, για παράδειγμα, προειδοποιεί στο εγχειρίδιο εγκατάστασης ότι και το <em>υπερβολικά</em> μαλακό νερό μπορεί να είναι διαβρωτικό.<sup><a href="#src-6" aria-label="Πηγή 6">6</a></sup></li>
   <li><strong>Πλυντήριο ποτηριών:</strong> το λιγότερο αλάτι σημαίνει λιγότερα «σημάδια» στα ποτήρια και λιγότερο γυάλισμα με το χέρι.</li>
 </ul>
 
@@ -309,7 +310,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%88%CF%87%CF%89%20%CE%BA%CE%B1%CF%86%CE%AD%2F%CE%BA%CE%B1%CF%86%CE%B5%CF%84%CE%AD%CF%81%CE%B9%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%20%CE%BC%CE%B7%CF%87%CE%B1%CE%BD%CE%AE%20espresso." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%88%CF%87%CF%89%20%CE%BA%CE%B1%CF%86%CE%AD%2F%CE%BA%CE%B1%CF%86%CE%B5%CF%84%CE%AD%CF%81%CE%B9%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%20%CE%BC%CE%B7%CF%87%CE%B1%CE%BD%CE%AE%20espresso." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -318,12 +319,12 @@
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Πηγές</h2>
           <ol>
-      <li id="src-1">Specialty Coffee Association – Dissecting SCAA&#x27;s Water Quality Standard (2013): <a href="https://scanews.coffee/2013/07/08/dissecting-scaas-water-quality-standard/" rel="noopener" target="_blank">scanews.coffee/2013/07/08/dissecting-scaas-water-quality-standard/</a></li>
-      <li id="src-2">La Marzocco – Water specifications: <a href="https://www.lamarzocco.com/uk/en/technical-questions/la-marzocco-water-specifications/" rel="noopener" target="_blank">www.lamarzocco.com/uk/en/technical-questions/la-marzocco-water-specifications/</a></li>
-      <li id="src-3">La Marzocco – Warranty: <a href="https://www.lamarzocco.com/uk/en/warranty/" rel="noopener" target="_blank">www.lamarzocco.com/uk/en/warranty/</a></li>
-      <li id="src-4">WHO – Chlorine in Drinking-water (taste threshold): <a href="https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/chlorine.pdf" rel="noopener" target="_blank">cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/chlorine.pdf</a></li>
-      <li id="src-5">Hoshizaki – Water filtration for ice machines: <a href="https://www.hoshizakiamerica.com/product/h9320-51/" rel="noopener" target="_blank">www.hoshizakiamerica.com/product/h9320-51/</a></li>
-      <li id="src-6">Rational – iCombi Pro / Classic installation manual (water quality): <a href="https://www.rational-online.com/" rel="noopener" target="_blank">www.rational-online.com/</a></li>
+      <li id="src-1">Specialty Coffee Association – Dissecting SCAA&#x27;s Water Quality Standard (2013): <a href="https://scanews.coffee/2013/07/08/dissecting-scaas-water-quality-standard/" rel="noopener noreferrer" target="_blank">scanews.coffee/2013/07/08/dissecting-scaas-water-quality-standard/<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-2">La Marzocco – Water specifications: <a href="https://www.lamarzocco.com/uk/en/technical-questions/la-marzocco-water-specifications/" rel="noopener noreferrer" target="_blank">www.lamarzocco.com/uk/en/technical-questions/la-marzocco-water-specifications/<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-3">La Marzocco – Warranty: <a href="https://www.lamarzocco.com/uk/en/warranty/" rel="noopener noreferrer" target="_blank">www.lamarzocco.com/uk/en/warranty/<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-4">WHO – Chlorine in Drinking-water (taste threshold): <a href="https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/chlorine.pdf" rel="noopener noreferrer" target="_blank">cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/chlorine.pdf<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-5">Hoshizaki – Water filtration for ice machines: <a href="https://www.hoshizakiamerica.com/product/h9320-51/" rel="noopener noreferrer" target="_blank">www.hoshizakiamerica.com/product/h9320-51/<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-6">Rational – iCombi Pro / Classic installation manual (water quality): <a href="https://www.rational-online.com/" rel="noopener noreferrer" target="_blank">www.rational-online.com/<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
           </ol>
           <p class="disclaimer">Το άρθρο είναι ενημερωτικό και δεν αποτελεί ιατρική συμβουλή. Για την ποιότητα του νερού του δικτύου σας, η επίσημη πηγή είναι ο πάροχος ύδρευσης της περιοχής σας. Για ασφαλή συμπεράσματα για το δικό σας νερό, χρειάζεται εργαστηριακή ανάλυση.</p>
         </section>
@@ -385,7 +386,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%88%CF%87%CF%89%20%CE%BA%CE%B1%CF%86%CE%AD%2F%CE%BA%CE%B1%CF%86%CE%B5%CF%84%CE%AD%CF%81%CE%B9%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%20%CE%BC%CE%B7%CF%87%CE%B1%CE%BD%CE%AE%20espresso." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%88%CF%87%CF%89%20%CE%BA%CE%B1%CF%86%CE%AD%2F%CE%BA%CE%B1%CF%86%CE%B5%CF%84%CE%AD%CF%81%CE%B9%CE%B1%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%20%CE%BC%CE%B7%CF%87%CE%B1%CE%BD%CE%AE%20espresso." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

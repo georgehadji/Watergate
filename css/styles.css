@@ -366,6 +366,7 @@ a, button, summary, label, input, select, textarea { touch-action: manipulation;
 
 /* ---------- Compare (scrolls horizontally on small screens) ---------- */
 .table-wrap {
+  position: relative; /* contains .sr-only text in cells, so it scrolls with the table instead of widening the page */
   overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface);
   -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
 }
@@ -464,6 +465,7 @@ textarea { resize: vertical; min-height: 110px; }
 .contact-form .consent { flex-direction: row; align-items: flex-start; gap: 10px; font-weight: 500; font-size: .85rem; color: var(--muted); }
 .consent input { width: 22px; height: 22px; min-height: 0; flex: none; margin-top: 2px; accent-color: var(--aqua-dark); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.form-note { margin: 0; color: var(--muted); font-size: .85rem; }
 .field-error { color: var(--danger-text); font-size: .85rem; font-weight: 600; line-height: 1.4; }
 .field-error[hidden] { display: none; }
 .contact-form [aria-invalid="true"] { border-color: var(--danger-text); }
@@ -555,6 +557,8 @@ textarea { resize: vertical; min-height: 110px; }
 .action-viber { color: var(--viber-text); }
 .action-whatsapp { color: var(--whatsapp-text); }
 .action-bar a:active { background: var(--bg-tint); }
+/* Keep focused elements clear of the fixed action bar when the browser scrolls them into view */
+@media (max-width: 899px) { html { scroll-padding-bottom: calc(76px + env(safe-area-inset-bottom)); } }
 @media (min-width: 900px) { .action-bar { display: none; } }
 
 /* ---------- Reveal on scroll ---------- */

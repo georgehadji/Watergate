@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Σκληρό νερό &amp; άλατα (πουρί): τι λύση δουλεύει">
   <meta name="twitter:description" content="Τι είναι η σκληρότητα του νερού, τι κάνουν τα άλατα σε βραστήρα, θερμοσίφωνα και μηχανή καφέ, και ποια φίλτρα τα αφαιρούν.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/sklero-nero-alata.jpg">
+  <meta name="twitter:image:alt" content="Σκληρό νερό και άλατα: τι προκαλούν και ποια λύση δουλεύει">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -222,7 +223,7 @@
 <p>Αν ο βραστήρας σας γεμίζει λευκές κρούστες, τα ποτήρια βγαίνουν από το πλυντήριο με λεκέδες και η κεφαλή του ντους βουλώνει, έχετε <strong>σκληρό νερό</strong>. Είναι από τα πιο συχνά θέματα που μας ρωτάτε, και δεν το λύνει κάθε φίλτρο.</p>
 
 <h2 id="ti-einai">Τι είναι η σκληρότητα του νερού</h2>
-<p>Καθώς το νερό περνά μέσα από πετρώματα και έδαφος, διαλύει <strong>ασβέστιο</strong> και <strong>μαγνήσιο</strong>. Η ποσότητά τους λέγεται σκληρότητα. Όταν το νερό ζεσταίνεται, μέρος τους ξαναγίνεται στερεό: αυτό είναι το «πουρί» (ανθρακικό ασβέστιο) που βλέπετε στον βραστήρα.<sup><a href="#src-2">2</a></sup></p>
+<p>Καθώς το νερό περνά μέσα από πετρώματα και έδαφος, διαλύει <strong>ασβέστιο</strong> και <strong>μαγνήσιο</strong>. Η ποσότητά τους λέγεται σκληρότητα. Όταν το νερό ζεσταίνεται, μέρος τους ξαναγίνεται στερεό: αυτό είναι το «πουρί» (ανθρακικό ασβέστιο) που βλέπετε στον βραστήρα.<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup></p>
 <p>Η σκληρότητα μετριέται με διαφορετικές μονάδες, κάτι που μπερδεύει:</p>
 <div class="table-wrap">
   <table>
@@ -234,16 +235,16 @@
     </tbody>
   </table>
 </div>
-<p>Μια συνηθισμένη κατάταξη (USGS) είναι: <strong>0–60 mg/L μαλακό</strong>, <strong>61–120 μέτρια σκληρό</strong>, <strong>121–180 σκληρό</strong> και <strong>πάνω από 180 πολύ σκληρό</strong>.<sup><a href="#src-2">2</a></sup></p>
+<p>Μια συνηθισμένη κατάταξη (USGS) είναι: <strong>0–60 mg/L μαλακό</strong>, <strong>61–120 μέτρια σκληρό</strong>, <strong>121–180 σκληρό</strong> και <strong>πάνω από 180 πολύ σκληρό</strong>.<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup></p>
 
 <h2 id="ygeia">Είναι επικίνδυνο για την υγεία;</h2>
-<p>Όχι. Ο Παγκόσμιος Οργανισμός Υγείας (ΠΟΥ) <strong>δεν έχει ορίσει όριο υγείας</strong> για τη σκληρότητα, γιατί δεν υπάρχουν πειστικά στοιχεία ότι βλάπτει.<sup><a href="#src-1">1</a></sup> Ο ΠΟΥ σημειώνει όμως ότι πάνω από περίπου <strong>200 mg/L</strong> το νερό μπορεί να δημιουργεί άλατα στις εγκαταστάσεις, ανάλογα με το pH και την αλκαλικότητα. Επίσης, πάνω από 500 mg/L η γεύση γίνεται γενικά μη αποδεκτή.<sup><a href="#src-1">1</a></sup></p>
+<p>Όχι. Ο Παγκόσμιος Οργανισμός Υγείας (ΠΟΥ) <strong>δεν έχει ορίσει όριο υγείας</strong> για τη σκληρότητα, γιατί δεν υπάρχουν πειστικά στοιχεία ότι βλάπτει.<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup> Ο ΠΟΥ σημειώνει όμως ότι πάνω από περίπου <strong>200 mg/L</strong> το νερό μπορεί να δημιουργεί άλατα στις εγκαταστάσεις, ανάλογα με το pH και την αλκαλικότητα. Επίσης, πάνω από 500 mg/L η γεύση γίνεται γενικά μη αποδεκτή.<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup></p>
 <p class="note">Το σκληρό νερό είναι <strong>πρόβλημα συσκευών και άνεσης</strong>, όχι υγείας. Όποιος σας λέει ότι «τα άλατα κάνουν πέτρες στα νεφρά» ή ότι «είναι δηλητήριο», δεν στηρίζεται σε τεκμήρια.</p>
 
 <h2 id="syskeves">Τι κάνουν τα άλατα στις συσκευές</h2>
 <ul>
   <li><strong>Βραστήρας, καφετιέρα, μηχανή espresso:</strong> το πουρί καλύπτει την αντίσταση και στενεύει τα λεπτά περάσματα του νερού. Η συσκευή αργεί, κάνει θόρυβο και τελικά χαλάει.</li>
-  <li><strong>Θερμοσίφωνας:</strong> τα άλατα μαζεύονται στον πυθμένα και πάνω στην αντίσταση. Απώλεια απόδοσης υπάρχει, κυρίως στους θερμοσίφωνες αερίου, αλλά το πόσο μεγάλη είναι συζητιέται: μια παλιά μελέτη του Gas Research Institute βρήκε μείωση γύρω στο 5% μετά από πολλά χρόνια λειτουργίας με πολύ σκληρό νερό.<sup><a href="#src-5">5</a></sup></li>
+  <li><strong>Θερμοσίφωνας:</strong> τα άλατα μαζεύονται στον πυθμένα και πάνω στην αντίσταση. Απώλεια απόδοσης υπάρχει, κυρίως στους θερμοσίφωνες αερίου, αλλά το πόσο μεγάλη είναι συζητιέται: μια παλιά μελέτη του Gas Research Institute βρήκε μείωση γύρω στο 5% μετά από πολλά χρόνια λειτουργίας με πολύ σκληρό νερό.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup></li>
   <li><strong>Πλυντήρια, βρύσες, ντουζιέρες:</strong> λευκοί λεκέδες, βουλωμένες κεφαλές ντους, περισσότερο απορρυπαντικό για το ίδιο αποτέλεσμα.</li>
 </ul>
 <p class="note note-warn">Θα δείτε συχνά το νούμερο «1,6 mm πουρί = 12% περισσότερο ρεύμα». Δεν βρήκαμε πρωτογενή πηγή που να το στηρίζει, γι' αυτό δεν το χρησιμοποιούμε.</p>
@@ -254,7 +255,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CE%AC%CE%BB%CE%B1%CF%84%CE%B1%20%CF%83%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CE%AC%CE%BB%CE%B1%CF%84%CE%B1%20%CF%83%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -273,12 +274,12 @@
       <tr><td>Αντίστροφη όσμωση</td><td>Ναι, το μεγαλύτερο μέρος</td><td>Πόσιμο νερό, μαγείρεμα, καφές</td></tr>
     </tbody>
   </table>
-  <caption>Πηγές: Penn State Extension, NSF/ANSI 58.<sup><a href="#src-3">3</a></sup> <sup><a href="#src-4">4</a></sup></caption>
+  <caption>Πηγές: Penn State Extension, NSF/ANSI 58.<sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup> <sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup></caption>
 </div>
 <h3>Για το νερό που πίνετε</h3>
-<p>Ένα σύστημα <a href="antistrofi-osmosi.html">αντίστροφης όσμωσης</a> κάτω από τον νεροχύτη αφαιρεί το μεγαλύτερο μέρος των διαλυμένων αλάτων. Τα συστήματα που είναι πιστοποιημένα κατά NSF/ANSI 58 πρέπει να μειώνουν τα ολικά διαλυμένα στερεά (TDS) τουλάχιστον κατά 75%.<sup><a href="#src-4">4</a></sup> Το νερό βγαίνει από ξεχωριστό βρυσάκι και δεν αφήνει πουρί στον βραστήρα.</p>
+<p>Ένα σύστημα <a href="antistrofi-osmosi.html">αντίστροφης όσμωσης</a> κάτω από τον νεροχύτη αφαιρεί το μεγαλύτερο μέρος των διαλυμένων αλάτων. Τα συστήματα που είναι πιστοποιημένα κατά NSF/ANSI 58 πρέπει να μειώνουν τα ολικά διαλυμένα στερεά (TDS) τουλάχιστον κατά 75%.<sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup> Το νερό βγαίνει από ξεχωριστό βρυσάκι και δεν αφήνει πουρί στον βραστήρα.</p>
 <h3>Για όλο το σπίτι</h3>
-<p>Αν θέλετε να προστατέψετε θερμοσίφωνα, πλυντήρια και μπαταρίες, χρειάζεται <strong>αποσκληρυντής</strong> στην κεντρική παροχή. Ο αποσκληρυντής αντικαθιστά το ασβέστιο και το μαγνήσιο με νάτριο.<sup><a href="#src-3">3</a></sup> Γι' αυτό, πολλοί κρατούν ξεχωριστή παροχή (ή αντίστροφη όσμωση) για το πόσιμο νερό.</p>
+<p>Αν θέλετε να προστατέψετε θερμοσίφωνα, πλυντήρια και μπαταρίες, χρειάζεται <strong>αποσκληρυντής</strong> στην κεντρική παροχή. Ο αποσκληρυντής αντικαθιστά το ασβέστιο και το μαγνήσιο με νάτριο.<sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup> Γι' αυτό, πολλοί κρατούν ξεχωριστή παροχή (ή αντίστροφη όσμωση) για το πόσιμο νερό.</p>
 <h3>Για επαγγελματικό εξοπλισμό</h3>
 <p>Οι μηχανές espresso και οι παγομηχανές χρειάζουν ελεγχόμενη σκληρότητα, όχι μηδενική. Δείτε τον οδηγό μας <a href="nero-gia-kafe-espresso.html">για το νερό στον καφέ</a>.</p>
 
@@ -312,7 +313,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CE%AC%CE%BB%CE%B1%CF%84%CE%B1%20%CF%83%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CE%AC%CE%BB%CE%B1%CF%84%CE%B1%20%CF%83%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -321,11 +322,11 @@
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Πηγές</h2>
           <ol>
-      <li id="src-1">World Health Organization – Hardness in Drinking-water (background document): <a href="https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf" rel="noopener" target="_blank">cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf</a></li>
-      <li id="src-2">U.S. Geological Survey – Hardness of Water: <a href="https://www.usgs.gov/special-topics/water-science-school/science/hardness-water" rel="noopener" target="_blank">www.usgs.gov/special-topics/water-science-school/science/hardness-water</a></li>
-      <li id="src-3">Penn State Extension – Water Softening: <a href="https://extension.psu.edu/water-softening" rel="noopener" target="_blank">extension.psu.edu/water-softening</a></li>
-      <li id="src-4">NSF – Standards for water treatment systems (NSF/ANSI 42, 53, 58): <a href="https://www.nsf.org/consumer-resources/articles/standards-water-treatment-systems" rel="noopener" target="_blank">www.nsf.org/consumer-resources/articles/standards-water-treatment-systems</a></li>
-      <li id="src-5">ACEEE 1984 – Scale buildup on water heater life-cycle efficiency (Gas Research Institute study): <a href="https://www.aceee.org/files/proceedings/1984/data/papers/SS84_Panel5_Paper_18.pdf" rel="noopener" target="_blank">www.aceee.org/files/proceedings/1984/data/papers/SS84_Panel5_Paper_18.pdf</a></li>
+      <li id="src-1">World Health Organization – Hardness in Drinking-water (background document): <a href="https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf" rel="noopener noreferrer" target="_blank">cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-2">U.S. Geological Survey – Hardness of Water: <a href="https://www.usgs.gov/special-topics/water-science-school/science/hardness-water" rel="noopener noreferrer" target="_blank">www.usgs.gov/special-topics/water-science-school/science/hardness-water<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-3">Penn State Extension – Water Softening: <a href="https://extension.psu.edu/water-softening" rel="noopener noreferrer" target="_blank">extension.psu.edu/water-softening<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-4">NSF – Standards for water treatment systems (NSF/ANSI 42, 53, 58): <a href="https://www.nsf.org/consumer-resources/articles/standards-water-treatment-systems" rel="noopener noreferrer" target="_blank">www.nsf.org/consumer-resources/articles/standards-water-treatment-systems<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-5">ACEEE 1984 – Scale buildup on water heater life-cycle efficiency (Gas Research Institute study): <a href="https://www.aceee.org/files/proceedings/1984/data/papers/SS84_Panel5_Paper_18.pdf" rel="noopener noreferrer" target="_blank">www.aceee.org/files/proceedings/1984/data/papers/SS84_Panel5_Paper_18.pdf<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
           </ol>
           <p class="disclaimer">Το άρθρο είναι ενημερωτικό και δεν αποτελεί ιατρική συμβουλή. Για την ποιότητα του νερού του δικτύου σας, η επίσημη πηγή είναι ο πάροχος ύδρευσης της περιοχής σας. Για ασφαλή συμπεράσματα για το δικό σας νερό, χρειάζεται εργαστηριακή ανάλυση.</p>
         </section>
@@ -387,7 +388,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CE%AC%CE%BB%CE%B1%CF%84%CE%B1%20%CF%83%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CE%AC%CE%BB%CE%B1%CF%84%CE%B1%20%CF%83%CF%84%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CF%80%CE%B5%CF%81%CE%B9%CE%BF%CF%87%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Παλιές σωληνώσεις &amp; μόλυβδος στο νερό">
   <meta name="twitter:description" content="Ο πάροχος ευθύνεται μέχρι τον μετρητή. Τι «μαζεύει» το νερό σε παλιές σωληνώσεις, τι ισχύει για τον μόλυβδο και τι κάνετε στην πράξη.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/palies-solines-molyvdos.jpg">
+  <meta name="twitter:image:alt" content="Παλιές σωληνώσεις και μόλυβδος: τι παθαίνει το νερό μέχρι να φτάσει στη βρύση σας">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -224,8 +225,8 @@
 <p>Οι αναλύσεις του παρόχου ύδρευσης δείχνουν την ποιότητα του νερού στο δίκτυο. Από τον μετρητή μέχρι το ποτήρι σας όμως, το νερό περνά από τις σωληνώσεις του κτιρίου, που μπορεί να είναι 30, 40 ή 50 χρονών. Αυτό το κομμάτι δεν το ελέγχει κανείς άλλος εκτός από εσάς.</p>
 
 <h2 id="eythyni">Ποιος ευθύνεται για τι</h2>
-<p>Η ευρωπαϊκή Οδηγία 2020/2184 και η ελληνική ΚΥΑ που τη μεταφέρει ορίζουν ως <strong>εσωτερικό δίκτυο</strong> τους σωλήνες, τα εξαρτήματα και τις συσκευές ανάμεσα στο δίκτυο διανομής και στις βρύσες, όταν δεν είναι ευθύνη του παρόχου.<sup><a href="#src-2">2</a></sup> <sup><a href="#src-3">3</a></sup> Στην πράξη, ο πάροχος ευθύνεται <strong>μέχρι τον μετρητή</strong>. Αν ένα πρόβλημα οφείλεται στις σωληνώσεις ή στη δεξαμενή του κτιρίου, η ευθύνη είναι του ιδιοκτήτη ή της πολυκατοικίας.</p>
-<p>Η νεότερη νομοθεσία δίνει μεγαλύτερη προσοχή στα εσωτερικά δίκτυα. Η τροποποίηση του 2025 της ελληνικής ΚΥΑ πρόσθεσε διατάξεις για εκτίμηση κινδύνου σε κτίρια προτεραιότητας, όπως νοσοκομεία, σχολεία και ξενοδοχεία, καθώς και για τη λεγιονέλα και τον μόλυβδο.<sup><a href="#src-4">4</a></sup></p>
+<p>Η ευρωπαϊκή Οδηγία 2020/2184 και η ελληνική ΚΥΑ που τη μεταφέρει ορίζουν ως <strong>εσωτερικό δίκτυο</strong> τους σωλήνες, τα εξαρτήματα και τις συσκευές ανάμεσα στο δίκτυο διανομής και στις βρύσες, όταν δεν είναι ευθύνη του παρόχου.<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup> <sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup> Στην πράξη, ο πάροχος ευθύνεται <strong>μέχρι τον μετρητή</strong>. Αν ένα πρόβλημα οφείλεται στις σωληνώσεις ή στη δεξαμενή του κτιρίου, η ευθύνη είναι του ιδιοκτήτη ή της πολυκατοικίας.</p>
+<p>Η νεότερη νομοθεσία δίνει μεγαλύτερη προσοχή στα εσωτερικά δίκτυα. Η τροποποίηση του 2025 της ελληνικής ΚΥΑ πρόσθεσε διατάξεις για εκτίμηση κινδύνου σε κτίρια προτεραιότητας, όπως νοσοκομεία, σχολεία και ξενοδοχεία, καθώς και για τη λεγιονέλα και τον μόλυβδο.<sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup></p>
 
 <h2 id="ti-mazevei">Τι μπορεί να «μαζέψει» το νερό στο κτίριο</h2>
 <ul>
@@ -235,7 +236,7 @@
 </ul>
 
 <h2 id="molyvdos">Τι ισχύει για τον μόλυβδο</h2>
-<p>Ο Παγκόσμιος Οργανισμός Υγείας είναι σαφής: <strong>δεν υπάρχει επίπεδο έκθεσης στον μόλυβδο που να είναι γνωστό ως αβλαβές</strong>. Τα παιδιά είναι ιδιαίτερα ευάλωτα.<sup><a href="#src-1">1</a></sup> Γι' αυτό η Οδηγία 2020/2184 κρατά το όριο στα <strong>10 μg/L</strong> μέχρι τις 12 Ιανουαρίου 2036 και μετά το μειώνει στα <strong>5 μg/L</strong>.<sup><a href="#src-2">2</a></sup></p>
+<p>Ο Παγκόσμιος Οργανισμός Υγείας είναι σαφής: <strong>δεν υπάρχει επίπεδο έκθεσης στον μόλυβδο που να είναι γνωστό ως αβλαβές</strong>. Τα παιδιά είναι ιδιαίτερα ευάλωτα.<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup> Γι' αυτό η Οδηγία 2020/2184 κρατά το όριο στα <strong>10 μg/L</strong> μέχρι τις 12 Ιανουαρίου 2036 και μετά το μειώνει στα <strong>5 μg/L</strong>.<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup></p>
 <p class="note">Αυτό δεν σημαίνει ότι κάθε παλιό κτίριο έχει μόλυβδο στο νερό. Αν όμως έχετε παλιές σωληνώσεις και παιδιά ή έγκυο στο σπίτι, αξίζει να το ελέγξετε με ανάλυση αντί να το μαντεύετε.</p>
 
 <aside class="cta-box" aria-label="Δωρεάν συμβουλή">
@@ -244,7 +245,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%BB%CE%B9%CF%8C%20%CE%BA%CF%84%CE%AF%CF%81%CE%B9%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%28%CE%B4%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B9%CF%82%20%CF%83%CF%89%CE%BB%CE%B7%CE%BD%CF%8E%CF%83%CE%B5%CE%B9%CF%82%29." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%BB%CE%B9%CF%8C%20%CE%BA%CF%84%CE%AF%CF%81%CE%B9%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%28%CE%B4%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B9%CF%82%20%CF%83%CF%89%CE%BB%CE%B7%CE%BD%CF%8E%CF%83%CE%B5%CE%B9%CF%82%29." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -252,8 +253,8 @@
 
 <h2 id="ti-kanete">Τι κάνετε στην πράξη</h2>
 <ol>
-  <li><strong>Αφήστε το νερό να τρέξει</strong> όταν έχει μείνει ώρες στους σωλήνες (το πρωί, μετά από ταξίδι). Η αμερικανική EPA προτείνει 30 δευτερόλεπτα έως 2 λεπτά.<sup><a href="#src-6">6</a></sup> Μπορείτε να μαζεύετε αυτό το νερό για πότισμα.</li>
-  <li><strong>Μόνο κρύο νερό</strong> για πόσιμο, μαγείρεμα και γάλα για μωρά. Το ζεστό νερό διαλύει περισσότερα μέταλλα από τους σωλήνες.<sup><a href="#src-5">5</a></sup></li>
+  <li><strong>Αφήστε το νερό να τρέξει</strong> όταν έχει μείνει ώρες στους σωλήνες (το πρωί, μετά από ταξίδι). Η αμερικανική EPA προτείνει 30 δευτερόλεπτα έως 2 λεπτά.<sup><a href="#src-6" aria-label="Πηγή 6">6</a></sup> Μπορείτε να μαζεύετε αυτό το νερό για πότισμα.</li>
+  <li><strong>Μόνο κρύο νερό</strong> για πόσιμο, μαγείρεμα και γάλα για μωρά. Το ζεστό νερό διαλύει περισσότερα μέταλλα από τους σωλήνες.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup></li>
   <li><strong>Ανάλυση</strong> σε εργαστήριο διαπιστευμένο από το ΕΣΥΔ, αν έχετε υποψίες. Για τον μόλυβδο ζητήστε δείγμα «πρώτης ροής», δηλαδή νερό που έμεινε στους σωλήνες όλη τη νύχτα.</li>
   <li><strong>Καθαρισμός δεξαμενής</strong>, αν το κτίριο έχει, τουλάχιστον μία φορά τον χρόνο από ειδικό συνεργείο.</li>
   <li><strong>Φίλτρο με την κατάλληλη πιστοποίηση</strong>, στο σημείο που πίνετε.</li>
@@ -266,12 +267,12 @@
     <tbody>
       <tr><td>Σκουριά, άμμος, ιζήματα σε όλο το σπίτι</td><td>Φίλτρο ιζημάτων στην κεντρική παροχή</td></tr>
       <tr><td>Γεύση και οσμή</td><td>Ενεργός άνθρακας στη βρύση ή κάτω από τον πάγκο</td></tr>
-      <tr><td>Μόλυβδος</td><td>Φίλτρο <strong>πιστοποιημένο για μόλυβδο</strong> κατά NSF/ANSI 53, ή αντίστροφη όσμωση πιστοποιημένη κατά NSF/ANSI 58 με ισχυρισμό για μόλυβδο<sup><a href="#src-7">7</a></sup></td></tr>
+      <tr><td>Μόλυβδος</td><td>Φίλτρο <strong>πιστοποιημένο για μόλυβδο</strong> κατά NSF/ANSI 53, ή αντίστροφη όσμωση πιστοποιημένη κατά NSF/ANSI 58 με ισχυρισμό για μόλυβδο<sup><a href="#src-7" aria-label="Πηγή 7">7</a></sup></td></tr>
       <tr><td>Μικροβιακή επιβάρυνση</td><td>Πρώτα εντοπισμός της αιτίας (δεξαμενή, δίκτυο). Τα συνηθισμένα φίλτρα <strong>δεν</strong> απολυμαίνουν το νερό.</td></tr>
     </tbody>
   </table>
 </div>
-<p>Το CDC και η EPA των ΗΠΑ συστήνουν, όπου υπάρχει θέμα μολύβδου, φίλτρο πιστοποιημένο κατά NSF/ANSI 53 για τη μείωση μολύβδου, και να αλλάζεται το ανταλλακτικό σύμφωνα με τις οδηγίες.<sup><a href="#src-5">5</a></sup> <sup><a href="#src-6">6</a></sup> Αν ένα φίλτρο δεν αναφέρει συγκεκριμένη πιστοποίηση για τον μόλυβδο, μην υποθέσετε ότι τον αφαιρεί.</p>
+<p>Το CDC και η EPA των ΗΠΑ συστήνουν, όπου υπάρχει θέμα μολύβδου, φίλτρο πιστοποιημένο κατά NSF/ANSI 53 για τη μείωση μολύβδου, και να αλλάζεται το ανταλλακτικό σύμφωνα με τις οδηγίες.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup> <sup><a href="#src-6" aria-label="Πηγή 6">6</a></sup> Αν ένα φίλτρο δεν αναφέρει συγκεκριμένη πιστοποίηση για τον μόλυβδο, μην υποθέσετε ότι τον αφαιρεί.</p>
 <p>Για τη μόνιμη λύση, την αντικατάσταση των παλιών σωληνώσεων, μιλήστε με υδραυλικό. Μέχρι να γίνει αυτό, αλλά και μετά, το φίλτρο στο σημείο που πίνετε είναι η τελευταία προστασία πριν από το ποτήρι σας.</p>
 
     <h2 id="syxnes-erotiseis">Συχνές ερωτήσεις</h2>
@@ -296,7 +297,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%BB%CE%B9%CF%8C%20%CE%BA%CF%84%CE%AF%CF%81%CE%B9%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%28%CE%B4%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B9%CF%82%20%CF%83%CF%89%CE%BB%CE%B7%CE%BD%CF%8E%CF%83%CE%B5%CE%B9%CF%82%29." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%BB%CE%B9%CF%8C%20%CE%BA%CF%84%CE%AF%CF%81%CE%B9%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%28%CE%B4%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B9%CF%82%20%CF%83%CF%89%CE%BB%CE%B7%CE%BD%CF%8E%CF%83%CE%B5%CE%B9%CF%82%29." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -305,13 +306,13 @@
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Πηγές</h2>
           <ol>
-      <li id="src-1">WHO – Lead poisoning (fact sheet): <a href="https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health" rel="noopener" target="_blank">www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health</a></li>
-      <li id="src-2">Οδηγία (ΕΕ) 2020/2184 για το νερό ανθρώπινης κατανάλωσης: <a href="https://eur-lex.europa.eu/eli/dir/2020/2184/oj/eng" rel="noopener" target="_blank">eur-lex.europa.eu/eli/dir/2020/2184/oj/eng</a></li>
-      <li id="src-3">ΚΥΑ Δ1(δ)/ΓΠ οικ. 27829/2023 (ΦΕΚ Β΄ 3525/25.05.2023) – μεταφορά της Οδηγίας στο ελληνικό δίκαιο: <a href="https://www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023" rel="noopener" target="_blank">www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023</a></li>
-      <li id="src-4">Υπουργείο Υγείας – ΚΥΑ Δ1(δ)/ΓΠ οικ. 35986/12-08-2025 (τροποποίηση): <a href="https://www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasia-poiothtas-ydatwn/prostasia-neroy-anthrwpinhs-katanalwshs/13605-dhmosieysh-ths-d1-d-gp-oik-35986-12-08-2025" rel="noopener" target="_blank">www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasi</a></li>
-      <li id="src-5">U.S. CDC – Lead in drinking water: <a href="https://www.cdc.gov/lead-prevention/prevention/drinking-water.html" rel="noopener" target="_blank">www.cdc.gov/lead-prevention/prevention/drinking-water.html</a></li>
-      <li id="src-6">U.S. EPA – Reduce your risk from lead in drinking water: <a href="https://www.epa.gov/system/files/documents/2025-08/reduce-risk.pdf" rel="noopener" target="_blank">www.epa.gov/system/files/documents/2025-08/reduce-risk.pdf</a></li>
-      <li id="src-7">NSF – Standards for water treatment systems: <a href="https://www.nsf.org/consumer-resources/articles/standards-water-treatment-systems" rel="noopener" target="_blank">www.nsf.org/consumer-resources/articles/standards-water-treatment-systems</a></li>
+      <li id="src-1">WHO – Lead poisoning (fact sheet): <a href="https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health" rel="noopener noreferrer" target="_blank">www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-2">Οδηγία (ΕΕ) 2020/2184 για το νερό ανθρώπινης κατανάλωσης: <a href="https://eur-lex.europa.eu/eli/dir/2020/2184/oj/eng" rel="noopener noreferrer" target="_blank">eur-lex.europa.eu/eli/dir/2020/2184/oj/eng<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-3">ΚΥΑ Δ1(δ)/ΓΠ οικ. 27829/2023 (ΦΕΚ Β΄ 3525/25.05.2023) – μεταφορά της Οδηγίας στο ελληνικό δίκαιο: <a href="https://www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023" rel="noopener noreferrer" target="_blank">www.elinyae.gr/ethniki-nomothesia/ya-d1dgp-oik-278292023-fek-3525b-2552023<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-4">Υπουργείο Υγείας – ΚΥΑ Δ1(δ)/ΓΠ οικ. 35986/12-08-2025 (τροποποίηση): <a href="https://www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasia-poiothtas-ydatwn/prostasia-neroy-anthrwpinhs-katanalwshs/13605-dhmosieysh-ths-d1-d-gp-oik-35986-12-08-2025" rel="noopener noreferrer" target="_blank">www.moh.gov.gr/articles/health/dieythynsh-dhmosias-ygieinhs/ygieinh-periballontos/prostasi<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-5">U.S. CDC – Lead in drinking water: <a href="https://www.cdc.gov/lead-prevention/prevention/drinking-water.html" rel="noopener noreferrer" target="_blank">www.cdc.gov/lead-prevention/prevention/drinking-water.html<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-6">U.S. EPA – Reduce your risk from lead in drinking water: <a href="https://www.epa.gov/system/files/documents/2025-08/reduce-risk.pdf" rel="noopener noreferrer" target="_blank">www.epa.gov/system/files/documents/2025-08/reduce-risk.pdf<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-7">NSF – Standards for water treatment systems: <a href="https://www.nsf.org/consumer-resources/articles/standards-water-treatment-systems" rel="noopener noreferrer" target="_blank">www.nsf.org/consumer-resources/articles/standards-water-treatment-systems<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
           </ol>
           <p class="disclaimer">Το άρθρο είναι ενημερωτικό και δεν αποτελεί ιατρική συμβουλή. Για την ποιότητα του νερού του δικτύου σας, η επίσημη πηγή είναι ο πάροχος ύδρευσης της περιοχής σας. Για ασφαλή συμπεράσματα για το δικό σας νερό, χρειάζεται εργαστηριακή ανάλυση.</p>
         </section>
@@ -373,7 +374,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%BB%CE%B9%CF%8C%20%CE%BA%CF%84%CE%AF%CF%81%CE%B9%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%28%CE%B4%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B9%CF%82%20%CF%83%CF%89%CE%BB%CE%B7%CE%BD%CF%8E%CF%83%CE%B5%CE%B9%CF%82%29." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%9C%CE%AD%CE%BD%CF%89%20%CF%83%CE%B5%20%CF%80%CE%B1%CE%BB%CE%B9%CF%8C%20%CE%BA%CF%84%CE%AF%CF%81%CE%B9%CE%BF%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%28%CE%B4%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B9%CF%82%20%CF%83%CF%89%CE%BB%CE%B7%CE%BD%CF%8E%CF%83%CE%B5%CE%B9%CF%82%29." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

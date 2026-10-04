@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <!-- Ασφάλεια: Content Security Policy. Η ίδια πολιτική (μαζί με frame-ancestors) στέλνεται και ως HTTP header από τα _headers / .htaccess -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; frame-src https://www.google.com https://maps.google.com; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src https://formspree.io; frame-src https://www.google.com https://maps.google.com; form-action https://formspree.io; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε παντού το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Φίλτρα Νερού Waterwal στη Θεσσαλονίκη – Σπίτι, Καφέ &amp; Επαγγελματίες">
   <meta name="twitter:description" content="Καθαρό, νόστιμο νερό από τη βρύση, σε όλο τον νομό Θεσσαλονίκης. Ζητήστε δωρεάν συμβουλή.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="Ποτήρι με καθαρό νερό και η φράση: Φίλτρα νερού Waterwal για σπίτι, καφέ και επαγγελματίες">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -326,7 +327,7 @@
             <li>Φίλτρο κεντρικής παροχής για όλο το σπίτι</li>
             <li>Φίλτρο ντους για λιγότερο χλώριο στο μπάνιο</li>
           </ul>
-          <a class="solution-link" href="#products" data-show="home">Δείτε τα προϊόντα για το σπίτι →</a>
+          <a class="solution-link" href="#products" data-show="home">Δείτε τα προϊόντα για το σπίτι<span aria-hidden="true"> →</span></a>
         </article>
 
         <article class="solution" id="lysi-kafe">
@@ -340,7 +341,7 @@
             <li>Πρόγραμμα τακτικής αλλαγής ανταλλακτικών</li>
           </ul>
           <!-- TODO: αν η Waterwal έχει ειδικά μοντέλα για μηχανές espresso / HoReCa, προσθέστε τα ονομαστικά εδώ και στα προϊόντα -->
-          <a class="solution-link" href="#products" data-show="cafe">Δείτε τα προϊόντα για καφέ →</a>
+          <a class="solution-link" href="#products" data-show="cafe">Δείτε τα προϊόντα για καφέ<span aria-hidden="true"> →</span></a>
         </article>
 
         <article class="solution" id="lysi-estiasi">
@@ -353,7 +354,7 @@
             <li>Φίλτρο κεντρικής παροχής για την κουζίνα και τις συσκευές</li>
             <li>Μελέτη ανάλογα με την κατανάλωση του χώρου</li>
           </ul>
-          <a class="solution-link" href="#products" data-show="horeca">Δείτε τα προϊόντα για εστίαση →</a>
+          <a class="solution-link" href="#products" data-show="horeca">Δείτε τα προϊόντα για εστίαση<span aria-hidden="true"> →</span></a>
         </article>
 
         <article class="solution" id="lysi-grafeio">
@@ -366,7 +367,7 @@
             <li>Αντίστροφη όσμωση για μεγαλύτερη κατανάλωση</li>
             <li>Συμβόλαιο για την τακτική αλλαγή φίλτρων</li>
           </ul>
-          <a class="solution-link" href="#products" data-show="office">Δείτε τα προϊόντα για γραφεία →</a>
+          <a class="solution-link" href="#products" data-show="office">Δείτε τα προϊόντα για γραφεία<span aria-hidden="true"> →</span></a>
         </article>
       </div>
       <p class="solution-other">Έχετε άλλο χώρο, όπως ιατρείο, γυμναστήριο, σχολείο, εξοχικό ή κατάστημα; <a href="#contact">Πείτε μας τι χρειάζεστε</a>.</p>
@@ -525,10 +526,10 @@
             <tr><th scope="col"><span class="sr-only">Χαρακτηριστικό</span></th><th scope="col">Βρύσης</th><th scope="col">Κάτω / άνω πάγκου</th><th scope="col">Αντίστροφη όσμωση</th><th scope="col">Κεντρικής παροχής</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">Χλώριο, γεύση, οσμή</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="partial">Ανάλογα με το φίλτρο</td></tr>
-            <tr><th scope="row">Άμμος, σκουριά, λάσπη</th><td class="partial">Μερικώς</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-            <tr><th scope="row">Διαλυμένα άλατα, νιτρικά</th><td class="no">Όχι</td><td class="no">Όχι</td><td class="yes">✓</td><td class="no">Όχι</td></tr>
-            <tr><th scope="row">Προστασία όλου του χώρου</th><td class="no">Όχι</td><td class="no">Όχι</td><td class="no">Όχι</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Χλώριο, γεύση, οσμή</th><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td><td class="partial">Ανάλογα με το φίλτρο</td></tr>
+            <tr><th scope="row">Άμμος, σκουριά, λάσπη</th><td class="partial">Μερικώς</td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td></tr>
+            <tr><th scope="row">Διαλυμένα άλατα, νιτρικά</th><td class="no">Όχι</td><td class="no">Όχι</td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td><td class="no">Όχι</td></tr>
+            <tr><th scope="row">Προστασία όλου του χώρου</th><td class="no">Όχι</td><td class="no">Όχι</td><td class="no">Όχι</td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Ναι</span></td></tr>
             <tr><th scope="row">Εγκατάσταση</th><td>Μόνοι σας</td><td>Απλή</td><td>Από τεχνικό</td><td>Από υδραυλικό</td></tr>
             <tr><th scope="row">Ιδανικό για</th><td>Ενοικιαζόμενα, γρήγορη λύση</td><td>Οικογένειες, γραφεία</td><td>Σκληρό νερό, εστίαση</td><td>Μονοκατοικίες, καφέ, επιχειρήσεις</td></tr>
           </tbody>
@@ -561,10 +562,10 @@
         </form>
         <p class="footnote">Οι προεπιλεγμένες τιμές είναι ενδεικτικές. Αλλάξτε τες με τα δικά σας δεδομένα. Το αρχικό κόστος αγοράς και τοποθέτησης δεν περιλαμβάνεται.</p>
       </div>
-      <div class="calc-result" aria-live="polite">
+      <div class="calc-result">
         <div class="calc-row"><span>Εμφιαλωμένο / έτος</span><strong id="r-bottled">–</strong></div>
         <div class="calc-row"><span>Ανταλλακτικά / έτος</span><strong id="r-filter">–</strong></div>
-        <div class="calc-row calc-total"><span>Εξοικονόμηση / έτος</span><strong id="r-save">–</strong></div>
+        <div class="calc-row calc-total" aria-live="polite" aria-atomic="true"><span>Εξοικονόμηση / έτος</span><strong id="r-save">–</strong></div>
         <div class="calc-row"><span>Μπουκάλια 1,5 λίτρου λιγότερα</span><strong id="r-bottles">–</strong></div>
         <a class="btn btn-light" href="#contact">Ζητήστε δωρεάν συμβουλή</a>
       </div>
@@ -689,7 +690,7 @@
         <div class="chat-buttons">
           <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%98%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%B1%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20Waterwal." target="_blank" rel="noopener noreferrer">
             <svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp
-          </a>
+          <span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
           <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756">
             <svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber
           </a>
@@ -699,13 +700,14 @@
       <!-- TODO: δημιουργήστε δωρεάν φόρμα στο formspree.io και βάλτε το δικό σας endpoint στο action.
            Μέχρι τότε, η φόρμα ανοίγει το πρόγραμμα email του επισκέπτη με τα στοιχεία συμπληρωμένα. -->
       <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-fallback-email="info@example.com">
+        <p class="form-note">Τα πεδία με <span aria-hidden="true">*</span><span class="sr-only">αστερίσκο</span> είναι υποχρεωτικά.</p>
         <div class="field-row">
-          <label>Ονοματεπώνυμο *<input name="name" required maxlength="100" autocomplete="name"></label>
-          <label>Τηλέφωνο *<input name="phone" type="tel" required maxlength="25" pattern="[0-9+\(\)\s\-]{8,25}" autocomplete="tel" inputmode="tel"></label>
+          <label><span>Ονοματεπώνυμο <span aria-hidden="true">*</span></span><input name="name" required minlength="2" maxlength="100" pattern="[\p{L}\p{M}][\p{L}\p{M} .'\-]{1,99}" autocomplete="name"></label>
+          <label><span>Τηλέφωνο <span aria-hidden="true">*</span></span><input name="phone" type="tel" required maxlength="25" pattern="[0-9+\(\)\s\-]{8,25}" autocomplete="tel" inputmode="tel"></label>
         </div>
         <div class="field-row">
           <label>Email<input name="email" type="email" maxlength="120" autocomplete="email"></label>
-          <label>Περιοχή<input name="area" maxlength="80" autocomplete="address-level2" placeholder="π.χ. Καλαμαριά"></label>
+          <label>Περιοχή<input name="area" maxlength="80" pattern="[\p{L}\p{M}\p{N} .,'\-]{0,80}" autocomplete="address-level2" placeholder="π.χ. Καλαμαριά"></label>
         </div>
         <div class="field-row">
           <label>Τύπος χώρου
@@ -731,10 +733,12 @@
           </label>
         </div>
         <label>Μήνυμα<textarea name="message" rows="4" maxlength="2000" placeholder="Πείτε μας λίγα λόγια για τις ανάγκες σας"></textarea></label>
+        <!-- Παγίδες για bots (honeypots): κρυφά πεδία που ένας άνθρωπος δεν βλέπει ούτε συμπληρώνει -->
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="hp" aria-hidden="true"><label>Ιστοσελίδα<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <label class="consent">
           <input type="checkbox" name="consent" required>
-          <span>Συμφωνώ να χρησιμοποιηθούν τα στοιχεία μου μόνο για να επικοινωνήσετε μαζί μου σχετικά με το αίτημά μου, σύμφωνα με την <a href="privacy.html">Πολιτική Απορρήτου</a>. *</span>
+          <span>Συμφωνώ να χρησιμοποιηθούν τα στοιχεία μου μόνο για να επικοινωνήσετε μαζί μου σχετικά με το αίτημά μου, σύμφωνα με την <a href="privacy.html">Πολιτική Απορρήτου</a>. <span aria-hidden="true">*</span></span>
         </label>
         <button class="btn btn-primary btn-block" type="submit">Αποστολή αιτήματος</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
@@ -757,7 +761,7 @@
         </div>
         <figcaption class="map-caption">
           <span>Ο χάρτης φορτώνεται από την Google μόνο αν πατήσετε «Εμφάνιση χάρτη». <a href="privacy.html#xartis">Απόρρητο</a></span>
-          <a class="map-open" href="https://www.google.com/maps/search/?api=1&amp;query=%CE%9D%CE%BF%CE%BC%CF%8C%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82" target="_blank" rel="noopener noreferrer">Άνοιγμα στο Google Maps ↗</a>
+          <a class="map-open" href="https://www.google.com/maps/search/?api=1&amp;query=%CE%9D%CE%BF%CE%BC%CF%8C%CF%82%20%CE%98%CE%B5%CF%83%CF%83%CE%B1%CE%BB%CE%BF%CE%BD%CE%AF%CE%BA%CE%B7%CF%82" target="_blank" rel="noopener noreferrer">Άνοιγμα στο Google Maps<span aria-hidden="true"> ↗</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
         </figcaption>
       </figure>
     </div>
@@ -792,7 +796,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%98%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%B1%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20Waterwal." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%98%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B5%CF%82%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%B1%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20Waterwal." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

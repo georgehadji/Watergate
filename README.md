@@ -133,10 +133,21 @@ Articles are marked with a publication date. When you change content, update `da
 
 ## Security
 
-- **Content Security Policy**: only resources from the site itself, with no inline scripts or styles; the one exception is Formspree for the form. It is set both as a `<meta>` tag and as an HTTP header (`_headers` / `.htaccess`, which also add `frame-ancestors 'none'`).
-- HSTS, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, `Cross-Origin-Opener-Policy`.
-- **No third parties on page load**: fonts are self-hosted (SIL Open Font License), and there are no analytics or cookies. Google Maps loads only after a visitor clicks to show the map. That means no cookie banner is needed, and it avoids the GDPR problem with Google Fonts (LG München, 2022).
-- The form has a honeypot against bots, field length limits, and a required consent checkbox.
+- **Content Security Policy**: only resources from the site itself, with no inline scripts or styles; the one exception is Formspree for the form. Each page has its own `<meta>` policy (pages without the form or map allow no connections, frames or form posts at all). The HTTP header (`_headers` / `.htaccess`) adds `frame-ancestors 'none'`, and the browser enforces both.
+- **Trusted Types** (`require-trusted-types-for 'script'`): the browser blocks `innerHTML`, `eval` and similar DOM-XSS sinks. The site's code only uses `textContent` and `createElement`. If you add a library that needs `innerHTML`, it will break, and you'll see an error in the console.
+- HSTS (2 years, no preload; see the comment in `_headers`), `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, a strict `Permissions-Policy`, `Cross-Origin-Opener-Policy`, `Cross-Origin-Resource-Policy` on scripts, styles and fonts, `Origin-Agent-Cluster`, and `X-XSS-Protection: 0` (OWASP's recommendation: the old browser XSS filter caused bugs of its own, and the CSP does that job now).
+- `.htaccess` also allows only GET/HEAD/OPTIONS, blocks dotfiles and backup/config files (`.bak`, `.env`, `.sql`, `.md` …), and hides the server signature.
+- `/.well-known/security.txt` (RFC 9116) tells people how to report a security issue. **Put the real email and domain in it, and renew `Expires` before 2027-10-04.**
+- **No third parties on page load**: fonts are self-hosted (SIL Open Font License), and there are no analytics or cookies. Google Maps loads only after a visitor clicks to show the map, and `data-embed-src` is used only if it starts with `https://www.google.com/maps/`. That means no cookie banner is needed, and it avoids the GDPR problem with Google Fonts (LG München, 2022).
+- **Form**:
+  - Two honeypot fields (`_gotcha`, which Formspree also checks, and `website`).
+  - A time trap: anything submitted less than 3 seconds after the page loads counts as a bot. Bots get the normal "thank you" message, so they can't tell they were caught.
+  - A one-minute cooldown after a successful send.
+  - At most 2 links in the message.
+  - Pattern checks on the name, phone and area fields, plus length limits on every field.
+  - Before sending, the script strips control characters and invisible or bidirectional Unicode characters (used to hide or spoof text).
+  - The request goes only to `https://formspree.io/f/…`, without cookies or redirects, and times out after 15 seconds.
+  - **These checks run in the browser, so a bot posting straight to Formspree skips them. Keep Formspree's own spam filtering (reCAPTCHA / Akismet in its settings) switched on.**
 - A static site has no database or server-side code, so it has a very small attack surface.
 - Check the headers after launch at [securityheaders.com](https://securityheaders.com).
 - **GitHub Pages cannot set HTTP headers**, so only the `<meta>` CSP applies there. For full security, prefer Netlify, Cloudflare Pages or Apache hosting.

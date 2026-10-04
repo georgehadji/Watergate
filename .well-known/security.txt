@@ -1,0 +1,6 @@
+# Αναφορά κενών ασφαλείας / Reporting security issues (RFC 9116)
+# TODO: βάλτε το πραγματικό email και domain πριν τη δημοσίευση, και ανανεώστε το Expires πριν λήξει.
+Contact: mailto:info@example.com
+Expires: 2027-10-04T00:00:00.000Z
+Preferred-Languages: el, en
+Canonical: https://www.example.gr/.well-known/security.txt

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Αντίστροφη όσμωση: υπέρ, κατά &amp; πότε αξίζει">
   <meta name="twitter:description" content="Πώς λειτουργεί η αντίστροφη όσμωση, τι αφαιρεί, πόσο νερό απορρίπτει και αν χρειάζεται επαναμεταλλοποίηση.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/antistrofi-osmosi.jpg">
+  <meta name="twitter:image:alt" content="Αντίστροφη όσμωση στο σπίτι: πότε αξίζει και τι πρέπει να ξέρετε">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -229,12 +230,12 @@
 <p>Το νερό βγαίνει από ξεχωριστό βρυσάκι δίπλα στη μπαταρία της κουζίνας.</p>
 
 <h2 id="ti-afairei">Τι αφαιρεί</h2>
-<p>Για να πιστοποιηθεί κατά <strong>NSF/ANSI 58</strong>, ένα σύστημα πρέπει να μειώνει τα <strong>ολικά διαλυμένα στερεά (TDS)</strong> τουλάχιστον κατά 75%. Κάθε επιπλέον ισχυρισμός (π.χ. αρσενικό, νιτρικά, μόλυβδος, φθόριο) πιστοποιείται ξεχωριστά.<sup><a href="#src-1">1</a></sup> Στην πράξη, οι μεμβράνες συγκρατούν μεγάλο μέρος από:</p>
+<p>Για να πιστοποιηθεί κατά <strong>NSF/ANSI 58</strong>, ένα σύστημα πρέπει να μειώνει τα <strong>ολικά διαλυμένα στερεά (TDS)</strong> τουλάχιστον κατά 75%. Κάθε επιπλέον ισχυρισμός (π.χ. αρσενικό, νιτρικά, μόλυβδος, φθόριο) πιστοποιείται ξεχωριστά.<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup> Στην πράξη, οι μεμβράνες συγκρατούν μεγάλο μέρος από:</p>
 <ul>
   <li>άλατα σκληρότητας (ασβέστιο, μαγνήσιο), δηλαδή <a href="sklero-nero-alata.html">το πουρί</a>,</li>
   <li>νιτρικά, θειικά, χλωριόντα,</li>
   <li>βαρέα μέταλλα και αρσενικό, όταν το σύστημα είναι πιστοποιημένο γι' αυτά,</li>
-  <li>PFAS («αιώνιες χημικές ουσίες»): η EPA κατατάσσει την αντίστροφη όσμωση στις καλύτερες διαθέσιμες τεχνολογίες,<sup><a href="#src-6">6</a></sup> και μια μελέτη σε οικιακά φίλτρα βρήκε ότι τα συστήματα αντίστροφης όσμωσης κάτω πάγκου μείωσαν τα PFAS κατά 94% ή περισσότερο.<sup><a href="#src-5">5</a></sup></li>
+  <li>PFAS («αιώνιες χημικές ουσίες»): η EPA κατατάσσει την αντίστροφη όσμωση στις καλύτερες διαθέσιμες τεχνολογίες,<sup><a href="#src-6" aria-label="Πηγή 6">6</a></sup> και μια μελέτη σε οικιακά φίλτρα βρήκε ότι τα συστήματα αντίστροφης όσμωσης κάτω πάγκου μείωσαν τα PFAS κατά 94% ή περισσότερο.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup></li>
 </ul>
 <p class="note">Πριν αγοράσετε ένα σύστημα για να αφαιρέσετε κάτι συγκεκριμένο, ζητήστε να δείτε την πιστοποίηση για <strong>αυτή</strong> την ουσία. Η γενική φράση «αφαιρεί το 99% των ρύπων» δεν λέει τίποτα.</p>
 
@@ -244,7 +245,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CF%81%CE%BF%CF%86%CE%B7%20%CF%8C%CF%83%CE%BC%CF%89%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CE%B1%CE%BD%20%CE%BC%CE%BF%CF%85%20%CF%84%CE%B1%CE%B9%CF%81%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CF%81%CE%BF%CF%86%CE%B7%20%CF%8C%CF%83%CE%BC%CF%89%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CE%B1%CE%BD%20%CE%BC%CE%BF%CF%85%20%CF%84%CE%B1%CE%B9%CF%81%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -252,11 +253,11 @@
 
 <h2 id="meionektimata">Τα μειονεκτήματα</h2>
 <h3>Απορρίπτει νερό</h3>
-<p>Η μεμβράνη «ξεπλένεται» συνεχώς και ένα μέρος του νερού πηγαίνει στην αποχέτευση. Η αμερικανική EPA αναφέρει ότι ένα τυπικό οικιακό σύστημα μπορεί να απορρίπτει <strong>5 ή περισσότερα λίτρα για κάθε λίτρο</strong> φιλτραρισμένου νερού. Τα αποδοτικά συστήματα με σήμα WaterSense περιορίζουν την απόρριψη σε <strong>2,3 λίτρα ή λιγότερα</strong>.<sup><a href="#src-2">2</a></sup> Επειδή το σύστημα χρησιμοποιείται μόνο για πόσιμο νερό και μαγείρεμα, οι συνολικές ποσότητες είναι μικρές σε σχέση με την κατανάλωση ενός σπιτιού. Ρωτήστε πάντως για την αναλογία απόρριψης πριν αγοράσετε.</p>
+<p>Η μεμβράνη «ξεπλένεται» συνεχώς και ένα μέρος του νερού πηγαίνει στην αποχέτευση. Η αμερικανική EPA αναφέρει ότι ένα τυπικό οικιακό σύστημα μπορεί να απορρίπτει <strong>5 ή περισσότερα λίτρα για κάθε λίτρο</strong> φιλτραρισμένου νερού. Τα αποδοτικά συστήματα με σήμα WaterSense περιορίζουν την απόρριψη σε <strong>2,3 λίτρα ή λιγότερα</strong>.<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup> Επειδή το σύστημα χρησιμοποιείται μόνο για πόσιμο νερό και μαγείρεμα, οι συνολικές ποσότητες είναι μικρές σε σχέση με την κατανάλωση ενός σπιτιού. Ρωτήστε πάντως για την αναλογία απόρριψης πριν αγοράσετε.</p>
 <h3>Νερό με λίγα μέταλλα</h3>
-<p>Το νερό της αντίστροφης όσμωσης είναι πολύ «φτωχό» σε μέταλλα. Σε κεφάλαιο έκθεσης που δημοσίευσε ο ΠΟΥ (F. Kozisek, 2005) αναφέρεται ότι το απομεταλλωμένο νερό χωρίς επαναμεταλλοποίηση <strong>δεν θεωρείται ιδανικό</strong> για τακτική κατανάλωση. Το ίδιο κείμενο προτείνει ελάχιστες τιμές για το ασβέστιο και το μαγνήσιο.<sup><a href="#src-3">3</a></sup> Δύο διευκρινίσεις για να μη γίνεται κινδυνολογία:</p>
+<p>Το νερό της αντίστροφης όσμωσης είναι πολύ «φτωχό» σε μέταλλα. Σε κεφάλαιο έκθεσης που δημοσίευσε ο ΠΟΥ (F. Kozisek, 2005) αναφέρεται ότι το απομεταλλωμένο νερό χωρίς επαναμεταλλοποίηση <strong>δεν θεωρείται ιδανικό</strong> για τακτική κατανάλωση. Το ίδιο κείμενο προτείνει ελάχιστες τιμές για το ασβέστιο και το μαγνήσιο.<sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup> Δύο διευκρινίσεις για να μη γίνεται κινδυνολογία:</p>
 <ul>
-  <li>Πρόκειται για κείμενο συγγραφέα σε έκθεση του ΠΟΥ και <strong>όχι</strong> για επίσημη οδηγία. Ο ίδιος ο ΠΟΥ αναφέρει ότι δεν υπάρχουν επαρκή στοιχεία για να οριστούν ελάχιστες τιμές μετάλλων στο νερό.<sup><a href="#src-4">4</a></sup></li>
+  <li>Πρόκειται για κείμενο συγγραφέα σε έκθεση του ΠΟΥ και <strong>όχι</strong> για επίσημη οδηγία. Ο ίδιος ο ΠΟΥ αναφέρει ότι δεν υπάρχουν επαρκή στοιχεία για να οριστούν ελάχιστες τιμές μετάλλων στο νερό.<sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup></li>
   <li>Τα περισσότερα μέταλλα τα παίρνουμε από την τροφή, όχι από το νερό.</li>
 </ul>
 <p>Ο πρακτικός δρόμος είναι ένα σύστημα με <strong>φίλτρο επαναμεταλλοποίησης</strong>, που βελτιώνει και τη γεύση.</p>
@@ -299,7 +300,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CF%81%CE%BF%CF%86%CE%B7%20%CF%8C%CF%83%CE%BC%CF%89%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CE%B1%CE%BD%20%CE%BC%CE%BF%CF%85%20%CF%84%CE%B1%CE%B9%CF%81%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CF%81%CE%BF%CF%86%CE%B7%20%CF%8C%CF%83%CE%BC%CF%89%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CE%B1%CE%BD%20%CE%BC%CE%BF%CF%85%20%CF%84%CE%B1%CE%B9%CF%81%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -308,12 +309,12 @@
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Πηγές</h2>
           <ol>
-      <li id="src-1">NSF – NSF/ANSI 58: Reverse Osmosis Drinking Water Treatment Systems: <a href="https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems" rel="noopener" target="_blank">www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems</a></li>
-      <li id="src-2">U.S. EPA WaterSense – Point-of-Use Reverse Osmosis Systems: <a href="https://www.epa.gov/watersense/point-use-reverse-osmosis-systems" rel="noopener" target="_blank">www.epa.gov/watersense/point-use-reverse-osmosis-systems</a></li>
-      <li id="src-3">WHO (2005) – Nutrients in Drinking Water, κεφ. 12 (F. Kozisek): Health risks from drinking demineralised water: <a href="https://www.who.int/publications/i/item/9241593989" rel="noopener" target="_blank">www.who.int/publications/i/item/9241593989</a></li>
-      <li id="src-4">WHO – Hardness in Drinking-water (background document): <a href="https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf" rel="noopener" target="_blank">cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf</a></li>
-      <li id="src-5">Herkert et al. (2020), Environ. Sci. Technol. Lett. – Point-of-Use/Point-of-Entry Filters and PFAS: <a href="https://pubs.acs.org/doi/10.1021/acs.estlett.0c00004" rel="noopener" target="_blank">pubs.acs.org/doi/10.1021/acs.estlett.0c00004</a></li>
-      <li id="src-6">U.S. EPA – PFAS NPDWR treatment fact sheet (2024): <a href="https://www.epa.gov/system/files/documents/2024-04/pfas-npdwr_fact-sheet_treatment_4.8.24.pdf" rel="noopener" target="_blank">www.epa.gov/system/files/documents/2024-04/pfas-npdwr_fact-sheet_treatment_4.8.24.pdf</a></li>
+      <li id="src-1">NSF – NSF/ANSI 58: Reverse Osmosis Drinking Water Treatment Systems: <a href="https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems" rel="noopener noreferrer" target="_blank">www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-2">U.S. EPA WaterSense – Point-of-Use Reverse Osmosis Systems: <a href="https://www.epa.gov/watersense/point-use-reverse-osmosis-systems" rel="noopener noreferrer" target="_blank">www.epa.gov/watersense/point-use-reverse-osmosis-systems<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-3">WHO (2005) – Nutrients in Drinking Water, κεφ. 12 (F. Kozisek): Health risks from drinking demineralised water: <a href="https://www.who.int/publications/i/item/9241593989" rel="noopener noreferrer" target="_blank">www.who.int/publications/i/item/9241593989<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-4">WHO – Hardness in Drinking-water (background document): <a href="https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf" rel="noopener noreferrer" target="_blank">cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/hardness-bd.pdf<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-5">Herkert et al. (2020), Environ. Sci. Technol. Lett. – Point-of-Use/Point-of-Entry Filters and PFAS: <a href="https://pubs.acs.org/doi/10.1021/acs.estlett.0c00004" rel="noopener noreferrer" target="_blank">pubs.acs.org/doi/10.1021/acs.estlett.0c00004<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-6">U.S. EPA – PFAS NPDWR treatment fact sheet (2024): <a href="https://www.epa.gov/system/files/documents/2024-04/pfas-npdwr_fact-sheet_treatment_4.8.24.pdf" rel="noopener noreferrer" target="_blank">www.epa.gov/system/files/documents/2024-04/pfas-npdwr_fact-sheet_treatment_4.8.24.pdf<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
           </ol>
           <p class="disclaimer">Το άρθρο είναι ενημερωτικό και δεν αποτελεί ιατρική συμβουλή. Για την ποιότητα του νερού του δικτύου σας, η επίσημη πηγή είναι ο πάροχος ύδρευσης της περιοχής σας. Για ασφαλή συμπεράσματα για το δικό σας νερό, χρειάζεται εργαστηριακή ανάλυση.</p>
         </section>
@@ -375,7 +376,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CF%81%CE%BF%CF%86%CE%B7%20%CF%8C%CF%83%CE%BC%CF%89%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CE%B1%CE%BD%20%CE%BC%CE%BF%CF%85%20%CF%84%CE%B1%CE%B9%CF%81%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CF%81%CE%BF%CF%86%CE%B7%20%CF%8C%CF%83%CE%BC%CF%89%CF%83%CE%B7%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CE%B1%CE%BD%20%CE%BC%CE%BF%CF%85%20%CF%84%CE%B1%CE%B9%CF%81%CE%B9%CE%AC%CE%B6%CE%B5%CE%B9." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

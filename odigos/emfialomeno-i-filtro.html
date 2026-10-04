@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Εμφιαλωμένο νερό ή φίλτρο; Κόστος &amp; μικροπλαστικά">
   <meta name="twitter:description" content="Πόσο κοστίζει το εμφιαλωμένο νερό τον χρόνο, πόσα μπουκάλια σημαίνει, τι ξέρουμε για τα μικροπλαστικά και πότε το φίλτρο συμφέρει.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/emfialomeno-i-filtro.jpg">
+  <meta name="twitter:image:alt" content="Εμφιαλωμένο νερό ή φίλτρο; Ο λογαριασμός, το πλαστικό και τα μικροπλαστικά">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -222,7 +223,7 @@
           </ol>
         </nav>
 
-<p>Η Ελλάδα είναι από τις χώρες της Ευρώπης που πίνουν το περισσότερο εμφιαλωμένο νερό: περίπου <strong>158 λίτρα ανά άτομο τον χρόνο</strong>, σύμφωνα με στοιχεία της Natural Mineral Waters Europe που δημοσίευσε το Euronews το 2024.<sup><a href="#src-1">1</a></sup></p>
+<p>Η Ελλάδα είναι από τις χώρες της Ευρώπης που πίνουν το περισσότερο εμφιαλωμένο νερό: περίπου <strong>158 λίτρα ανά άτομο τον χρόνο</strong>, σύμφωνα με στοιχεία της Natural Mineral Waters Europe που δημοσίευσε το Euronews το 2024.<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup></p>
 
 <h2 id="kostos">Ο λογαριασμός μιας οικογένειας</h2>
 <p>Ένα παράδειγμα με στρογγυλά νούμερα:</p>
@@ -242,7 +243,7 @@
 <p>Ένα φίλτρο νερού έχει <strong>αρχικό κόστος</strong> (συσκευή και τοποθέτηση) και <strong>ανταλλακτικά</strong>, συνήθως κάθε 6 μήνες περίπου. Για τις περισσότερες οικογένειες που αγοράζουν τακτικά εμφιαλωμένο, το φίλτρο αποσβένεται μέσα στον πρώτο χρόνο και μετά κοστίζει ένα κλάσμα. Υπάρχει και το κόστος που δεν φαίνεται στην απόδειξη: το κουβάλημα, ο χώρος στην αποθήκη, οι σακούλες με τα άδεια μπουκάλια.</p>
 
 <h2 id="plastiko">Το πλαστικό</h2>
-<p>Σύμφωνα με το Περιβαλλοντικό Πρόγραμμα του ΟΗΕ (UNEP), σε όλο τον κόσμο αγοράζεται περίπου <strong>1 εκατομμύριο πλαστικά μπουκάλια νερού κάθε λεπτό</strong>.<sup><a href="#src-6">6</a></sup> Η ανακύκλωση βοηθά, αλλά καλύτερα να μη χρειαστεί καθόλου το μπουκάλι. Με φίλτρο, τα 1.950 μπουκάλια του παραδείγματος δεν μπαίνουν καν στο σπίτι σας.</p>
+<p>Σύμφωνα με το Περιβαλλοντικό Πρόγραμμα του ΟΗΕ (UNEP), σε όλο τον κόσμο αγοράζεται περίπου <strong>1 εκατομμύριο πλαστικά μπουκάλια νερού κάθε λεπτό</strong>.<sup><a href="#src-6" aria-label="Πηγή 6">6</a></sup> Η ανακύκλωση βοηθά, αλλά καλύτερα να μη χρειαστεί καθόλου το μπουκάλι. Με φίλτρο, τα 1.950 μπουκάλια του παραδείγματος δεν μπαίνουν καν στο σπίτι σας.</p>
 
 <aside class="cta-box" aria-label="Δωρεάν συμβουλή">
   <p class="cta-title">Υπολογίστε τι θα γλιτώνατε εσείς</p>
@@ -250,24 +251,24 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%B5%CE%BC%CF%86%CE%B9%CE%B1%CE%BB%CF%89%CE%BC%CE%AD%CE%BD%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CF%80%CF%8C%CF%83%CE%BF%20%CE%B8%CE%B1%20%CE%BA%CF%8C%CF%83%CF%84%CE%B9%CE%B6%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%B5%CE%BC%CF%86%CE%B9%CE%B1%CE%BB%CF%89%CE%BC%CE%AD%CE%BD%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CF%80%CF%8C%CF%83%CE%BF%20%CE%B8%CE%B1%20%CE%BA%CF%8C%CF%83%CF%84%CE%B9%CE%B6%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
 </aside>
 
 <h2 id="mikroplastika">Τι ξέρουμε για τα μικροπλαστικά</h2>
-<p>Τον Ιανουάριο του 2024, ερευνητές του Πανεπιστημίου Columbia δημοσίευσαν στο PNAS μια νέα τεχνική μέτρησης πολύ μικρών σωματιδίων (νανοπλαστικών). Σε <strong>τρεις μάρκες εμφιαλωμένου νερού των ΗΠΑ</strong> μέτρησαν κατά μέσο όρο περίπου <strong>240.000 πλαστικά σωματίδια ανά λίτρο</strong>. Περίπου το 90% ήταν νανοπλαστικά, μικρότερα από 1 μικρόμετρο. Συνολικά βρήκαν 10 έως 100 φορές περισσότερα σωματίδια από όσα είχαν μετρηθεί παλιότερα.<sup><a href="#src-2">2</a></sup> <sup><a href="#src-3">3</a></sup></p>
+<p>Τον Ιανουάριο του 2024, ερευνητές του Πανεπιστημίου Columbia δημοσίευσαν στο PNAS μια νέα τεχνική μέτρησης πολύ μικρών σωματιδίων (νανοπλαστικών). Σε <strong>τρεις μάρκες εμφιαλωμένου νερού των ΗΠΑ</strong> μέτρησαν κατά μέσο όρο περίπου <strong>240.000 πλαστικά σωματίδια ανά λίτρο</strong>. Περίπου το 90% ήταν νανοπλαστικά, μικρότερα από 1 μικρόμετρο. Συνολικά βρήκαν 10 έως 100 φορές περισσότερα σωματίδια από όσα είχαν μετρηθεί παλιότερα.<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup> <sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup></p>
 <p>Για να είμαστε ακριβείς:</p>
 <ul>
   <li>Η μελέτη αφορά τρεις μάρκες των ΗΠΑ, όχι τα ελληνικά νερά.</li>
-  <li>Άλλοι επιστήμονες αμφισβήτησαν τη μέθοδο σε επιστολή τους στο ίδιο περιοδικό, και οι συγγραφείς απάντησαν.<sup><a href="#src-4">4</a></sup> Η μέτρηση των νανοπλαστικών είναι ακόμη πεδίο έρευνας.</li>
-  <li>Ο Παγκόσμιος Οργανισμός Υγείας (2019) αναφέρει ότι, με τα περιορισμένα διαθέσιμα στοιχεία, τα μικροπλαστικά στο πόσιμο νερό <strong>δεν φαίνεται να αποτελούν κίνδυνο για την υγεία</strong> στα σημερινά επίπεδα. Ζητά όμως περισσότερη έρευνα, ειδικά για τα νανοσωματίδια.<sup><a href="#src-5">5</a></sup></li>
+  <li>Άλλοι επιστήμονες αμφισβήτησαν τη μέθοδο σε επιστολή τους στο ίδιο περιοδικό, και οι συγγραφείς απάντησαν.<sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup> Η μέτρηση των νανοπλαστικών είναι ακόμη πεδίο έρευνας.</li>
+  <li>Ο Παγκόσμιος Οργανισμός Υγείας (2019) αναφέρει ότι, με τα περιορισμένα διαθέσιμα στοιχεία, τα μικροπλαστικά στο πόσιμο νερό <strong>δεν φαίνεται να αποτελούν κίνδυνο για την υγεία</strong> στα σημερινά επίπεδα. Ζητά όμως περισσότερη έρευνα, ειδικά για τα νανοσωματίδια.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup></li>
 </ul>
 <p class="note">Δεν θα σας πούμε ότι το εμφιαλωμένο «σας δηλητηριάζει». Δεν το στηρίζουν τα στοιχεία. Αν όμως θέλετε να μειώσετε την έκθεσή σας στο πλαστικό, το να μην πίνετε κάθε μέρα από πλαστικό μπουκάλι είναι ένα λογικό βήμα.</p>
 
 <h2 id="zesti">Μπουκάλια και ζέστη</h2>
-<p>Η θερμότητα επιταχύνει τη μετανάστευση του <strong>αντιμονίου</strong>, ενός στοιχείου που χρησιμοποιείται στην παραγωγή του PET, στο νερό. Σε πειράματα, για να ξεπεραστεί το όριο των ΗΠΑ χρειάστηκαν περίπου 187 ημέρες στους 60 °C. Στους 80 °C και πάνω ο χρόνος έπεφτε σε λίγες μέρες.<sup><a href="#src-7">7</a></sup> Αυτές είναι ακραίες συνθήκες. Στην κανονική αποθήκευση τα επίπεδα μένουν χαμηλά. Πάντως, μην αφήνετε μπουκάλια στον ήλιο ή στο αυτοκίνητο το καλοκαίρι.</p>
+<p>Η θερμότητα επιταχύνει τη μετανάστευση του <strong>αντιμονίου</strong>, ενός στοιχείου που χρησιμοποιείται στην παραγωγή του PET, στο νερό. Σε πειράματα, για να ξεπεραστεί το όριο των ΗΠΑ χρειάστηκαν περίπου 187 ημέρες στους 60 °C. Στους 80 °C και πάνω ο χρόνος έπεφτε σε λίγες μέρες.<sup><a href="#src-7" aria-label="Πηγή 7">7</a></sup> Αυτές είναι ακραίες συνθήκες. Στην κανονική αποθήκευση τα επίπεδα μένουν χαμηλά. Πάντως, μην αφήνετε μπουκάλια στον ήλιο ή στο αυτοκίνητο το καλοκαίρι.</p>
 
 <h2 id="pote-emfialomeno">Πότε το εμφιαλωμένο έχει νόημα</h2>
 <p>Είναι χρήσιμο σε διακοπή νερού, σε ταξίδι ή όταν ο πάροχος έχει ανακοινώσει ότι το νερό είναι ακατάλληλο για πόσιμο. Σε αυτή την περίπτωση <strong>ακολουθήστε πάντα τις οδηγίες του παρόχου</strong>: ένα οικιακό φίλτρο δεν αντικαθιστά την απολύμανση του δικτύου.</p>
@@ -302,7 +303,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%B5%CE%BC%CF%86%CE%B9%CE%B1%CE%BB%CF%89%CE%BC%CE%AD%CE%BD%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CF%80%CF%8C%CF%83%CE%BF%20%CE%B8%CE%B1%20%CE%BA%CF%8C%CF%83%CF%84%CE%B9%CE%B6%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%B5%CE%BC%CF%86%CE%B9%CE%B1%CE%BB%CF%89%CE%BC%CE%AD%CE%BD%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CF%80%CF%8C%CF%83%CE%BF%20%CE%B8%CE%B1%20%CE%BA%CF%8C%CF%83%CF%84%CE%B9%CE%B6%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -311,13 +312,13 @@
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Πηγές</h2>
           <ol>
-      <li id="src-1">Euronews (27/7/2024) – Which European countries consume the most bottled water (στοιχεία Natural Mineral Waters Europe): <a href="https://www.euronews.com/2024/07/27/italy-germany-portugal-which-european-countries-consume-the-most-bottled-water" rel="noopener" target="_blank">www.euronews.com/2024/07/27/italy-germany-portugal-which-european-countries-consume-the-mo</a></li>
-      <li id="src-2">Qian N. et al. (2024), PNAS 121(3) e2300582121 – Rapid single-particle chemical imaging of nanoplastics by SRS microscopy: <a href="https://www.pnas.org/doi/10.1073/pnas.2300582121" rel="noopener" target="_blank">www.pnas.org/doi/10.1073/pnas.2300582121</a></li>
-      <li id="src-3">NIH Research Matters – Plastic particles in bottled water: <a href="https://www.nih.gov/news-events/nih-research-matters/plastic-particles-bottled-water" rel="noopener" target="_blank">www.nih.gov/news-events/nih-research-matters/plastic-particles-bottled-water</a></li>
-      <li id="src-4">PNAS (2024) – Letter: Nanoplastics measurements must have appropriate blanks: <a href="https://www.pnas.org/doi/10.1073/pnas.2411099121" rel="noopener" target="_blank">www.pnas.org/doi/10.1073/pnas.2411099121</a></li>
-      <li id="src-5">WHO (2019) – Microplastics in drinking-water: <a href="https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution" rel="noopener" target="_blank">www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crac</a></li>
-      <li id="src-6">UNEP – Our planet is drowning in plastic pollution: <a href="https://www.unep.org/news-and-stories/story/our-planet-drowning-plastic-pollution" rel="noopener" target="_blank">www.unep.org/news-and-stories/story/our-planet-drowning-plastic-pollution</a></li>
-      <li id="src-7">Westerhoff P. et al. (2008), Water Research 42:551–556 – Antimony leaching from PET plastic: <a href="https://doi.org/10.1016/j.watres.2007.07.048" rel="noopener" target="_blank">doi.org/10.1016/j.watres.2007.07.048</a></li>
+      <li id="src-1">Euronews (27/7/2024) – Which European countries consume the most bottled water (στοιχεία Natural Mineral Waters Europe): <a href="https://www.euronews.com/2024/07/27/italy-germany-portugal-which-european-countries-consume-the-most-bottled-water" rel="noopener noreferrer" target="_blank">www.euronews.com/2024/07/27/italy-germany-portugal-which-european-countries-consume-the-mo<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-2">Qian N. et al. (2024), PNAS 121(3) e2300582121 – Rapid single-particle chemical imaging of nanoplastics by SRS microscopy: <a href="https://www.pnas.org/doi/10.1073/pnas.2300582121" rel="noopener noreferrer" target="_blank">www.pnas.org/doi/10.1073/pnas.2300582121<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-3">NIH Research Matters – Plastic particles in bottled water: <a href="https://www.nih.gov/news-events/nih-research-matters/plastic-particles-bottled-water" rel="noopener noreferrer" target="_blank">www.nih.gov/news-events/nih-research-matters/plastic-particles-bottled-water<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-4">PNAS (2024) – Letter: Nanoplastics measurements must have appropriate blanks: <a href="https://www.pnas.org/doi/10.1073/pnas.2411099121" rel="noopener noreferrer" target="_blank">www.pnas.org/doi/10.1073/pnas.2411099121<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-5">WHO (2019) – Microplastics in drinking-water: <a href="https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution" rel="noopener noreferrer" target="_blank">www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crac<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-6">UNEP – Our planet is drowning in plastic pollution: <a href="https://www.unep.org/news-and-stories/story/our-planet-drowning-plastic-pollution" rel="noopener noreferrer" target="_blank">www.unep.org/news-and-stories/story/our-planet-drowning-plastic-pollution<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-7">Westerhoff P. et al. (2008), Water Research 42:551–556 – Antimony leaching from PET plastic: <a href="https://doi.org/10.1016/j.watres.2007.07.048" rel="noopener noreferrer" target="_blank">doi.org/10.1016/j.watres.2007.07.048<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
           </ol>
           <p class="disclaimer">Το άρθρο είναι ενημερωτικό και δεν αποτελεί ιατρική συμβουλή. Για την ποιότητα του νερού του δικτύου σας, η επίσημη πηγή είναι ο πάροχος ύδρευσης της περιοχής σας. Για ασφαλή συμπεράσματα για το δικό σας νερό, χρειάζεται εργαστηριακή ανάλυση.</p>
         </section>
@@ -379,7 +380,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%B5%CE%BC%CF%86%CE%B9%CE%B1%CE%BB%CF%89%CE%BC%CE%AD%CE%BD%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CF%80%CF%8C%CF%83%CE%BF%20%CE%B8%CE%B1%20%CE%BA%CF%8C%CF%83%CF%84%CE%B9%CE%B6%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%20%CE%AC%CF%81%CE%B8%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CE%B5%CE%BC%CF%86%CE%B9%CE%B1%CE%BB%CF%89%CE%BC%CE%AD%CE%BD%CE%BF%20%CE%BD%CE%B5%CF%81%CF%8C%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%BC%CE%AC%CE%B8%CF%89%20%CF%80%CF%8C%CF%83%CE%BF%20%CE%B8%CE%B1%20%CE%BA%CF%8C%CF%83%CF%84%CE%B9%CE%B6%CE%B5%20%CE%AD%CE%BD%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

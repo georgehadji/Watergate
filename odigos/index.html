@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -30,6 +30,7 @@
   <meta name="twitter:title" content="Οδηγός νερού: άλατα, χλώριο, φίλτρα">
   <meta name="twitter:description" content="Το νερό της Θεσσαλονίκης, τα άλατα, το χλώριο, η αντίστροφη όσμωση και πώς διαλέγετε φίλτρο νερού για σπίτι ή καφέ. Άρθρα με πηγές.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/odigos.jpg">
+  <meta name="twitter:image:alt" content="Οδηγός νερού Waterwal: άλατα, χλώριο, φίλτρα και αντίστροφη όσμωση">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -290,7 +291,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%9F%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BC%CE%B9%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%9F%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BC%CE%B9%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -326,7 +327,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%9F%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BC%CE%B9%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%9F%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BC%CE%B9%CE%B1%20%CF%83%CF%85%CE%BC%CE%B2%CE%BF%CF%85%CE%BB%CE%AE%20%CE%B3%CE%B9%CE%B1%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%20%CE%BD%CE%B5%CF%81%CE%BF%CF%8D." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

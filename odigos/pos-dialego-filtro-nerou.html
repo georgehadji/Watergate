@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- TODO: αντικαταστήστε το https://www.example.gr/ με το πραγματικό σας domain (βλ. README) -->
@@ -33,6 +33,7 @@
   <meta name="twitter:title" content="Πώς διαλέγω φίλτρο νερού: οδηγός σε 5 ερωτήσεις">
   <meta name="twitter:description" content="Φίλτρο βρύσης, κάτω πάγκου, αντίστροφη όσμωση ή κεντρικής παροχής; Πέντε ερωτήσεις, οι πιστοποιήσεις NSF/ANSI και η αλλαγή ανταλλακτικών.">
   <meta name="twitter:image" content="https://www.example.gr/assets/og/pos-dialego-filtro-nerou.jpg">
+  <meta name="twitter:image:alt" content="Πώς διαλέγω φίλτρο νερού: ο οδηγός σε 5 ερωτήσεις">
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -247,7 +248,7 @@
 </ul>
 
 <h2 id="erotisi-3">3. Πόσο νερό χρειάζεστε και πόσο χώρο έχετε;</h2>
-<p>Ένα φίλτρο βρύσης είναι εύκολο αλλά έχει μικρή χωρητικότητα και ροή. Ένα σύστημα κάτω πάγκου δίνει άνετη ροή και δεν πιάνει χώρο στον πάγκο. Η αντίστροφη όσμωση χρειάζεται χώρο για δοχείο και σύνδεση με αποχέτευση, και απορρίπτει μέρος του νερού.<sup><a href="#src-5">5</a></sup> Για γραφεία και καφετέριες μετράει η ημερήσια κατανάλωση σε λίτρα.</p>
+<p>Ένα φίλτρο βρύσης είναι εύκολο αλλά έχει μικρή χωρητικότητα και ροή. Ένα σύστημα κάτω πάγκου δίνει άνετη ροή και δεν πιάνει χώρο στον πάγκο. Η αντίστροφη όσμωση χρειάζεται χώρο για δοχείο και σύνδεση με αποχέτευση, και απορρίπτει μέρος του νερού.<sup><a href="#src-5" aria-label="Πηγή 5">5</a></sup> Για γραφεία και καφετέριες μετράει η ημερήσια κατανάλωση σε λίτρα.</p>
 
 <aside class="cta-box" aria-label="Δωρεάν συμβουλή">
   <p class="cta-title">Θέλετε να το κάνουμε μαζί;</p>
@@ -255,27 +256,27 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%B5%CF%80%CE%B9%CE%BB%CE%BF%CE%B3%CE%AE%CF%82%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CF%81%CF%8C%CF%84%CE%B1%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%2F%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%AF%CF%81%CE%B7%CF%83%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%B5%CF%80%CE%B9%CE%BB%CE%BF%CE%B3%CE%AE%CF%82%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CF%81%CF%8C%CF%84%CE%B1%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%2F%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%AF%CF%81%CE%B7%CF%83%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
 </aside>
 
 <h2 id="erotisi-4">4. Έχει πιστοποίηση για αυτό που θέλετε;</h2>
-<p>Οι πιστοποιήσεις NSF/ANSI είναι τα πιο διαδεδομένα διεθνή πρότυπα δοκιμών για φίλτρα νερού:<sup><a href="#src-1">1</a></sup></p>
+<p>Οι πιστοποιήσεις NSF/ANSI είναι τα πιο διαδεδομένα διεθνή πρότυπα δοκιμών για φίλτρα νερού:<sup><a href="#src-1" aria-label="Πηγή 1">1</a></sup></p>
 <div class="table-wrap">
   <table>
     <thead><tr><th scope="col">Πρότυπο</th><th scope="col">Τι καλύπτει</th></tr></thead>
     <tbody>
       <tr><td>NSF/ANSI 42</td><td>Αισθητικά χαρακτηριστικά: γεύση και οσμή χλωρίου, σωματίδια</td></tr>
       <tr><td>NSF/ANSI 53</td><td>Ουσίες με επιπτώσεις στην υγεία, π.χ. μόλυβδος, κύστεις, πτητικές οργανικές ενώσεις, PFOA/PFOS</td></tr>
-      <tr><td>NSF/ANSI 58</td><td>Αντίστροφη όσμωση: μείωση TDS τουλάχιστον 75%, συν ξεχωριστούς ισχυρισμούς<sup><a href="#src-2">2</a></sup></td></tr>
+      <tr><td>NSF/ANSI 58</td><td>Αντίστροφη όσμωση: μείωση TDS τουλάχιστον 75%, συν ξεχωριστούς ισχυρισμούς<sup><a href="#src-2" aria-label="Πηγή 2">2</a></sup></td></tr>
       <tr><td>NSF/ANSI 401</td><td>«Αναδυόμενοι» ρύποι, π.χ. ορισμένα φάρμακα και φυτοφάρμακα</td></tr>
       <tr><td>NSF/ANSI 55 / P231</td><td>Συστήματα UV / μικροβιολογικοί καθαριστές</td></tr>
     </tbody>
   </table>
 </div>
-<p class="note">Η πιστοποίηση ισχύει για <strong>συγκεκριμένους ισχυρισμούς</strong>. Ένα φίλτρο πιστοποιημένο κατά NSF/ANSI 42 για το χλώριο δεν σημαίνει ότι αφαιρεί και τον μόλυβδο. Το ίδιο ισχύει για τα PFAS: σε μια μελέτη, τα φίλτρα άνθρακα άλλοτε τα αφαιρούσαν πλήρως και άλλοτε καθόλου.<sup><a href="#src-4">4</a></sup> Ζητήστε να δείτε <strong>τι ακριβώς</strong> καλύπτει η πιστοποίηση.</p>
+<p class="note">Η πιστοποίηση ισχύει για <strong>συγκεκριμένους ισχυρισμούς</strong>. Ένα φίλτρο πιστοποιημένο κατά NSF/ANSI 42 για το χλώριο δεν σημαίνει ότι αφαιρεί και τον μόλυβδο. Το ίδιο ισχύει για τα PFAS: σε μια μελέτη, τα φίλτρα άνθρακα άλλοτε τα αφαιρούσαν πλήρως και άλλοτε καθόλου.<sup><a href="#src-4" aria-label="Πηγή 4">4</a></sup> Ζητήστε να δείτε <strong>τι ακριβώς</strong> καλύπτει η πιστοποίηση.</p>
 <p>Κόκκινες σημαίες: υποσχέσεις για «θεραπευτικό», «ιονισμένο» ή «ζωντανό» νερό, «αφαιρεί το 100% των ρύπων» χωρίς πιστοποίηση, και φίλτρα που «δεν χρειάζονται ποτέ αλλαγή».</p>
 
 <h2 id="antallaktika">5. Πόσο κοστίζουν τα ανταλλακτικά, και κάθε πότε αλλάζουν;</h2>
@@ -286,7 +287,7 @@
   <li>Ποιος θα σας θυμίσει την αλλαγή;</li>
 </ul>
 <h3>Γιατί η αλλαγή δεν «περιμένει»</h3>
-<p>Ένα φίλτρο ενεργού άνθρακα κάνει δύο πράγματα όταν «γεράσει». Πρώτον, κορέννυται και σταματά να συγκρατεί αυτό που υποτίθεται ότι συγκρατεί. Δεύτερον, ο άνθρακας αφαιρεί το χλώριο, οπότε μέσα στο φίλτρο μπορούν να αναπτυχθούν βακτήρια, ειδικά όταν το νερό μένει στάσιμο. Σε μελέτη του Πανεπιστημίου της Αριζόνα, το νερό από φίλτρα στο σημείο κατανάλωσης είχε συχνά πολύ περισσότερα ετερότροφα βακτήρια από το νερό της βρύσης.<sup><a href="#src-3">3</a></sup> Τα περισσότερα από αυτά τα βακτήρια δεν είναι παθογόνα, αλλά δεν χρειάζεται να το ρισκάρετε:</p>
+<p>Ένα φίλτρο ενεργού άνθρακα κάνει δύο πράγματα όταν «γεράσει». Πρώτον, κορέννυται και σταματά να συγκρατεί αυτό που υποτίθεται ότι συγκρατεί. Δεύτερον, ο άνθρακας αφαιρεί το χλώριο, οπότε μέσα στο φίλτρο μπορούν να αναπτυχθούν βακτήρια, ειδικά όταν το νερό μένει στάσιμο. Σε μελέτη του Πανεπιστημίου της Αριζόνα, το νερό από φίλτρα στο σημείο κατανάλωσης είχε συχνά πολύ περισσότερα ετερότροφα βακτήρια από το νερό της βρύσης.<sup><a href="#src-3" aria-label="Πηγή 3">3</a></sup> Τα περισσότερα από αυτά τα βακτήρια δεν είναι παθογόνα, αλλά δεν χρειάζεται να το ρισκάρετε:</p>
 <ul>
   <li><strong>Αλλάζετε το ανταλλακτικό στην ώρα του</strong>: συνήθως κάθε 6 μήνες περίπου, ή νωρίτερα αν το λέει η χωρητικότητα σε λίτρα.</li>
   <li><strong>Αφήστε το νερό να τρέξει λίγα δευτερόλεπτα</strong> όταν το φίλτρο δεν έχει χρησιμοποιηθεί για μέρες, π.χ. μετά από διακοπές.</li>
@@ -330,7 +331,7 @@
   <div class="cta-actions">
     <a class="btn btn-light" href="../#contact">Ζητήστε δωρεάν συμβουλή</a>
     <div class="chat-buttons">
-      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%B5%CF%80%CE%B9%CE%BB%CE%BF%CE%B3%CE%AE%CF%82%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CF%81%CF%8C%CF%84%CE%B1%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%2F%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%AF%CF%81%CE%B7%CF%83%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp</a>
+      <a class="btn btn-chat btn-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%B5%CF%80%CE%B9%CE%BB%CE%BF%CE%B3%CE%AE%CF%82%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CF%81%CF%8C%CF%84%CE%B1%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%2F%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%AF%CF%81%CE%B7%CF%83%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg>WhatsApp<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
       <a class="btn btn-chat btn-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg>Viber</a>
     </div>
   </div>
@@ -339,11 +340,11 @@
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Πηγές</h2>
           <ol>
-      <li id="src-1">NSF – Standards for water treatment systems (42, 53, 55, 58, 401, P231): <a href="https://www.nsf.org/consumer-resources/articles/standards-water-treatment-systems" rel="noopener" target="_blank">www.nsf.org/consumer-resources/articles/standards-water-treatment-systems</a></li>
-      <li id="src-2">NSF – NSF/ANSI 58: Reverse Osmosis Drinking Water Treatment Systems: <a href="https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems" rel="noopener" target="_blank">www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems</a></li>
-      <li id="src-3">Chaidez C., Gerba C.P. (2004), Int. J. Environ. Health Res. 14(4):253–260 – Comparison of the microbiologic quality of point-of-use (POU)-treated water and tap water: <a href="https://www.tandfonline.com/doi/abs/10.1080/09603120410001725595" rel="noopener" target="_blank">www.tandfonline.com/doi/abs/10.1080/09603120410001725595</a></li>
-      <li id="src-4">Herkert et al. (2020), Environ. Sci. Technol. Lett. – PFAS removal by point-of-use / point-of-entry filters: <a href="https://pubs.acs.org/doi/10.1021/acs.estlett.0c00004" rel="noopener" target="_blank">pubs.acs.org/doi/10.1021/acs.estlett.0c00004</a></li>
-      <li id="src-5">U.S. EPA WaterSense – Point-of-Use Reverse Osmosis Systems: <a href="https://www.epa.gov/watersense/point-use-reverse-osmosis-systems" rel="noopener" target="_blank">www.epa.gov/watersense/point-use-reverse-osmosis-systems</a></li>
+      <li id="src-1">NSF – Standards for water treatment systems (42, 53, 55, 58, 401, P231): <a href="https://www.nsf.org/consumer-resources/articles/standards-water-treatment-systems" rel="noopener noreferrer" target="_blank">www.nsf.org/consumer-resources/articles/standards-water-treatment-systems<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-2">NSF – NSF/ANSI 58: Reverse Osmosis Drinking Water Treatment Systems: <a href="https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems" rel="noopener noreferrer" target="_blank">www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-3">Chaidez C., Gerba C.P. (2004), Int. J. Environ. Health Res. 14(4):253–260 – Comparison of the microbiologic quality of point-of-use (POU)-treated water and tap water: <a href="https://www.tandfonline.com/doi/abs/10.1080/09603120410001725595" rel="noopener noreferrer" target="_blank">www.tandfonline.com/doi/abs/10.1080/09603120410001725595<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-4">Herkert et al. (2020), Environ. Sci. Technol. Lett. – PFAS removal by point-of-use / point-of-entry filters: <a href="https://pubs.acs.org/doi/10.1021/acs.estlett.0c00004" rel="noopener noreferrer" target="_blank">pubs.acs.org/doi/10.1021/acs.estlett.0c00004<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+      <li id="src-5">U.S. EPA WaterSense – Point-of-Use Reverse Osmosis Systems: <a href="https://www.epa.gov/watersense/point-use-reverse-osmosis-systems" rel="noopener noreferrer" target="_blank">www.epa.gov/watersense/point-use-reverse-osmosis-systems<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
           </ol>
           <p class="disclaimer">Το άρθρο είναι ενημερωτικό και δεν αποτελεί ιατρική συμβουλή. Για την ποιότητα του νερού του δικτύου σας, η επίσημη πηγή είναι ο πάροχος ύδρευσης της περιοχής σας. Για ασφαλή συμπεράσματα για το δικό σας νερό, χρειάζεται εργαστηριακή ανάλυση.</p>
         </section>
@@ -405,7 +406,7 @@
 <nav class="action-bar" aria-label="Γρήγορη επικοινωνία">
   <a class="action-call" href="tel:+306947830756"><svg aria-hidden="true"><use href="#ic-phone"/></svg><span>Κλήση</span></a>
   <a class="action-viber" href="viber://chat?number=%2B306947830756"><svg aria-hidden="true"><use href="#ic-viber"/></svg><span>Viber</span></a>
-  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%B5%CF%80%CE%B9%CE%BB%CE%BF%CE%B3%CE%AE%CF%82%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CF%81%CF%8C%CF%84%CE%B1%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%2F%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%AF%CF%81%CE%B7%CF%83%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
+  <a class="action-whatsapp" href="https://wa.me/306947830756?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%94%CE%B9%CE%AC%CE%B2%CE%B1%CF%83%CE%B1%20%CF%84%CE%BF%CE%BD%20%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%20%CE%B5%CF%80%CE%B9%CE%BB%CE%BF%CE%B3%CE%AE%CF%82%20%CF%86%CE%AF%CE%BB%CF%84%CF%81%CE%BF%CF%85%20%CE%BA%CE%B1%CE%B9%20%CE%B8%CE%B1%20%CE%AE%CE%B8%CE%B5%CE%BB%CE%B1%20%CF%80%CF%81%CF%8C%CF%84%CE%B1%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20%CF%83%CF%80%CE%AF%CF%84%CE%B9%2F%CF%84%CE%B7%CE%BD%20%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%AF%CF%81%CE%B7%CF%83%CE%AE%20%CE%BC%CE%BF%CF%85." target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 </nav>
 
 </body>

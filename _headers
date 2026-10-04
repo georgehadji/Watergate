@@ -1,19 +1,42 @@
 # Security headers για Netlify / Cloudflare Pages.
-# (Για Apache / κοινόχρηστη φιλοξενία cPanel χρησιμοποιείται το .htaccess.)
+# (Για Apache / κοινόχρηστη φιλοξενία cPanel χρησιμοποιείται το .htaccess, με τις ίδιες τιμές.)
+#
+# CSP: εδώ μπαίνει η "ένωση" όσων χρειάζονται όλες οι σελίδες (Formspree και χάρτης Google
+# για την αρχική). Κάθε σελίδα έχει επιπλέον δική της, αυστηρότερη CSP στο <meta>, και ο browser
+# εφαρμόζει και τις δύο. Το frame-ancestors λειτουργεί μόνο ως header, όχι στο <meta>.
+# Trusted Types: μπλοκάρει DOM-based XSS (innerHTML, eval κ.λπ.). Ο κώδικας του site δεν τα χρησιμοποιεί.
+# X-XSS-Protection: 0 απενεργοποιεί το παλιό "XSS auditor" των browsers, που είχε δικά του κενά
+# ασφαλείας (σύσταση OWASP). Την προστασία από XSS την κάνει πλέον η CSP.
+# HSTS: 2 χρόνια. Για το HSTS preload list (hstspreload.org), προσθέστε "; preload" ΜΟΝΟ αν όλα τα
+# subdomains σας έχουν HTTPS. Η καταχώριση είναι δύσκολο να αναιρεθεί.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; frame-src https://www.google.com https://maps.google.com; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'self' https://formspree.io; frame-src https://www.google.com https://maps.google.com; form-action 'self' https://formspree.io; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  X-XSS-Protection: 0
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Permissions-Policy: accelerometer=(), autoplay=(), browsing-topics=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(self "https://www.google.com"), geolocation=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), xr-spatial-tracking=()
   Cross-Origin-Opener-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
+  Origin-Agent-Cluster: ?1
+
+# Scripts, styles and fonts are only for this site: other sites cannot embed them.
+# (Images stay embeddable, so Facebook, Viber, WhatsApp and X can show the share previews.)
+/js/*
+  Cache-Control: public, max-age=604800
+  Cross-Origin-Resource-Policy: same-origin
+
+/css/*
+  Cache-Control: public, max-age=604800
+  Cross-Origin-Resource-Policy: same-origin
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Resource-Policy: same-origin
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-/css/*
-  Cache-Control: public, max-age=604800
-
-/js/*
-  Cache-Control: public, max-age=604800
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8

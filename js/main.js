@@ -9,11 +9,21 @@
       var open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
     });
+    function closeNav(returnFocus) {
+      if (!nav.classList.contains("is-open")) return;
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      if (returnFocus) toggle.focus();
+    }
     nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
+      if (e.target.closest("a")) closeNav(false);
+    });
+    // Escape closes the menu; tabbing out of the open menu closes it too.
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeNav(true);
+    });
+    nav.addEventListener("focusout", function (e) {
+      if (e.relatedTarget && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) closeNav(false);
     });
   }
 
@@ -33,15 +43,32 @@
   // ---------- Product filter (by type of space) ----------
   var tabs = document.querySelectorAll(".filter-tabs .tab");
   var products = document.querySelectorAll(".product");
+  // Screen readers hear how many products the filter left visible.
+  var filterStatus = null;
+  var tabGroup = document.querySelector(".filter-tabs");
+  if (tabGroup) {
+    filterStatus = document.createElement("p");
+    filterStatus.className = "sr-only";
+    filterStatus.setAttribute("role", "status");
+    tabGroup.after(filterStatus);
+  }
   function applyFilter(filter) {
+    var label = "";
     tabs.forEach(function (t) {
       var active = t.dataset.filter === filter;
       t.classList.toggle("is-active", active);
       t.setAttribute("aria-pressed", String(active));
+      if (active) label = t.textContent.trim();
     });
+    var shown = 0;
     products.forEach(function (p) {
       p.hidden = !(filter === "all" || p.dataset.cat.split(" ").indexOf(filter) !== -1);
+      if (!p.hidden) shown++;
     });
+    if (filterStatus) {
+      filterStatus.textContent = shown + (shown === 1 ? " προϊόν" : " προϊόντα") +
+        (filter === "all" ? " συνολικά." : " για: " + label + ".");
+    }
   }
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () { applyFilter(tab.dataset.filter); });
@@ -103,6 +130,45 @@
     status.textContent = msg;
     status.className = "form-status" + (kind ? " " + kind : "");
   }
+  // Anti-spam and input hygiene. This only stops bots that use the page: anything posting
+  // straight to Formspree skips it, so keep Formspree's own spam filter switched on too.
+  var MIN_FILL_MS = 3000;          // people need longer than this to fill the form
+  var RESEND_COOLDOWN_MS = 60000;  // one request per minute from the same browser tab
+  var REQUEST_TIMEOUT_MS = 15000;
+  var SENT_KEY = "waterwal-form-sent";
+  var THANKS = "Ευχαριστούμε! Λάβαμε το αίτημά σας και θα επικοινωνήσουμε σύντομα μαζί σας.";
+  var FAILED = "Κάτι πήγε στραβά. Δοκιμάστε ξανά ή καλέστε μας στο τηλέφωνο.";
+  var EMAIL_RE = /^[^\s@<>()"',;:?&=]+@[^\s@<>()"',;:?&=]+\.[a-z]{2,}$/i;
+  var formShownAt = Date.now();
+
+  // Control characters, plus invisible and bidirectional formatting characters used to
+  // hide or spoof text. Line breaks and tabs survive only in the message.
+  var UNSAFE_CHARS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F​-‏‪-‮⁠-⁤⁦-⁩﻿]/g;
+  function clean(value, multiline) {
+    var v = String(value).replace(UNSAFE_CHARS, "");
+    if (!multiline) v = v.replace(/[\r\n\t]+/g, " ");
+    return v.trim();
+  }
+  function cleanData(source) {
+    var out = new FormData();
+    source.forEach(function (value, key) {
+      if (key === "website") return; // our own honeypot, never sent
+      out.append(key, clean(value, key === "message"));
+    });
+    return out;
+  }
+  function isBot() {
+    var trapped = form.elements._gotcha.value || (form.elements.website && form.elements.website.value);
+    return Boolean(trapped) || Date.now() - formShownAt < MIN_FILL_MS;
+  }
+  function sentRecently() {
+    try { return Date.now() - Number(sessionStorage.getItem(SENT_KEY) || 0) < RESEND_COOLDOWN_MS; }
+    catch (err) { return false; }
+  }
+  function markSent() {
+    try { sessionStorage.setItem(SENT_KEY, String(Date.now())); } catch (err) { /* no storage: no cooldown */ }
+  }
+
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -110,12 +176,25 @@
         form.reportValidity();
         return;
       }
-      if (form.elements._gotcha.value) return; // spam bot
+      // Bots get the same "thank you" as people, so they learn nothing about the filter.
+      if (isBot()) {
+        form.reset();
+        setStatus(THANKS, "ok");
+        return;
+      }
+      if (sentRecently()) {
+        setStatus("Το αίτημά σας έχει ήδη σταλεί. Για νέο αίτημα δοκιμάστε ξανά σε ένα λεπτό ή καλέστε μας.", "err");
+        return;
+      }
 
-      var data = new FormData(form);
+      var data = cleanData(new FormData(form));
       var configured = form.action.indexOf("YOUR_FORM_ID") === -1;
 
       if (!configured) {
+        if (!EMAIL_RE.test(form.dataset.fallbackEmail || "")) {
+          setStatus(FAILED, "err");
+          return;
+        }
         var lines = [
           "Ονοματεπώνυμο: " + data.get("name"),
           "Τύπος χώρου: " + data.get("space"),
@@ -134,19 +213,41 @@
         return;
       }
 
+      // Post only to Formspree over HTTPS, whatever the action attribute was changed to.
+      if (form.action.indexOf("https://formspree.io/f/") !== 0) {
+        setStatus(FAILED, "err");
+        return;
+      }
+
       var btn = form.querySelector("button[type=submit]");
+      var ctrl = typeof AbortController === "function" ? new AbortController() : null;
+      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, REQUEST_TIMEOUT_MS) : 0;
       btn.disabled = true;
       setStatus("Αποστολή…");
-      fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } })
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+        credentials: "omit",
+        redirect: "error",
+        referrerPolicy: "strict-origin-when-cross-origin",
+        signal: ctrl ? ctrl.signal : undefined
+      })
         .then(function (res) {
           if (!res.ok) throw new Error(String(res.status));
           form.reset();
-          setStatus("Ευχαριστούμε! Λάβαμε το αίτημά σας και θα επικοινωνήσουμε σύντομα μαζί σας.", "ok");
+          markSent();
+          setStatus(THANKS, "ok");
         })
-        .catch(function () {
-          setStatus("Κάτι πήγε στραβά. Δοκιμάστε ξανά ή καλέστε μας στο τηλέφωνο.", "err");
+        .catch(function (err) {
+          setStatus(err && err.name === "AbortError"
+            ? "Η σύνδεση άργησε πολύ. Δοκιμάστε ξανά ή καλέστε μας στο τηλέφωνο."
+            : FAILED, "err");
         })
-        .finally(function () { btn.disabled = false; });
+        .finally(function () {
+          clearTimeout(timer);
+          btn.disabled = false;
+        });
     });
   }
 
@@ -154,13 +255,23 @@
   // Messages are also set as the native validity message, so the browser's own
   // bubble (and validation without this script) stays in Greek.
   var fieldMessages = {
-    name: { valueMissing: "Γράψτε το ονοματεπώνυμό σας." },
+    name: {
+      valueMissing: "Γράψτε το ονοματεπώνυμό σας.",
+      tooShort: "Γράψτε το ονοματεπώνυμό σας (τουλάχιστον 2 γράμματα).",
+      patternMismatch: "Το ονοματεπώνυμο μπορεί να έχει μόνο γράμματα, κενά, τελεία, απόστροφο και παύλα."
+    },
     phone: {
       valueMissing: "Γράψτε ένα τηλέφωνο για να σας καλέσουμε.",
       patternMismatch: "Ο αριθμός δεν φαίνεται σωστός. Γράψτε 8 έως 25 ψηφία, π.χ. 6912345678."
     },
     email: { typeMismatch: "Το email δεν φαίνεται σωστό. Ελέγξτε ότι έχει τη μορφή onoma@domain.gr." },
+    area: { patternMismatch: "Γράψτε την περιοχή με γράμματα και αριθμούς, π.χ. Καλαμαριά." },
+    message: { tooManyLinks: "Για λόγους ασφαλείας, το μήνυμα μπορεί να έχει έως 2 συνδέσμους." },
     consent: { valueMissing: "Τσεκάρετε τη συγκατάθεση για να μπορέσουμε να σας απαντήσουμε." }
+  };
+  // Checks the browser has no built-in validity flag for.
+  var customChecks = {
+    tooManyLinks: function (field) { return (field.value.match(/https?:\/\/|www\./gi) || []).length > 2; }
   };
 
   function errorFor(field) {
@@ -185,7 +296,8 @@
     field.setCustomValidity("");
     var msgs = fieldMessages[field.name] || {};
     for (var key in msgs) {
-      if (field.validity[key]) return msgs[key];
+      var failed = customChecks[key] ? customChecks[key](field) : field.validity[key];
+      if (failed) return msgs[key];
     }
     return "";
   }
@@ -204,12 +316,31 @@
     }
   }
 
+  // Errors that appear after the visitor has already moved on are read out here.
+  var errorLive = null;
+  if (form) {
+    errorLive = document.createElement("p");
+    errorLive.className = "sr-only";
+    errorLive.setAttribute("aria-live", "polite");
+    form.appendChild(errorLive);
+  }
+  function announceError(field, msg) {
+    if (!errorLive || document.activeElement === field) return;
+    var label = field.closest("label");
+    var name = label ? label.firstChild.textContent.replace("*", "").trim() : "";
+    errorLive.textContent = name ? name + ": " + msg : msg;
+  }
+
   if (form) {
     var checked = Object.keys(fieldMessages).map(function (n) { return form.elements[n]; }).filter(Boolean);
     checked.forEach(function (field) {
       validateField(field, false);
       // Validate when the visitor leaves a field they typed in, then live while they fix it.
-      field.addEventListener("blur", function () { if (field.value && field.type !== "checkbox") validateField(field, true); });
+      field.addEventListener("blur", function () {
+        if (!field.value || field.type === "checkbox") return;
+        validateField(field, true);
+        if (field.validationMessage) setTimeout(function () { announceError(field, field.validationMessage); }, 0);
+      });
       field.addEventListener(field.type === "checkbox" ? "change" : "input", function () {
         validateField(field, field.getAttribute("aria-invalid") === "true");
       });
@@ -247,7 +378,9 @@
     var loadBtn = mapCard.querySelector(".map-load");
     loadBtn.hidden = false;
     loadBtn.addEventListener("click", function () {
-      var src = mapCard.dataset.embedSrc ||
+      // Only Google Maps embeds; anything else in data-embed-src is ignored.
+      var custom = mapCard.dataset.embedSrc || "";
+      var src = custom.indexOf("https://www.google.com/maps/") === 0 ? custom :
         "https://www.google.com/maps?q=" + encodeURIComponent(mapCard.dataset.mapQuery) +
         "&z=" + encodeURIComponent(mapCard.dataset.mapZoom || "11") + "&hl=el&output=embed";
       var iframe = document.createElement("iframe");
